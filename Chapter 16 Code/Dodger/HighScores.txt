@@ -1,0 +1,1 @@
+[["Alex Trebec", 1669], ["Joe Schmoe", 1350], ["Baba O'Reilly", 517], ["Jamie Fox", 433], ["Indiana Jones", 412], ["Anonymous", 339], ["Grumpy Cat", 318], ["Tess Ting", 83], ["-----", 0], ["-----", 0]]

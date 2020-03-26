@@ -1,0 +1,10 @@
+# Constants
+
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+PURPLE = (200, 0, 200)
+YELLOW = (255, 255, 0)
+GRAY = (50, 50, 50)
+
+SQUARE_HEIGHT = 100
+SQUARE_WIDTH = 100
