@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55f152cc-a6eb-449c-ad31-62e957348596" name="Default" comment="" />
+    <list default="true" id="55f152cc-a6eb-449c-ad31-62e957348596" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rock Paper Scissors State Machine/RockPaperScissors.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Rock Paper Scissors State Machine/RockPaperScissors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneResults.py" beforeDir="false" afterPath="$PROJECT_DIR$/SceneResults.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneSplash.py" beforeDir="false" afterPath="$PROJECT_DIR$/SceneSplash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO TV Two instances init.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO TV Two instances.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 2 code/OO TV Two instances.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,20 +18,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SceneSplash.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main_RockPaperScissors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="17" />
+            <state relative-caret-position="223">
+              <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SceneSplash.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ScenePlay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-405">
-              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            <state relative-caret-position="172">
+              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -31,17 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SceneResults.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" selection-end-line="129" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main_RockPaperScissors.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+            <state relative-caret-position="207">
+              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -49,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="429">
               <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="23" />
             </state>
           </provider>
@@ -59,7 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>RockIma</find>
       <find>active_scene</find>
       <find>filtered</find>
       <find>pressed_keys</find>
@@ -89,6 +96,7 @@
       <find>play</find>
       <find>leave</find>
       <find>Image</find>
+      <find>blit</find>
     </findStrings>
     <replaceStrings>
       <replace>urenderpdate</replace>
@@ -99,6 +107,9 @@
       <replace>SCISSORS</replace>
       <replace>startingSceneKey</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -114,16 +125,16 @@
         <option value="$PROJECT_DIR$/Constants.py" />
         <option value="$PROJECT_DIR$/SceneMgr.py" />
         <option value="$PROJECT_DIR$/Rock Paper Scissors.py" />
-        <option value="$PROJECT_DIR$/SceneSplash.py" />
         <option value="$PROJECT_DIR$/ScenePlay.py" />
+        <option value="$PROJECT_DIR$/SceneSplash.py" />
         <option value="$PROJECT_DIR$/SceneResults.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1802" />
-    <option name="y" value="26" />
-    <option name="width" value="1680" />
+    <option name="x" value="1715" />
+    <option name="y" value="24" />
+    <option name="width" value="1813" />
     <option name="height" value="963" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -142,11 +153,13 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,10 +171,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
   </component>
@@ -267,7 +280,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="SampleMain" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="SceneResults" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SceneMgr" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,7 +292,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SampleMain.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SceneResults.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -293,15 +306,15 @@
       <item itemvalue="Python.RPSMain" />
       <item itemvalue="Python.Rock Paper Scissors" />
       <item itemvalue="Python.SCENESDemo" />
-      <item itemvalue="Python.SampleMain" />
+      <item itemvalue="Python.SceneResults" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Main_RockPaperScissors" />
+        <item itemvalue="Python.SceneResults" />
         <item itemvalue="Python.Rock Paper Scissors" />
         <item itemvalue="Python.RPSMain" />
         <item itemvalue="Python.SCENESDemo" />
-        <item itemvalue="Python.SampleMain" />
       </list>
     </recent_temporary>
   </component>
@@ -319,22 +332,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1802" y="26" width="1680" height="963" extended-state="0" />
+    <frame x="1715" y="24" width="1813" height="963" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25557566" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23660715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27995256" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27948114" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39881656" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -366,38 +379,38 @@
     <entry file="file://$PROJECT_DIR$/pygwidgets.py" />
     <entry file="file://$PROJECT_DIR$/SceneMgr.py" />
     <entry file="file://$PROJECT_DIR$/Rock Paper Scissors.py" />
-    <entry file="file://$PROJECT_DIR$/SceneSplash.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SceneResults.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Constants.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="429">
           <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main_RockPaperScissors.py">
+    <entry file="file://$PROJECT_DIR$/SceneSplash.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        <state relative-caret-position="184">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ScenePlay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="172">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SceneResults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main_RockPaperScissors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
         </state>
       </provider>
     </entry>

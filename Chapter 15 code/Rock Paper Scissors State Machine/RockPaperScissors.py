@@ -30,44 +30,53 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
 # 4 - Load assets: image(s), sounds,  etc.
+
+# For Splash screen
+messageField = pygwidgets.DisplayText(window, (15, 25),  'Welcome to Rock, Paper, Scissors!', \
+                                    fontSize=50, textColor = WHITE, width = 610, justified = 'center')
+
+rockImage = pygwidgets.Image(window, (25, 120), 'images/Rock.png')
+paperImage = pygwidgets.Image(window, (225, 120), 'images/Paper.png')
+scissorsImage = pygwidgets.Image(window, (425, 120), 'images/Scissors.png')
+
 startButton = pygwidgets.CustomButton(window, (210, 300), \
                                            up='images/startButtonUp.png', \
                                            down='images/startButtonDown.png', \
                                            over='images/startButtonHighlight.png')
 
+# For Player Choice screen
 rockButton = pygwidgets.CustomButton(window, (25, 120), \
-                                 up = "images/Rock.png", \
-                                 over = "images/RockOver.png", \
-                                 down = "images/RockDown.png")
+                                 up = 'images/Rock.png', \
+                                 over = 'images/RockOver.png', \
+                                 down = 'images/RockDown.png')
 
 paperButton =  pygwidgets.CustomButton(window, (225, 120), \
-                                 up = "images/Paper.png", \
-                                 over = "images/PaperOver.png", \
-                                 down = "images/PaperDown.png")
+                                 up = 'images/Paper.png', \
+                                 over = 'images/PaperOver.png', \
+                                 down = 'images/PaperDown.png')
 
 scissorButton =  pygwidgets.CustomButton(window, (425, 120), \
-                                 up = "images/Scissors.png", \
-                                 over = "images/ScissorsOver.png", \
-                                 down = "images/ScissorsDown.png") 
-
-rockImage = pygame.image.load("images/Rock.png")
-paperImage = pygame.image.load("images/Paper.png")
-scissorImage = pygame.image.load("images/Scissors.png")
-
-restartButton = pygwidgets.CustomButton(window, (220, 310), \
-                                    up='images/restartButtonUp.png', \
-                                    down='images/restartButtonDown.png', \
-                                    over='images/restartButtonHighlight.png')
-
-# Text settings
-messageField = pygwidgets.DisplayText(window, (15, 25),  'Welcome to Rock, Paper, Scissors!', \
-                                    fontSize=50, textColor = WHITE, width = 610, justified = 'center')
+                                 up = 'images/Scissors.png', \
+                                 over = 'images/ScissorsOver.png', \
+                                 down = 'images/ScissorsDown.png')
 
 chooseText = pygwidgets.DisplayText(window, (15, 395), 'Choose!', \
                                     fontSize=50, textColor = WHITE, width = 610, justified = 'center')
 
 resultsField = pygwidgets.DisplayText(window, (20, 275), '', \
                                     fontSize=50, textColor=WHITE, width=610, justified='center')
+
+# For results screen
+rpsCollectionPlayer = pygwidgets.ImageCollection(window, (50, 62), \
+                    {ROCK:'images/Rock.png', PAPER:'images/Paper.png', SCISSORS:'images/Scissors.png'}, '')
+rpsCollectionComputer = pygwidgets.ImageCollection(window, (350, 62), \
+                    {ROCK:'images/Rock.png', PAPER:'images/Paper.png', SCISSORS:'images/Scissors.png'}, '')
+
+restartButton = pygwidgets.CustomButton(window, (220, 310), \
+                                    up='images/restartButtonUp.png', \
+                                    down='images/restartButtonDown.png', \
+                                    over='images/restartButtonHighlight.png')
+
 playerScoreCounter = pygwidgets.DisplayText(window, (15, 315), 'Player Score:', \
                                     fontSize=50, textColor = WHITE)
 
@@ -75,15 +84,14 @@ computerScoreCounter = pygwidgets.DisplayText(window, (300, 315), 'Computer Scor
                                     fontSize=50, textColor = WHITE)
 
 # Sounds
-winnerSound = pygame.mixer.Sound("sounds/ding.wav")
-tieSound = pygame.mixer.Sound("sounds/push.wav")
-loserSound = pygame.mixer.Sound("sounds/buzz.wav")
-
+winnerSound = pygame.mixer.Sound('sounds/ding.wav')
+tieSound = pygame.mixer.Sound('sounds/push.wav')
+loserSound = pygame.mixer.Sound('sounds/buzz.wav')
 
 # 5 - Initialize variables
 playerScore = 0
 computerScore = 0
-state = STATE_SPLASH    # The current state that the game is in
+state = STATE_SPLASH    # The starting state
 
 # 6 - Loop forever
 while True:
@@ -103,77 +111,70 @@ while True:
             playerChoice = ''  # Indicates no choice yet
             if  rockButton.handleEvent(event):
                 playerChoice = ROCK
-                playerImage = rockImage
+                rpsCollectionPlayer.replace(ROCK)
                 
-            if  paperButton.handleEvent(event):
+            elif  paperButton.handleEvent(event):
                 playerChoice = PAPER
-                playerImage = paperImage
+                rpsCollectionPlayer.replace(PAPER)
                 
-            if  scissorButton.handleEvent(event):
+            elif  scissorButton.handleEvent(event):
                 playerChoice = SCISSORS
-                playerImage = scissorImage
+                rpsCollectionPlayer.replace(SCISSORS)
 
             if playerChoice != '':    # player has made a choice, make computer choice
 
                 # Computer chooses from tuple of moves
-                RPS = (ROCK, PAPER,SCISSORS)
-                computerChoice = random.choice(RPS) # Computer chooses
+                rps = (ROCK, PAPER, SCISSORS)
+                computerChoice = random.choice(rps) # Computer chooses
+                rpsCollectionComputer.replace(computerChoice)
 
                 # Evaluate the Game
-                if computerChoice == ROCK:
-                    computerImage = rockImage
-                elif computerChoice == PAPER:
-                    computerImage = paperImage
-                else:
-                    computerImage = scissorImage
-
-                # Win/Lose/Tie Conditions
-                if playerChoice == computerChoice:
-                    resultsField.setValue("It's a tie!")
+                if playerChoice == computerChoice:  #Tie
+                    resultsField.setValue('It is a tie!')
                     tieSound.play()
                     
                 elif playerChoice == ROCK and computerChoice == SCISSORS:
-                    resultsField.setValue("Rock breaks Scissors.You win!")
+                    resultsField.setValue('Rock breaks Scissors.You win!')
                     playerScore = playerScore + 1
                     winnerSound.play()
 
                 elif playerChoice == ROCK and computerChoice == PAPER:
-                    resultsField.setValue("Rock is covered by Paper. You lose.")
+                    resultsField.setValue('Rock is covered by Paper. You lose.')
                     computerScore = computerScore + 1
                     loserSound.play()
                    
                 elif playerChoice == SCISSORS and computerChoice == PAPER:
-                    resultsField.setValue("Scissors cuts Paper.  You win!")
+                    resultsField.setValue('Scissors cuts Paper.  You win!')
                     playerScore = playerScore + 1
                     winnerSound.play()
 
                 elif playerChoice == SCISSORS and computerChoice == ROCK:
-                    resultsField.setValue("Scissors crushed by Rock. You lose.")
+                    resultsField.setValue('Scissors crushed by Rock. You lose.')
                     computerScore = computerScore + 1
                     loserSound.play()
 
                 elif playerChoice == PAPER and computerChoice == ROCK:
-                    resultsField.setValue("Paper covers Rock.  You win!")
+                    resultsField.setValue('Paper covers Rock.  You win!')
                     playerScore = playerScore + 1
                     winnerSound.play()
 
                 elif playerChoice == PAPER and computerChoice == SCISSORS:
-                    resultsField.setValue("Paper is cut by Scissors.  You lose.")
+                    resultsField.setValue('Paper is cut by Scissors.  You lose.')
                     computerScore = computerScore + 1
                     loserSound.play()
 
                 # Shows the player's score
-                playerScoreCounter.setValue("Your Score: "+ str(playerScore))
+                playerScoreCounter.setValue('Your Score: '+ str(playerScore))
                 # Shows the computer's score
-                computerScoreCounter.setValue("Computer Score: "+ str(computerScore))
+                computerScoreCounter.setValue('Computer Score: '+ str(computerScore))
 
-                state = STATE_SHOW_RESULTS
+                state = STATE_SHOW_RESULTS  # change state
 
         elif state == STATE_SHOW_RESULTS:
             if  restartButton.handleEvent(event):
-                state = STATE_PLAYER_CHOICE
+                state = STATE_PLAYER_CHOICE  # change state
 
-    # 8  Do any "per frame" actions
+    # 8  Do any 'per frame' actions
     if state == STATE_PLAYER_CHOICE:
         messageField.setValue('       Rock             Paper         Scissors')
     elif state == STATE_SHOW_RESULTS:
@@ -186,9 +187,9 @@ while True:
     messageField.draw()
 
     if state == STATE_SPLASH:
-        window.blit(rockImage, (25, 120))
-        window.blit(paperImage, (225, 120))
-        window.blit(scissorImage, (425, 120))
+        rockImage.draw()
+        paperImage.draw()
+        scissorsImage.draw()
         startButton.draw()
 
     # Draw player choices on window
@@ -201,8 +202,8 @@ while True:
     # Draw the results on to the window
     elif state == STATE_SHOW_RESULTS:
         resultsField.draw()
-        window.blit(playerImage, (50, 62))
-        window.blit(computerImage, (350, 62))
+        rpsCollectionPlayer.draw()
+        rpsCollectionComputer.draw()
         playerScoreCounter.draw()
         computerScoreCounter.draw()
         restartButton.draw()

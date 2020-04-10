@@ -18,9 +18,12 @@ class SceneResults(pyghelpers.Scene):
         self.playerScore = 0
         self.computerScore = 0
 
-        self.rockImage = pygame.image.load("images/Rock.png")
-        self.paperImage = pygame.image.load("images/Paper.png")
-        self.scissorImage = pygame.image.load("images/Scissors.png")
+        self.rpsCollectionPlayer = pygwidgets.ImageCollection(window, (50, 62), \
+                                    {ROCK: 'images/Rock.png', PAPER: 'images/Paper.png',
+                                    SCISSORS: 'images/Scissors.png'}, '')
+        self.rpsCollectionComputer = pygwidgets.ImageCollection(window, (350, 62), \
+                                    {ROCK: 'images/Rock.png', PAPER: 'images/Paper.png',
+                                    SCISSORS: 'images/Scissors.png'}, '')
 
         self.youComputerField = pygwidgets.DisplayText(window, (22, 25), 'You                     Computer', \
                                                 fontSize=50, textColor=WHITE, width=610, justified='center')
@@ -52,18 +55,18 @@ class SceneResults(pyghelpers.Scene):
 
         # Set the player and computer images
         if playerChoice == ROCK:
-            self.playerImage = self.rockImage
+            self.rpsCollectionPlayer.replace(ROCK)
         elif playerChoice == PAPER:
-            self.playerImage = self.paperImage
+            self.rpsCollectionPlayer.replace(PAPER)
         else:
-            self.playerImage = self.scissorImage
+            self.rpsCollectionPlayer.replace(SCISSORS)
 
         if computerChoice == ROCK:
-            self.computerImage = self.rockImage
+            self.rpsCollectionComputer.replace(ROCK)
         elif computerChoice == PAPER:
-            self.computerImage = self.paperImage
+            self.rpsCollectionComputer.replace(PAPER)
         else:
-            self.computerImage = self.scissorImage
+            self.rpsCollectionComputer.replace(SCISSORS)
 
 
         # Evaluate the game  Win/Lose/Tie Conditions
@@ -105,8 +108,6 @@ class SceneResults(pyghelpers.Scene):
         self.playerScoreCounter.setValue('Score: ' + str(self.playerScore))
         self.computerScoreCounter.setValue('Score: ' + str(self.computerScore))
 
-
-
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:
             if self.restartButton.handleEvent(event):
@@ -119,8 +120,8 @@ class SceneResults(pyghelpers.Scene):
 
         self.youComputerField.draw()
         self.resultsField.draw()
-        self.window.blit(self.playerImage, (50, 62))
-        self.window.blit(self.computerImage, (350, 62))
+        self.rpsCollectionPlayer.draw()
+        self.rpsCollectionComputer.draw()
         self.playerScoreCounter.draw()
         self.computerScoreCounter.draw()
         self.restartButton.draw()

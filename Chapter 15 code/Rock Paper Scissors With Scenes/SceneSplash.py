@@ -25,9 +25,9 @@ class SceneSplash(pyghelpers.Scene):
                                                 down='images/startButtonDown.png', \
                                                 over='images/startButtonHighlight.png')
 
-        self.rockImage = pygame.image.load("images/Rock.png")
-        self.paperImage = pygame.image.load("images/Paper.png")
-        self.scissorImage = pygame.image.load("images/Scissors.png")
+        self.rockImage = pygwidgets.Image(window, (25, 120), 'images/Rock.png')
+        self.paperImage = pygwidgets.Image(window, (225, 120), 'images/Paper.png')
+        self.scissorsImage = pygwidgets.Image(window, (425, 120), 'images/Scissors.png')
 
     def enter(self, data):
         pass
@@ -43,9 +43,9 @@ class SceneSplash(pyghelpers.Scene):
     def draw(self):
         self.window.fill(GRAY)
         self.messageField.draw()
-        self.window.blit(self.rockImage, (25, 120))
-        self.window.blit(self.paperImage, (225, 120))
-        self.window.blit(self.scissorImage, (425, 120))
+        self.rockImage.draw()
+        self.paperImage.draw()
+        self.scissorsImage.draw()
         self.startButton.draw()
 
     def leave(self):

@@ -11,7 +11,6 @@ class TV():
         self.VOLUME_MINIMUM = 0  # constant
         self.VOLUME_MAXIMUM = 10  # constant
         self.volume = self.VOLUME_MAXIMUM // 2  # integer divide
-
         
     def power(self):
         self.isOn = not self.isOn  # toggle
@@ -56,7 +55,6 @@ class TV():
             return  # not in our list of legal channel, don't do anything
         self.channelIndex = self.channelList.index(newChannel)
 
-
     def showInfo(self):
         print()
         print('Status of TV:')
@@ -69,8 +67,6 @@ class TV():
                 print('    Volume is:', self.volume)
         else:
             print('    TV is: Off')
-
-
 
 # Test code
 oTV1 = TV()  # create one TV object

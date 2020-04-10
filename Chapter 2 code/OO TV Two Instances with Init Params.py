@@ -13,8 +13,7 @@ class TV():
         self.VOLUME_MINIMUM = 0  # constant
         self.VOLUME_MAXIMUM = 10  # constant
         self.volume = self.VOLUME_MAXIMUM // 2  # integer divide
-
-        
+       
     def power(self):
         self.isOn = not self.isOn  # toggle
 
@@ -58,7 +57,6 @@ class TV():
             return  # not in our list of legal channel, don't do anything
         self.channelIndex = self.channelList.index(newChannel)
 
-
     def showInfo(self):
         print()
         print('Status of TV:', self.brand)
@@ -73,8 +71,6 @@ class TV():
         else:
             print('    TV is: Off')
 
-
-
 # Test code - create two
 oTV1 = TV('Sony', 'Family room')  # create one TV object
 oTV2 = TV('Samsung', 'Bedroom')  # create another TV object
@@ -88,12 +84,12 @@ oTV1.volumeUp()
 oTV1.volumeUp()
 
 # raise the volume of TV2
+oTV2.volumeUp()
+oTV2.volumeUp()
+oTV2.volumeUp()
+oTV2.volumeUp()
+oTV2.volumeUp()
 
-oTV2.volumeUp()
-oTV2.volumeUp()
-oTV2.volumeUp()
-oTV2.volumeUp()
-oTV2.volumeUp()
 # change TV2's channel and mute it
 oTV2.setChannel(44)
 oTV2.mute()
