@@ -1,46 +1,30 @@
-# DimmerSwitch Procedural Code
+# Dimmer Switch class
 
-def turnOn():    
-    on = True
-    # turn  on the light at the given setting
-    return on
+class DimmerSwitch():
+    def __init__(self):
+        self.isOn = False
+        self.brightness = 0
+        
+    def turnOn(self):
+        self.isOn = True
 
-def turnOff():
-    on = False
-    #turn off the light
-    return on
+    def turnOff(self):
+        self.isOn = False
 
-def raiseLevel(currentSetting):
-    newSetting = currentSetting
-    if newSetting <= 10:
-        newSetting = newSetting + 1
-    return newSetting
+    def raiseLevel(self):
+        if self.brightness < 10:
+            self.brightness = self.brightness + 1
 
-def lowerLevel(currentSetting):
-    newSetting = currentSetting
-    if newSetting > 0:
-        newSetting = newSetting - 1
-    return newSetting
+    def lowerLevel(self):
+        if self.brightness > 0:
+            self.brightness = self.brightness - 1
 
-    
-# Main code
+    # Extra method for debugging
+    def show(self):
+        print('Switch is on?', self.isOn)
+        print('Brightness is:', self.brightness)
 
-brightness = 0   # a global integer variable
-switchIsOn = False  # global boolean
 
-##  Test code:
-switchIsOn = turnOn()
-brightness = raiseLevel(brightness)
-brightness = raiseLevel(brightness)
-brightness = raiseLevel(brightness)
-brightness = raiseLevel(brightness)
-brightness = raiseLevel(brightness)
-print  'Light is on? ', switchIsOn, '  Brightness is: ', brightness
-brightness = lowerLevel(brightness)
-switchIsOn = turnOff()
-print  'Light is on? ', switchIsOn, '  Brightness is: ', brightness
-switchIsOn = turnOn()
-brightness = raiseLevel(brightness)
-brightness = raiseLevel(brightness)
-brightness = raiseLevel(brightness)
-print  'Light is on? ', switchIsOn, '  Brightness is: ', brightness
+
+
+

@@ -16,8 +16,8 @@ switchIsOn = False     # a global Boolean variable
 ##  Test code:
 print(switchIsOn)
 turnOn()
-print switchIsOn)
+print(switchIsOn)
 turnOff()
-prin(switchIsOn)
+print(switchIsOn)
 turnOn()
 print(switchIsOn)

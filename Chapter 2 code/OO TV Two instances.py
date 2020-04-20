@@ -1,4 +1,4 @@
-# TV class
+# Two TV objects with calls to their methods
 
 class TV():
     def __init__(self):  
