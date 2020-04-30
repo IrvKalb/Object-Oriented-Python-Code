@@ -1,17 +1,17 @@
-# DimmerSwitch class with Test Code
-
 # Dimmer Switch class
 
-class Dimmer():
+class DimmerSwitch():
     def __init__(self):
         self.isOn = False
         self.brightness = 0
         
     def turnOn(self):
         self.isOn = True
+        # turn the light on at self.brightness
 
     def turnOff(self):
         self.isOn = False
+        # turn the light off
 
     def raiseLevel(self):
         if self.brightness < 10:
@@ -22,29 +22,35 @@ class Dimmer():
             self.brightness = self.brightness - 1
 
     # Extra method for debugging
-    def showState(self):
-        print('Switch is on?', self.isOn)
-        print('Brightness is:', self.brightness)   
+    def show(self):
+        print('Light is on?', self.isOn)
+        print('Brightness is:', self.brightness)
+
+    
 
 # Main code
 
-oDimmer1 = Dimmer( )
-oDimmer2 = Dimmer( )
-
-print(type(oDimmer1))
-
+# Create first Dimmer Switch, turn on and raise level twice
+oDimmer1 = DimmerSwitch()
 oDimmer1.turnOn()
 oDimmer1.raiseLevel()
 oDimmer1.raiseLevel()
 
-oDimmer2.raiseLevel()
-oDimmer2.raiseLevel()
+# Create second Dimmer Switch, turn on and raise level 3 times
+oDimmer2 = DimmerSwitch()
+oDimmer2.turnOn()
 oDimmer2.raiseLevel()
 oDimmer2.raiseLevel()
 oDimmer2.raiseLevel()
 
-oDimmer1.showState()
-oDimmer2.showState()
+# Create third Dimmer Switch, leave alone, use default settings
+oDimmer3 = DimmerSwitch()
+
+# Ask each switch to show itself
+oDimmer1.show()
+oDimmer2.show()
+oDimmer3.show()
+
 
 
 

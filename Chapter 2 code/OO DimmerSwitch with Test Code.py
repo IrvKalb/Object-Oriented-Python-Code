@@ -26,9 +26,7 @@ class DimmerSwitch():
         print('Switch is on?', self.isOn)
         print('Brightness is:', self.brightness)
 
-
 # Main code
-
 oDimmer = DimmerSwitch( )
 
 ##  Dimmer test code:

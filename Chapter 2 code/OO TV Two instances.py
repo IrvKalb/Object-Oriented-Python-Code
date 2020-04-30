@@ -35,8 +35,8 @@ class TV():
         if not self.isOn:
             return
         self.channelIndex = self.channelIndex + 1
-        if self.channelIndex > self.nChannels:
-            self.channelIndex = 0
+        if self.channelIndex == self.nChannels:
+            self.channelIndex = 0  #wrap around to the first channel
 
     def channelDown(self):
         if not self.isOn:
