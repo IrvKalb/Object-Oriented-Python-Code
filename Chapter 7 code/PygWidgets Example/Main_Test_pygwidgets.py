@@ -3,11 +3,14 @@
 #  4/17  Developed by Irv Kalb
 
 # 1 - Import libraries
+import os
+import sys
+# The next line is here just in case you are running from the command line
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 import pygame
 from pygame.locals import *
 import pygwidgets
-import os
-import sys
+
 
 # 2 - Define constants
 BLACK = (0, 0, 0)
@@ -19,6 +22,8 @@ WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 640
 FRAMES_PER_SECOND = 30
 
+# The function and Test class and method below are not required.
+# These are only here as a demonstration of how you could use a callback approach to handling events if you want to.
 
 # Define a function to be used as a "callBack"
 def myFunction(theNickname):
@@ -43,8 +48,6 @@ clock = pygame.time.Clock()  # set the speed (frames per second)
 oTest = Test()
  
 # 4 - Load assets: image(s), sounds,  etc.
-# The next line is here just in case you are running from the command line
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
 backgroundImage = pygwidgets.Image(window, (0, 0), 'images/background1.jpg')
 displayTextTitle = pygwidgets.DisplayText(window, (0, 20), 'pygwidgets example by Irv Kalb', \
                                     fontSize=36, width= 640, textColor=BLACK, justified='center')
@@ -71,14 +74,14 @@ restartButton = pygwidgets.CustomButton(window, (100, 430), \
                                     disabled='images/RestartButtonDisabled.png',
                                     soundOnClick='sounds/blip.wav',
                                     nickname='RestartButton',
-                                    callBack=myFunction)
+                                    callBack=myFunction)  #  callBack here is not required
 
 # checkBoxA controls the availability of checkBoxB and checkBoxC
 # checkBoxB will control the availiability the custom radio buttons
 # checkBoxC will control the availiability of the text radio buttons
 # checkBoxA and checkBoxC are text checkboxes, checkboxB is a custom checkBox
 
-checkBoxA = pygwidgets.TextCheckBox(window, (410, 70), 'Allow Check Boxes')
+checkBoxA = pygwidgets.TextCheckBox(window, (410, 80), 'Allow Check Boxes')
 
 checkBoxB = pygwidgets.CustomCheckBox(window, (450, 110), value=True,
                             on='images/checkBoxOn.png', off='images/checkBoxOff.png', \
@@ -103,7 +106,7 @@ radioCustom3 = pygwidgets.CustomRadioButton(window, (500, 230), 'Custom Group', 
                             onDisabled='images/RadioHighOnDisabled.png', offDisabled='images/RadioHighOffDisabled.png', \
                             value=False, nickname='High')
 
-checkBoxC = pygwidgets.TextCheckBox(window, (450, 290), 'Allow Radio Buttons')
+checkBoxC = pygwidgets.TextCheckBox(window, (450, 295), 'Allow Radio Buttons')
 
 radioText1 = pygwidgets.TextRadioButton(window, (500, 320), 'Default Group', 'Radio Text 1', \
                                       value=False)
@@ -115,7 +118,7 @@ radioText3 = pygwidgets.TextRadioButton(window, (500, 400), 'Default Group', 'Ra
                                       value=False)
 
 statusButton = pygwidgets.TextButton(window, (500, 430), 'Show Status',
-                                     callBack=oTest.myMethod)
+                                     callBack=oTest.myMethod)  # callBack here is not required
 
 myDragger = pygwidgets.Dragger(window, (300, 200), 
                         'images/dragMeUp.png', \
@@ -126,7 +129,7 @@ myDragger = pygwidgets.Dragger(window, (300, 200),
 
 pythonIcon = pygwidgets.Image(window, (15, 500), 'images/pythonIcon.png')
 
-myImages = pygwidgets.ImageCollection(window, (400, 500), \
+myImages = pygwidgets.ImageCollection(window, (400, 490), \
                                 {'start':'imageStart.jpg', \
                                  'left':'imageLeft.jpg', \
                                  'right':'imageRight.jpg', \
@@ -134,10 +137,16 @@ myImages = pygwidgets.ImageCollection(window, (400, 500), \
                                  'down':'imageDown.jpg'}, \
                                 'start', path='images/')
 
-myImagesInstructions = pygwidgets.DisplayText(window, (400, 600), 'Click then type l, r, d, u, or s')
+myImagesInstructions = pygwidgets.DisplayText(window, (400, 595), 'Click then type l, r, d, u, s, or Space')
 
 
-iconInstructions = pygwidgets.DisplayText(window, (15, 600), 'Click then up or down to resize,\nleft or right to rotate')
+iconInstructions = pygwidgets.DisplayText(window, (15, 595),
+                                          'Click then up or down arrow to resize,\n' + \
+                                          'left or right arrow to rotate, \n' + \
+                                          'h or v to flip horizontal or vertical')
+
+frisbeeImage = pygwidgets.Image(window, (562, 2), 'images/frisbee.png')
+
 
 
 # 5 - Initialize variables
@@ -237,7 +246,17 @@ while True:
             print('The currently selected Text Radio Button is:', nickname)
 
         if myDragger.handleEvent(event):
-            print('Done dragging, nickname was', myDragger.getNickname())
+            print('Done dragging, dragger nickname was:', myDragger.getNickname())
+            print('  Mouse up at:', myDragger.getMouseUpLoc())
+            print('  Dragger is now located at', myDragger.getLoc())
+
+        if myImages.handleEvent(event):
+            print('Got click on image collection at', event.pos)
+
+        if frisbeeImage.handleEvent(event):
+            print('Got click on the frisbee image at', event.pos)
+
+
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_l:
@@ -250,6 +269,13 @@ while True:
                 myImages.replace('down')
             elif event.key == pygame.K_s:
                 myImages.replace('start')
+            elif event.key == pygame.K_SPACE:
+                myImages.replace('')
+
+            elif event.key == pygame.K_h:
+                pythonIcon.flipHorizontal()
+            elif event.key == pygame.K_v:
+                pythonIcon.flipVertical()
 
     keyPressedList = pygame.key.get_pressed()
     if keyPressedList[pygame.K_LEFT]:
@@ -272,6 +298,9 @@ while True:
             pct = pct - 10
         pythonIcon.scale(pct, scaleFromCenter=scaleFromCenter)
         #print('Scaling down to', pct, '%')
+
+
+       
 
 
     # 8  Do any "per frame" actions
@@ -303,6 +332,7 @@ while True:
     statusButton.draw()
     myDragger.draw()
     myImages.draw()
+    frisbeeImage.draw()
     myImagesInstructions.draw()
     iconInstructions.draw()
 

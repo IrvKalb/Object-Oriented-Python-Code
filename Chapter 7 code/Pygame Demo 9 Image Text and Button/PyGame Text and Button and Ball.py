@@ -23,9 +23,12 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()  # set the speed (frames per second)
 
 # 4 - Load assets: image(s), sounds,  etc.
-ballImage = pygwidgets.Image(window, (0, 0), 'images/ball.png')
+#ball = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables
+#ballRect = ball.get_rect()
+
+ball = pygwidgets.Image(window, (0, 0), 'images/ball.png')
 ballLeft = 0
 ballTop = 0
 
@@ -37,6 +40,8 @@ xSpeed = N_PIXELS_PER_FRAME
 ySpeed = N_PIXELS_PER_FRAME
 
 
+
+background = pygwidgets.Image(window, (0, 0), 'images/background1.jpg')
 
 restartButton = pygwidgets.CustomButton(window, (500, 430), \
                                         up='images/RestartButtonUp.png', \
@@ -88,26 +93,30 @@ while True:
             print('The the second field, the user entered:', userText)
 
 
-    # 8 - Do any "per frame" actions
+    # Main code
     counter = counter + 1
     messageTextA.setValue('Here is some text.  Loop counter:' + str(counter))
-    
-    if (ballLeft < 0) or (ballLeft  > MAX_WIDTH):
+
+    ballLeft, ballRight = ball.getLoc()
+
+    # 8 - Do any "per frame" actions
+    if (ballLeft < 0) or (ballLeft + BALL_WIDTH_HEIGHT > WINDOW_WIDTH):
         xSpeed = -xSpeed  # reverse X direction
 
-    if (ballTop < 0) or (ballTop > MAX_HEIGHT):
+    if (ballTop < 0) or (ballTop + BALL_WIDTH_HEIGHT > WINDOW_HEIGHT):
         ySpeed = -ySpeed  # reverse Y direction
 
-    # update the location of the ball, based on the speed in two directions
+    # update the rectangle of the ball, based on the speed in two directions
     ballLeft = ballLeft + xSpeed
     ballTop = ballTop + ySpeed
-    ballImage.setLoc((ballLeft, ballTop ))
+    ball.setLoc( (ballLeft, ballTop ))
+
 
     # 9 - Clear the screen before drawing it again
-    window.fill(GRAY)
+    background.draw()  # draw a background image
                           
     # 10 - Draw the screen elements
-    ballImage.draw()
+    ball.draw()
 
     restartButton.draw()
     hitMeButton.draw()

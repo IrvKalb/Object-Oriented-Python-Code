@@ -54,7 +54,6 @@ while True:
     
     # 10 - Draw the screen elements
     oBall.draw()   # tell the ball to draw itself
-    frameCountDisplay.draw()
     restartButton.draw()
 
     # 11 - Update the screen
