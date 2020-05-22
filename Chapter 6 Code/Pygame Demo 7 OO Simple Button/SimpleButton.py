@@ -1,11 +1,17 @@
 #
 # SIMPLE BUTTON
 #
+# Uses a "state machine" approach
+#
 
 import pygame
 from pygame.locals import *
 
 class SimpleButton():
+    # used to track the state of the button
+    STATE_IDLE = 'idle'
+    STATE_ARMED = 'armed'
+    STATE_DISARMED = 'disarmed'
         
     def __init__(self, window, loc, up, down):
 
@@ -14,16 +20,14 @@ class SimpleButton():
         self.surfaceUp = pygame.image.load(up)
         self.surfaceDown = pygame.image.load(down)
 
-        # figure out the rect of the button, (used to see if the mouse is within the button)
+        # get the rect of the button, (used to see if the mouse is within the button)
         self.rect = self.surfaceUp.get_rect()
-        self.rect.left = self.loc[0]
-        self.rect.top = self.loc[1]
+        self.rect[0] = loc[0]
+        self.rect[1] = loc[1]
 
-        # used to track the state of the button
-        self.buttonDown = False # is the button currently pushed down?
-        self.mouseOverButton = False # is the mouse currently hovering over the button?
-        self.lastMouseDownOverButton = False # was the last mouse down event over the button? (Tracks clicks.)
-        self.mouseIsDown = False
+
+
+        self.state = SimpleButton.STATE_IDLE
 
 
     def handleEvent(self, eventObj):
@@ -31,57 +35,38 @@ class SimpleButton():
         # Normally returns False.
 
         if eventObj.type not in (MOUSEMOTION, MOUSEBUTTONUP, MOUSEBUTTONDOWN) :
-            # The button only cares bout mouse-related events 
+            # The button only cares about mouse-related events
             return False
 
-        clicked = False
-
         eventPointInButtonRect = self.rect.collidepoint(eventObj.pos)
-        if (not self.mouseOverButton) and eventPointInButtonRect:
-            # if mouse has entered the button:
-            self.mouseOverButton = True
 
-        elif self.mouseOverButton and (not eventPointInButtonRect):
-            # if mouse has exited the button:
-            self.mouseOverButton = False
+        if self.state == SimpleButton.STATE_IDLE:
+            if (eventObj.type == MOUSEBUTTONDOWN) and eventPointInButtonRect:
+                self.state = SimpleButton.STATE_ARMED
 
-        if eventPointInButtonRect:
-            if eventObj.type == MOUSEBUTTONDOWN:
-                self.buttonDown = True
-                self.lastMouseDownOverButton = True
-        else:
-            if eventObj.type in (MOUSEBUTTONUP, MOUSEBUTTONDOWN):
-                # if an up/down happens off the button, then the next up won't cause mouseClick()
-                self.lastMouseDownOverButton = False
+        elif self.state == SimpleButton.STATE_ARMED:
+            if (eventObj.type == MOUSEBUTTONUP) and eventPointInButtonRect:
+                self.state = SimpleButton.STATE_IDLE
+                return True  # clicked!
 
-        if eventObj.type == MOUSEBUTTONDOWN:
-            self.mouseIsDown = True
-            
-        # mouse up is handled whether or not it was over the button
-        doMouseClick = False
-        if eventObj.type == MOUSEBUTTONUP:
-            self.mouseIsDown = False
-            if self.lastMouseDownOverButton:
-                doMouseClick = True
-            self.lastMouseDownOverButton = False
+            if (eventObj.type == MOUSEMOTION) and not(eventPointInButtonRect):
+                self.state = SimpleButton.STATE_DISARMED
 
-            if self.buttonDown:
-                self.buttonDown = False
+        elif self.state == SimpleButton.STATE_DISARMED:
+            if eventPointInButtonRect:
+                self.state = SimpleButton.STATE_ARMED
+            elif eventObj.type == MOUSEBUTTONUP:
+                self.state = SimpleButton.STATE_IDLE
 
-            if doMouseClick:
-                self.buttonDown = False
-                clicked = True
-
-        return clicked
+        return False
 
     def draw(self):
         # Draw the button's current appearance to the window.
-        if self.mouseIsDown:
-            if self.mouseOverButton and self.lastMouseDownOverButton:
-                self.window.blit(self.surfaceDown, self.loc)
-            else:
-                self.window.blit(self.surfaceUp, self.loc)
-        else:  # mouse is up
+        #print('In draw, state is:', self.state)
+        if self.state == SimpleButton.STATE_ARMED:
+            self.window.blit(self.surfaceDown, self.loc)
+
+        else:  # IDLE or DISARMED
             self.window.blit(self.surfaceUp, self.loc)
 
 
