@@ -9,32 +9,32 @@ class Vector():
     def __str__(self):
         return 'This vector has an x of ' + str(self.x) + ' and a y of ' + str(self.y)
 
-    def __add__(self, other):  # called for + operator
-        return Vector(self.x + other.x, self.y + other.y)
+    def __add__(self, oOther):  # called for + operator
+        return Vector(self.x + oOther.x, self.y + oOther.y)
 
-    def __sub__(self, other):  # called for - operator
-        return Vector(self.x - other.x, self.y - other.y)
+    def __sub__(self, oOther):  # called for - operator
+        return Vector(self.x - oOther.x, self.y - oOther.y)
 
-    def __mul__(self, other):  # called for * operator
-        return (self.x * other.x) + (self.y * other.y)
+    def __mul__(self, oOther):  # called for * operator
+        return (self.x * oOther.x) + (self.y * oOther.y)
 
     def __abs__(self):
         return (self.x ** 2 + self.y ** 2) ** 0.5
 
-    def __eq__(self, other):  # called for == operator
-        return (self.x == other.x) and (self.y == other.y)
+    def __eq__(self, oOther):  # called for == operator
+        return (self.x == oOther.x) and (self.y == oOther.y)
 
-    def __ne__(self, other):  # called for != operator
-        return not self.__eq__(other)  # reuse __eq__
+    def __ne__(self, oOther):  # called for != operator
+        return not self.__eq__(oOther)  # reuse __eq__
 
-    def __lt__(self, other):    # called for < operator
-        if self.__abs__() < other.__abs__():
+    def __lt__(self, oOther):    # called for < operator
+        if self.__abs__() < oOther.__abs__():
             return True
         else:
             return False
         
-    def __gt__(self, other):  # called for > operator
-        if self.__abs__() > other.__abs__():
+    def __gt__(self, oOther):  # called for > operator
+        if self.__abs__() > oOther.__abs__():
             return True
         else:
             return False
