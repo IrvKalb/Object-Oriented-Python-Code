@@ -16,11 +16,12 @@ class DisplayMoney(pygwidgets.DisplayText):
                  fontName=None, fontSize=24, width=150, height=None, \
                  textColor=BLACK, backgroundColor=None, justified='left',\
                  currencySymbol='$', currencySymbolOnLeft=True, showCents=True):
-        if startingAmount == '':
-            startingAmount = 0.00
+
         self.currencySymbol = currencySymbol
         self.currencySymbolOnLeft = currencySymbolOnLeft
         self.showCents = showCents
+        if startingAmount == '':
+            startingAmount = 0.00
 
         # Call the __init__ method of our base class
         super().__init__(window, loc, startingAmount, \

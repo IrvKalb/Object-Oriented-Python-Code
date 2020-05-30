@@ -1,7 +1,7 @@
 # Shape class
 #
 # To be used as a base class for other classes
-
+#
 import random
 
 # set up the colors
@@ -15,10 +15,11 @@ class Shape():  # This is an abstract class
         if type(self) is Shape:
             raise Exception('You cannot instantiate a Shape class directly.')
         self.window = window
+        self.type = whichShape
         self.color = random.choice((RED, GREEN, BLUE))
         self.x = random.randrange(0, 400)
         self.y = random.randrange(0, 400)
-        self.type = whichShape
+
 
     def getType(self):
         return self.type

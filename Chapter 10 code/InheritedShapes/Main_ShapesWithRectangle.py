@@ -1,4 +1,4 @@
-# Main Shapes program
+# Main Shapes with abstract methods
 
 import pygame
 import sys
@@ -6,6 +6,7 @@ from pygame.locals import *
 from Square import *
 from Circle import *
 from Triangle import *
+from Rectangle import *
 
 # set up the constants
 WHITE = (255, 255, 255)
@@ -20,13 +21,15 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 clock = pygame.time.Clock()
 
 shapesList = []
-shapeTypesTuple = ('Square', 'Circle', 'Triangle')
+shapeTypesTuple = ('Square', 'Circle', 'Triangle', 'Rectangle')
 for i in range(0, N_SHAPES):
     thisType = random.choice(shapeTypesTuple)
     if thisType == 'Square':
         oShape = Square(window)
     elif thisType == 'Circle':
         oShape = Circle(window)
+    elif thisType == 'Rectangle':
+        oShape = Rectangle(window)
     else:  # must be triangle
         oShape = Triangle(window)
     shapesList.append(oShape)
@@ -45,8 +48,8 @@ while True:
                     thisType = oShape.getType()
                     print('Clicked on a', thisType,  'whose area is', str(thisArea))
 
-    # draw on the surface object
     window.fill(WHITE)
+    # Tell each shape to draw itself
     for oShape in shapesList:
         oShape.draw()
 
