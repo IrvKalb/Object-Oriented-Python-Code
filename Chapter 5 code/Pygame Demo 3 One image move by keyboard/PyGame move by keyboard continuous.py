@@ -46,22 +46,22 @@ while True:
             pygame.quit()  
             sys.exit()
 
+    # 8 - Do any "per frame" actions
     # Check for user pressing keys
-    keyPressedList = pygame.key.get_pressed()
+    keyPressedTuple = pygame.key.get_pressed()
            
-    if keyPressedList[pygame.K_LEFT]:  # moving left
+    if keyPressedTuple[pygame.K_LEFT]:  # moving left
         ballX = ballX - N_PIXELS_TO_MOVE
 
-    if keyPressedList[pygame.K_RIGHT]:  # moving right
+    if keyPressedTuple[pygame.K_RIGHT]:  # moving right
         ballX = ballX + N_PIXELS_TO_MOVE
 
-    if keyPressedList[pygame.K_UP]:  # moving up
+    if keyPressedTuple[pygame.K_UP]:  # moving up
         ballY = ballY - N_PIXELS_TO_MOVE
 
-    if keyPressedList[pygame.K_DOWN]:  # moving down
+    if keyPressedTuple[pygame.K_DOWN]:  # moving down
         ballY = ballY + N_PIXELS_TO_MOVE            
 
-    # 8 - Do any "per frame" actions
     # Check if the ball is colliding with the target
     ballRect = pygame.Rect(ballX, ballY, BALL_WIDTH_HEIGHT, BALL_WIDTH_HEIGHT)
     if ballRect.colliderect(targetRect):
@@ -78,7 +78,7 @@ while True:
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make PyGame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait the correct amount
 
 
 

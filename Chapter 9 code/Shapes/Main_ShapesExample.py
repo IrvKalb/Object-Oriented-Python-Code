@@ -4,6 +4,7 @@ from pygame.locals import *
 from Square import *
 from Circle import *
 from Triangle import *
+import pygwidgets
 
 # set up the constants
 WHITE = (255, 255, 255)
@@ -29,6 +30,9 @@ for i in range(0, N_SHAPES):
         oShape = Triangle(window)
     shapesList.append(oShape)
 
+statusLine = pygwidgets.DisplayText(window, (4,4), \
+                    'Click on shapes', fontSize=28)
+
 # main loop
 while True:
     for event in pygame.event.get():
@@ -41,12 +45,14 @@ while True:
                 if oShape.clickedInside(event.pos):
                     thisArea = oShape.getArea()
                     thisType = oShape.getType()
-                    print('Clicked on a', thisType,  'whose area is', str(thisArea))
+                    newText = 'Clicked on a ' + thisType + ' whose area is ' + str(thisArea)
+                    statusLine.setValue(newText)
 
-    # draw on the surface object
+    # Tell each shape to draw itself
     window.fill(WHITE)
     for oShape in shapesList:
         oShape.draw()
+    statusLine.draw()
 
     pygame.display.update()
     clock.tick(FRAMES_PER_SECOND)
