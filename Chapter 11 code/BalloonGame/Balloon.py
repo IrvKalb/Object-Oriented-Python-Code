@@ -34,7 +34,6 @@ class Balloon():
             self.nPoints = 10
             self.speedY = 1.5
 
-
         balloonRect = self.balloonImage.getRect()
         self.width = balloonRect.width
         self.height = balloonRect.height

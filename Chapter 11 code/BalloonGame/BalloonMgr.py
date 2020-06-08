@@ -31,7 +31,6 @@ class BalloonMgr():
             self.balloonList.append(oBalloon)
 
 
-
     def handleEvent(self, event):
         if event.type == MOUSEBUTTONDOWN:
             for oBalloon in self.balloonList:

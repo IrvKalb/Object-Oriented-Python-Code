@@ -1,7 +1,7 @@
 # Sample class
 class Sample():
 
-    nObjects = 0  # This is a class variable
+    nObjects = 0  # This is a class variable of the Sample class
     def __init__(self, name):
         self.name = name
         Sample.nObjects = Sample.nObjects + 1
