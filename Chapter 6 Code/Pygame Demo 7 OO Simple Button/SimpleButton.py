@@ -25,16 +25,13 @@ class SimpleButton():
         self.rect[0] = loc[0]
         self.rect[1] = loc[1]
 
-
-
         self.state = SimpleButton.STATE_IDLE
-
 
     def handleEvent(self, eventObj):
         # This method will return True if user clicks the button.
         # Normally returns False.
 
-        if eventObj.type not in (MOUSEMOTION, MOUSEBUTTONUP, MOUSEBUTTONDOWN) :
+        if eventObj.type not in (MOUSEMOTION, MOUSEBUTTONUP, MOUSEBUTTONDOWN):
             # The button only cares about mouse-related events
             return False
 
@@ -62,7 +59,6 @@ class SimpleButton():
 
     def draw(self):
         # Draw the button's current appearance to the window.
-        #print('In draw, state is:', self.state)
         if self.state == SimpleButton.STATE_ARMED:
             self.window.blit(self.surfaceDown, self.loc)
 

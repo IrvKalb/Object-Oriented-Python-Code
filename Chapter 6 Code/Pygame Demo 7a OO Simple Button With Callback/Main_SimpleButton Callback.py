@@ -1,4 +1,4 @@
-#  Pygame demo 7a 3-Button Test with callbacks
+#  pygame demo 7a 3-Button Test with callbacks
 
 # 1 - Import packages
 import pygame
@@ -14,7 +14,7 @@ FRAMES_PER_SECOND = 30
 
 # Define a function to be used as a "callback"
 def myCallBackFunction():
-    print('Called myFunction')
+    print('Called myCallBackFunction')
 
 # Define a class with a method to be used as a "callback"
 class CallBackTest():
@@ -38,7 +38,7 @@ oCallBackTest = CallBackTest()
 # Create instances of SimpleButton
 oButtonA = SimpleButton(window, (25, 30), \
                         'images/buttonAUp.png', \
-                        'images/buttonADown.png')
+                        'images/buttonADown.png')  # no callback
 oButtonB = SimpleButton(window, (150, 30), \
                         'images/buttonBUp.png', \
                         'images/buttonBDown.png', myCallBackFunction)  # specifying a function to call back
@@ -83,4 +83,4 @@ while True:
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make PyGame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait the correct amount

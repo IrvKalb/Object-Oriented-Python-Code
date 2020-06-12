@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e048782-f67d-475e-ad4b-4f2fa26d1651" name="Default" comment="" />
+    <list default="true" id="4e048782-f67d-475e-ad4b-4f2fa26d1651" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button With Callback/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /.idea/Pygame Demo 6 Ball Bounce Object Oriented .iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /.idea/Pygame Demo 6 Ball Bounce Object Oriented .iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /Main_BallBounce Many Balls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /Main_BallBounce Many Balls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /Main_BallBounce.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 6 Ball Bounce Object Oriented /Main_BallBounce.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/.idea/PyGame Demo 7 OO Simple Button.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/.idea/PyGame Demo 7 OO Simple Button.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/Main_SimpleButton 3 Buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/Main_SimpleButton 3 Buttons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/Main_SimpleButton.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/Main_SimpleButton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/SimpleButton.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/SimpleButton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button With Callback/Main_SimpleButton Callback.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button With Callback/Main_SimpleButton Callback.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button with callback/.idea/PyGame Demo 7 OO Simple Button.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button with callback/.idea/PyGame Demo 7 OO Simple Button.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button with callback/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button with callback/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button with callback/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7a OO Simple Button with callback/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/.idea/Pygame Demo 8 Simple Text Display.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/.idea/Pygame Demo 8 Simple Text Display.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/Main_Ball Text and Button.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/Main_Ball Text and Button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Pygame Demo 9 Image Text and Button.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Pygame Demo 9 Image Text and Button.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyGame Text and Button and Ball.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyGame Text and Button and Ball.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,25 +39,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pygwidgets.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygwidgets.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="PyGame Text and Button and Ball.py" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PyGame Text and Button and Ball.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="355">
+              <caret line="133" column="45" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/PyGame Text and Button and Ball.py" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1916" />
-    <option name="y" value="47" />
+    <option name="x" value="1692" />
+    <option name="y" value="90" />
     <option name="width" value="1546" />
     <option name="height" value="864" />
   </component>
@@ -49,12 +82,12 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -66,9 +99,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="/usr/bin/python" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -102,6 +137,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
@@ -123,60 +161,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1916" y="47" width="1546" height="864" extended-state="0" />
+    <frame x="1692" y="90" width="1546" height="864" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983607" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39919356" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39919356" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="3" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygwidgets.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygwidgets.py" />
     <entry file="file://$PROJECT_DIR$/PyGame Text and Button and Ball.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygwidgets.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygwidgets.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyGame Text and Button and Ball.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="355">
+          <caret line="133" column="45" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
         </state>
       </provider>
     </entry>

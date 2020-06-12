@@ -13,22 +13,20 @@ class SimpleButton():
     STATE_ARMED = 'armed'
     STATE_DISARMED = 'disarmed'
         
-    def __init__(self, window, loc, up, down):
+    def __init__(self, window, loc, up, down, callBack=None):
 
         self.window = window
         self.loc = loc
         self.surfaceUp = pygame.image.load(up)
         self.surfaceDown = pygame.image.load(down)
+        self.callBack = callBack  # added to save potential callback
 
         # get the rect of the button, (used to see if the mouse is within the button)
         self.rect = self.surfaceUp.get_rect()
         self.rect[0] = loc[0]
         self.rect[1] = loc[1]
 
-
-
         self.state = SimpleButton.STATE_IDLE
-
 
     def handleEvent(self, eventObj):
         # This method will return True if user clicks the button.
@@ -47,6 +45,9 @@ class SimpleButton():
         elif self.state == SimpleButton.STATE_ARMED:
             if (eventObj.type == MOUSEBUTTONUP) and eventPointInButtonRect:
                 self.state = SimpleButton.STATE_IDLE
+                # User completed a click, if a callback was specified, call it
+                if self.callBack is not None:
+                    self.callBack()
                 return True  # clicked!
 
             if (eventObj.type == MOUSEMOTION) and not(eventPointInButtonRect):

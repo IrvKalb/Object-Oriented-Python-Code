@@ -24,11 +24,11 @@ clock = pygame.time.Clock()  # set the speed (frames per second)
 # 4 - Load assets: image(s), sounds, etc.
 
 # 5 - Initialize variables
-frameCounter = 0
 oBall = Ball(window, WINDOW_WIDTH, WINDOW_HEIGHT)
 frameCountDisplay = SimpleText(window, (100, 15), '', WHITE)
 restartButton = SimpleButton(window, (290, 444), \
                              'images/restartUp.png', 'images/restartDown.png')
+frameCounter = 0
 
 # 6 - Loop forever
 while True:
@@ -60,6 +60,6 @@ while True:
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make PyGame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait the correct amount
 
 
