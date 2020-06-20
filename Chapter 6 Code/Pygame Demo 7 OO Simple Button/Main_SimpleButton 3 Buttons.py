@@ -42,7 +42,7 @@ while True:
             pygame.quit()
             sys.exit()
 
-        # Pass the event to each button, see if oned has been clicked on
+        # Pass the event to each button, see if one has been clicked on
         if oButtonA.handleEvent(event):
             print('User clicked button A.')
         elif oButtonB.handleEvent(event):

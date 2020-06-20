@@ -6,8 +6,8 @@ from pygame.locals import *
 import sys
 import random
 from Ball import *  # bring in the Ball class code
-from SimpleText import *
-from SimpleButton import *
+from SimpleText import * # bring the SimpleText class code
+from SimpleButton import * # bring the SimpleButton class code
 
 # 2 - Define constants
 BLACK = (0, 0, 0)

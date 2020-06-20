@@ -25,8 +25,6 @@ class SimpleButton():
         self.rect[0] = loc[0]
         self.rect[1] = loc[1]
 
-
-
         self.state = SimpleButton.STATE_IDLE
 
 

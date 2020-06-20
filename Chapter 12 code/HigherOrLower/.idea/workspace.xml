@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84463962-3611-4ed2-9c9a-b3c4aee35a99" name="Default" comment="" />
+    <list default="true" id="84463962-3611-4ed2-9c9a-b3c4aee35a99" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Deck.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/Main_SimpleButton 3 Buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/Main_SimpleButton 3 Buttons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/Main_SimpleButton.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 7 OO Simple Button/Main_SimpleButton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/Main_Ball Text and Button.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/Main_Ball Text and Button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/SimpleButton.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/SimpleButton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/SimpleText.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 6 Code/Pygame Demo 8 Simple Text Display/SimpleText.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2325">
+            <state relative-caret-position="2790">
               <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
             </state>
           </provider>
@@ -25,17 +34,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainHigherOrLower.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="270">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Deck.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="593">
+              <caret line="34" selection-start-line="34" selection-end-line="36" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -43,17 +52,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Card.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
+            <state relative-caret-position="900">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="120">
+              <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -100,6 +109,9 @@
       <replace>self.playingDeckList</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -116,17 +128,18 @@
         <option value="$PROJECT_DIR$/BlackJackDeck.py" />
         <option value="$PROJECT_DIR$/Game.py" />
         <option value="$PROJECT_DIR$/Card.py" />
-        <option value="$PROJECT_DIR$/Deck.py" />
         <option value="$PROJECT_DIR$/HigherOrLower Main.py" />
+        <option value="$PROJECT_DIR$/Deck.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1793" />
-    <option name="y" value="395" />
+    <option name="x" value="1649" />
+    <option name="y" value="84" />
     <option name="width" value="1647" />
     <option name="height" value="971" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -147,6 +160,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -340,7 +354,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1793" y="395" width="1647" height="971" extended-state="0" />
+    <frame x="1649" y="84" width="1647" height="971" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23800738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -354,7 +369,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.10332103" side_tool="true" weight="0.21974148" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -408,52 +423,40 @@
     <entry file="file://$PROJECT_DIR$/images/2 of Clubs.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/BlackJackTesting Main.py" />
+    <entry file="file://$PROJECT_DIR$/BlackJackDeck.py" />
     <entry file="file://$PROJECT_DIR$/Game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
+        <state relative-caret-position="2790">
           <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainHigherOrLower.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="270">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Deck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Card.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
+        <state relative-caret-position="900">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlackJackTesting Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlackJackDeck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Constants.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        <state relative-caret-position="120">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Deck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="34" selection-start-line="34" selection-end-line="36" selection-end-column="38" />
         </state>
       </provider>
     </entry>

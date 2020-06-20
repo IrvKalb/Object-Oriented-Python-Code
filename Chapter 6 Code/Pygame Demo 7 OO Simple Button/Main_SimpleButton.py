@@ -36,7 +36,7 @@ while True:
             pygame.quit()
             sys.exit()
 
-        # Pass the event to the button, see if has been clicked on
+        # Pass the event to the button, see if it has been clicked on
         if  oButton.handleEvent(event):
             print('User has clicked the Button')
 

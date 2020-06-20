@@ -9,7 +9,7 @@ class Deck():
     STANDARD_VALUES_TUPLE = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
 
     def __init__(self, window, valuesTuple=STANDARD_VALUES_TUPLE):
-        # If nothing is passed in for valuesTuple, it uses default values
+        # If nothing is passed in for valuesTuple, use default values
         self.startingDeckList = []
         self.playingDeckList = []
         for suit in Deck.SUIT_TUPLE:
@@ -32,16 +32,19 @@ class Deck():
         oCard = self.playingDeckList.pop()  # pop one off the deck and return it
         return oCard
 
+    def returnCardToDeck(self, oCard):
+        # put a card back into the deck
+        self.deckList.insert(0, oCard)
 
-if __name__ == "__main__":
-    # MAIN CODE to test Deck
+
+if __name__ == '__main__':
+    # MAIN CODE to test the Deck class
 
     import pygame
-    from Card import *
 
     # CONSTANTS
-    WINDOW_WIDTH = 1000
-    WINDOW_HEIGHT = 600
+    WINDOW_WIDTH = 100
+    WINDOW_HEIGHT = 100
 
     pygame.init()
     window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))

@@ -14,14 +14,12 @@ class SimpleText():
         self.text = None # so that the call to setText below will force the creation of the text image
         self.setValue(value) # Set the initial text for drawing
 
-
     def setValue(self, newText):  
         if self.text == newText:
             return  # nothing to change
 
         self.text = newText  # save the new text
         self.textSurface = self.font.render(self.text, True, self.textColor)
-
 
     def draw(self):
         self.window.blit(self.textSurface, self.loc)
