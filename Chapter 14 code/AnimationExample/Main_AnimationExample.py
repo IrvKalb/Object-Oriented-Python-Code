@@ -95,9 +95,7 @@ oWalkAnimation = pygwidgets.SpriteSheetAnimation(window, (460, 335), 'images/mal
                              .1, .1, .1, .1, .1, .1, .1, .1, .3, .1, .1, .1, .1, .1, .1, .1, .1, .3), \
                              DONT_START, DONT_LOOP)
 
-
 oStartButton = pygwidgets.TextButton(window, (440, 400), "Start")
-
 
 # 6 - Loop forever
 while True:
@@ -153,19 +151,15 @@ while True:
 
     # 10 - Draw all window elements
     oTitleText.draw()
-
     oDinosaurAnimation.draw()
     oPlayButton.draw()
     oPauseButton.draw()
     oStopButton.draw()
     oLoopCheckBox.draw()
     oShowCheckBox.draw()
-
     oTRexAnimation.draw()
     oInstructionsText.draw()
-
     oEffectAnimation.draw()
-
     oWalkAnimation.draw()
     oStartButton.draw()
 

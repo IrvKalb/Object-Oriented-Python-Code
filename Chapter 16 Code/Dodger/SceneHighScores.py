@@ -172,7 +172,6 @@ class SceneHighScores(pyghelpers.Scene):
                     self.setEmptyHighScores()
                     self.showHighScores()
 
-
     def draw(self):
         self.backgroundImage.draw()
         self.scoresField.draw()
@@ -180,7 +179,6 @@ class SceneHighScores(pyghelpers.Scene):
         self.quitButton.draw()
         self.resetScoresButton.draw()
         self.startNewGameButton.draw()
-
 
     def respond(self, infoRequested):
         if infoRequested == HIGH_SCORES_DATA:

@@ -40,7 +40,6 @@ class ScenePlay(pyghelpers.Scene):
                                                 over="images/ScissorsOver.png", \
                                                 down="images/ScissorsDown.png")
 
-
     def handleInputs(self, eventsList, keyPressedList):
         playerChoice = ''
 

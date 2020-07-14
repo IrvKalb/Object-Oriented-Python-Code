@@ -42,6 +42,7 @@ class Balloon():
         self.y = maxHeight + random.randrange(75)
         self.balloonImage.setLoc((self.x, self.y))
 
+
     def clickedInside(self, mousePoint):
         myRect = pygame.Rect(self.x, self.y, self.width, self.height)
         if myRect.collidepoint(mousePoint):

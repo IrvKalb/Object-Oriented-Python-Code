@@ -2,7 +2,7 @@
 # Constants, shared by all scenes
 #
 
-# Scene keys (anything unique values):
+# Scene keys (any unique values):
 SCENE_A = 'scene A'
 SCENE_B = 'scene B'
 SCENE_C = 'scene C'

@@ -29,7 +29,7 @@ headerMessage = pygwidgets.DisplayText(window, (0, 50), 'Click the button to sta
                                        str(TIMER_LENGTH) + ' second timer:', \
                                        fontSize=36, justified='center', width=WINDOW_WIDTH)
 
-startButton = pygwidgets.TextButton(window, (280, 100), 'Start')
+startButton = pygwidgets.TextButton(window, (180, 100), 'Start')
 
 clickMeButton = pygwidgets.TextButton(window, (320, 100), 'Click Me')
 

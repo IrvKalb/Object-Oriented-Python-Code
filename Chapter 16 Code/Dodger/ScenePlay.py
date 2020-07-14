@@ -15,9 +15,6 @@ from Player import *
 from Baddies import *
 from Goodies import *
 
-
-
-
 def showCustomYesNoDialog(theWindow, theText):
     oDialogBackground = pygwidgets.Image(theWindow, (35, 250), 'images/dialog.png')
     oPromptDisplayText = pygwidgets.DisplayText(theWindow, (0, 290), theText, \
@@ -43,7 +40,6 @@ def showCustomYesNoDialog(theWindow, theText):
     choiceAsBoolean = pyghelpers.customYesNoDialog(theWindow, oDialogBackground, oPromptDisplayText, \
                                          oYesButton, oNoButton)
     return choiceAsBoolean
-
 
 
 BOTTOM_RECT = (0, GAME_HEIGHT + 1, WINDOW_WIDTH, WINDOW_HEIGHT - GAME_HEIGHT)
