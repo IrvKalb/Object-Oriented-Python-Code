@@ -2,9 +2,9 @@
 
 class PrivatePerson():
 
-    def __init__(self, name, data):
+    def __init__(self, name, privateData):
         self.name = name
-        self.__privateData = data
+        self.__privateData = privateData
 
     def getName(self):
         return self.name
