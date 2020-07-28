@@ -30,10 +30,10 @@ for i in range(0, N_SHAPES):
         oShape = Triangle(window)
     shapesList.append(oShape)
 
-statusLine = pygwidgets.DisplayText(window, (4,4), \
+oStatusLine = pygwidgets.DisplayText(window, (4,4), \
                     'Click on shapes', fontSize=28)
 
-# main loop
+# Main loop
 while True:
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -41,18 +41,21 @@ while True:
             sys.exit()
 
         if event.type == MOUSEBUTTONDOWN:
-            for oShape in shapesList:
+            # Reverse order to check last drawn shape first
+            for oShape in reversed(shapesList):
                 if oShape.clickedInside(event.pos):
                     thisArea = oShape.getArea()
                     thisType = oShape.getType()
-                    newText = 'Clicked on a ' + thisType + ' whose area is ' + str(thisArea)
-                    statusLine.setValue(newText)
+                    newText = 'Clicked on a ' + thisType \
+                                     + ' whose area is ' + str(thisArea)
+                    oStatusLine.setValue(newText)
+                    break # only deal with topmost shape
 
     # Tell each shape to draw itself
     window.fill(WHITE)
     for oShape in shapesList:
         oShape.draw()
-    statusLine.draw()
+    oStatusLine.draw()
 
     pygame.display.update()
     clock.tick(FRAMES_PER_SECOND)

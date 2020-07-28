@@ -23,7 +23,7 @@ for i in range(0, N_RECTANGLES):
     oRectangle = Rectangle(window)
     rectanglesList.append(oRectangle)
 
-state = FIRST_RECTANGLE
+whichRectangle = FIRST_RECTANGLE
 print(oRectangle)
 
 # main loop
@@ -36,21 +36,21 @@ while True:
         if event.type == MOUSEBUTTONDOWN:
             for oRectangle in rectanglesList:
                 if oRectangle.clickedInside(event.pos):
-                    print('Clicked on', state, 'rectangle.')
+                    print('Clicked on', whichRectangle, 'rectangle.')
 
-                    if state == FIRST_RECTANGLE:
+                    if whichRectangle == FIRST_RECTANGLE:
                         oFirstRectangle = oRectangle
-                        state = SECOND_RECTANGLE
+                        whichRectangle = SECOND_RECTANGLE
 
-                    elif state == SECOND_RECTANGLE:
+                    elif whichRectangle == SECOND_RECTANGLE:
+                        # user has chosen 2 rectangles, let’s compare
                         if oFirstRectangle == oRectangle:
                             print('Rectangles are the same size.')
-                        else:
-                            if oFirstRectangle < oRectangle:
-                                print('First rectangle is smaller than second rectangle.')
-                            else:
-                                print('First rectangle is larger than second rectangle.')
-                        state = FIRST_RECTANGLE
+                        elif oFirstRectangle < oRectangle:
+                            print('First rectangle is smaller than second rectangle.')
+                        else: # must be larger
+                            print('First rectangle is larger than second rectangle.')
+                        whichRectangle = FIRST_RECTANGLE
 
     # Clear the screen, and draw all rectangles
     window.fill(WHITE)

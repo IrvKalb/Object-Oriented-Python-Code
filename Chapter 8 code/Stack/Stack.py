@@ -3,7 +3,7 @@
 class Stack():
     ''' Stack class implements a last in first out LIFO algorithm'''
     def __init__(self, startingStackAsList=None):
-        if startingStackAsList == None:
+        if startingStackAsList is None:
             self.dataList = [ ]
         else:
             self.dataList = startingStack[:]  # make a copy 

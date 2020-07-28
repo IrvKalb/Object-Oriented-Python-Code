@@ -7,7 +7,7 @@ class Vector():
         self.y = y
 
     def __str__(self):
-        return 'This vector has an x of ' + str(self.x) + ' and a y of ' + str(self.y)
+        return 'This vector has an X of ' + str(self.x) + ' and a Y of ' + str(self.y)
 
     def __add__(self, oOther):  # called for + operator
         return Vector(self.x + oOther.x, self.y + oOther.y)
@@ -44,11 +44,11 @@ v2 = Vector(2, 2)
 v3 = Vector(3, 4)
 
 print(v1 == v2) # False
-print(v1 == v3)  # True
+print(v1 == v3) # True
 print(v1 + v2)  #  5, 6
 print(v1 - v2)  # 1, 2
 print(abs(v1))  # 5
-print(abs(v2))  #2.8284...
+print(abs(v2))  # 2.8284...
 
 print(v1 < v2)  # False
 print(v1 > v2)  # True
