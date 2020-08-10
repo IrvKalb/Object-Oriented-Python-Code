@@ -16,4 +16,3 @@ oProgrammingClub.report()
 # Attempt to add additional student
 
 oProgrammingClub.addStudent('Iwanna Join')
-

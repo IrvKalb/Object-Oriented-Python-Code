@@ -41,10 +41,12 @@ oButtonA = SimpleButton(window, (25, 30), \
                         'images/buttonADown.png')  # no callback
 oButtonB = SimpleButton(window, (150, 30), \
                         'images/buttonBUp.png', \
-                        'images/buttonBDown.png', myCallBackFunction)  # specifying a function to call back
+                        'images/buttonBDown.png',
+                        callBack=myCallBackFunction)  # specifying a function to call back
 oButtonC = SimpleButton(window, (275, 30), \
                         'images/buttonCUp.png', \
-                        'images/buttonCDown.png', oCallBackTest.myMethod)  # method to callback
+                        'images/buttonCDown.png',
+                        callBack=oCallBackTest.myMethod)  # method to callback
 counter = 0
 
 
