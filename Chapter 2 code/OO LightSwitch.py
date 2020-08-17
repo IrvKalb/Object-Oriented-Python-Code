@@ -16,13 +16,13 @@ class LightSwitch():
         print(self.switchIsOn)
     
 # Main code
-oSwitch = LightSwitch()  # create a switch object
+oLightSwitch = LightSwitch()  # create a LightSwitch object
 
 #  Test code:
-oSwitch.show()
-oSwitch.turnOn()
-oSwitch.show()
-oSwitch.turnOff()
-oSwitch.show()
-oSwitch.turnOn()
-oSwitch.show()
+oLightSwitch.show()
+oLightSwitch.turnOn()
+oLightSwitch.show()
+oLightSwitch.turnOff()
+oLightSwitch.show()
+oLightSwitch.turnOn()
+oLightSwitch.show()

@@ -5,25 +5,25 @@ class LightSwitch():
         self.switchIsOn = False
 
     def turnOn(self):
-        # turn the light on 
+        # turn the switch on 
          self.switchIsOn = True
 
     def turnOff(self):
-        # turn the light off
+        # turn the switch off
          self.switchIsOn = False
 
     def show(self):
         print(self.switchIsOn)
     
 # Main code
-oSwitch1 = LightSwitch()  # create a switch object
-oSwitch2 = LightSwitch()  # create another switch object
+oLightSwitch1 = LightSwitch()  # create a LightSwitch object
+oLightSwitch2 = LightSwitch()  # create another LightSwitch object
 
 #  Test code:
-oSwitch1.show()
-oSwitch2.show()
-oSwitch1.turnOn()
-oSwitch2.turnOff()  # Should be off at start, but this makes it clearer
-oSwitch1.show()
-oSwitch2.show()
+oLightSwitch1.show()
+oLightSwitch2.show()
+oLightSwitch1.turnOn()
+oLightSwitch2.turnOff()  # Should be off at start, but this makes it clearer
+oLightSwitch1.show()
+oLightSwitch2.show()
 
