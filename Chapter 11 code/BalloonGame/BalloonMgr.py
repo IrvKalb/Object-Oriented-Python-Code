@@ -31,9 +31,11 @@ class BalloonMgr():
             self.balloonList.append(oBalloon)
 
 
+
     def handleEvent(self, event):
         if event.type == MOUSEBUTTONDOWN:
-            for oBalloon in self.balloonList:
+            # go 'reversed' thru list so top-most balloon gets popped first
+            for oBalloon in reversed(self.balloonList):
                 nPointsThisBalloon = oBalloon.clickedInside(event.pos)
                 if nPointsThisBalloon > 0:
                     #print('clicked on a balloon')

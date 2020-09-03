@@ -14,7 +14,6 @@ class Bank():
         self.accountsDict[newAccountNumber] = oAccount
         # Increment to prepare for next account to be created
         self.nextAccountNumber = self.nextAccountNumber + 1
-        print(self.accountsDict)
         return newAccountNumber
 
     def openAccountInteractively(self):

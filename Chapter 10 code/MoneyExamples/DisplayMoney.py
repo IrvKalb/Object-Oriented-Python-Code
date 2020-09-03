@@ -12,15 +12,15 @@ BLACK = (0, 0, 0)
 #
 class DisplayMoney(pygwidgets.DisplayText):
 
-    def __init__(self, window, loc, startingAmount,
+    def __init__(self, window, loc, startingAmount=None, \
+                 currencySymbol='$', currencySymbolOnLeft=True, showCents=True, \
                  fontName=None, fontSize=24, width=150, height=None, \
-                 textColor=BLACK, backgroundColor=None, justified='left',\
-                 currencySymbol='$', currencySymbolOnLeft=True, showCents=True):
+                 textColor=BLACK, backgroundColor=None, justified='left'):
 
         self.currencySymbol = currencySymbol
         self.currencySymbolOnLeft = currencySymbolOnLeft
         self.showCents = showCents
-        if startingAmount == '':
+        if startingAmount == None:
             startingAmount = 0.00
 
         # Call the __init__ method of our base class

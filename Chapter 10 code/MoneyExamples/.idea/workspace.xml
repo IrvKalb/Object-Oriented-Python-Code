@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23795cb8-4bba-42db-8a8f-9a5b509549cd" name="Default" comment="" />
+    <list default="true" id="23795cb8-4bba-42db-8a8f-9a5b509549cd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Money examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Money examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DisplayMoney.py" beforeDir="false" afterPath="$PROJECT_DIR$/DisplayMoney.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/BalloonGameExample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/BalloonGameExample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/BalloonMgr.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/BalloonMgr.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,37 +20,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main_InputNumber.py">
+        <entry file="file://$PROJECT_DIR$/Main_MoneyExample.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DisplayMoney.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main_InputNumber.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DisplayMoney.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/InputNumber.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main_MoneyExample.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state relative-caret-position="726">
+              <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -70,6 +79,9 @@
       <replace>inputField</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -78,15 +90,15 @@
         <option value="$PROJECT_DIR$/MoneyExample.py" />
         <option value="$PROJECT_DIR$/pygwidgets.py" />
         <option value="$PROJECT_DIR$/MoneyExample1.py" />
-        <option value="$PROJECT_DIR$/DisplayMoney.py" />
         <option value="$PROJECT_DIR$/MoneyExample2.py" />
         <option value="$PROJECT_DIR$/InputNumber.py" />
+        <option value="$PROJECT_DIR$/DisplayMoney.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2179" />
-    <option name="y" value="258" />
+    <option name="x" value="1621" />
+    <option name="y" value="328" />
     <option name="width" value="1680" />
     <option name="height" value="1023" />
   </component>
@@ -112,43 +124,20 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Money examples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Money examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Money examples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="Money examples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6.1 (/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="Money examples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6.1 (/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -290,12 +279,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.MoneyExample" />
-      <item itemvalue="Python.MoneyExampleInherited" />
+      <item itemvalue="Python.Main_InputNumber" />
+      <item itemvalue="Python.Main_MoneyExample" />
       <item itemvalue="Python.MoneyExample1" />
       <item itemvalue="Python.MoneyExample2" />
-      <item itemvalue="Python.Main_MoneyExample" />
-      <item itemvalue="Python.Main_InputNumber" />
+      <item itemvalue="Python.MoneyExampleInherited" />
+      <item itemvalue="Python.MoneyExample" />
     </list>
     <recent_temporary>
       <list>
@@ -321,10 +310,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2179" y="258" width="1680" height="1023" extended-state="0" />
-    <editor active="true" />
+    <frame x="1621" y="328" width="1680" height="1023" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16636528" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16849817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -336,8 +324,9 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5075347" side_tool="true" weight="0.28239202" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="PlantUML" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -388,15 +377,15 @@
     <entry file="file://$PROJECT_DIR$/MoneyExample2.py" />
     <entry file="file://$PROJECT_DIR$/Main_InputNumber.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="330">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DisplayMoney.py">
+    <entry file="file://$PROJECT_DIR$/InputNumber.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="726">
+          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -407,10 +396,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InputNumber.py">
+    <entry file="file://$PROJECT_DIR$/DisplayMoney.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        <state relative-caret-position="390">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
         </state>
       </provider>
     </entry>

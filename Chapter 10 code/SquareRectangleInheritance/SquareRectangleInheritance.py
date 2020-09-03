@@ -1,7 +1,5 @@
-#
 #  Square Rectangle Inheritance
 #
-
 # Define the Square class, which we will use as a base class
 class Square():
     def __init__(self, width, color):
