@@ -14,9 +14,6 @@ FRAMES_PER_SECOND = 30
 WHITE = (255, 255, 255)
 TIMER_LENGTH = 2.5  # seconds
 
-def myFunction(theNickname):
-    print('In myFunction, timer for', theNickname, 'call back was executed')
-
 # 3 - Initialize the world
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
@@ -37,8 +34,7 @@ timerMessage = pygwidgets.DisplayText(window, (0, 160), 'Message showing during 
                                       fontSize=36, justified='center', width=WINDOW_WIDTH)
 
 timerMessage.hide()  # start off with this message hidden
-oTimer = pyghelpers.Timer(TIMER_LENGTH, nickname='2.5 second timer',
-                          callBack=myFunction)  # create a timer object
+oTimer = pyghelpers.Timer(TIMER_LENGTH)  # create a timer object
 
 
 # 6 - Loop forever
@@ -66,7 +62,6 @@ while True:
         timerMessage.hide()
         print('Timer ended')
 
-
     # 9 - Clear the screen
     window.fill(WHITE)
 
@@ -80,4 +75,4 @@ while True:
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make PyGame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait the correct amount

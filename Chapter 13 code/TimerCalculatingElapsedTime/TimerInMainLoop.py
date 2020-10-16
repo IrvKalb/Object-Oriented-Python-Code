@@ -48,7 +48,7 @@ while True:
             sys.exit()
 
         if startButton.handleEvent(event):
-            timeStarted = time.time()  # start the timer
+            timeStarted = time.time()  # remember the start time
             startButton.disable()
             timerMessage.show()
             print('Starting timer')
@@ -60,7 +60,7 @@ while True:
     # 8 - Do any "per frame" actions
     if timerRunning:  # if the timer is running
         elapsed = time.time() - timeStarted
-        if elapsed >= TIMER_LENGTH :  # True here means timer has ended
+        if elapsed >= TIMER_LENGTH:  # True here means timer has ended
             startButton.enable()
             timerMessage.hide()
             print('Timer ended')

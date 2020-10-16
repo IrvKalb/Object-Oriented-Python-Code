@@ -15,7 +15,8 @@ class Card():
         self.value = value
         fileName = 'images/' + self.cardName + '.png'
         self.images = pygwidgets.ImageCollection(window, (0, 0), \
-                        {'front': fileName, 'back': Card.BACK_OF_CARD_IMAGE}, 'back')
+                                {'front': fileName, \
+                                 'back': Card.BACK_OF_CARD_IMAGE}, 'back')
         self.x = 0  # some starting pos, use setLoc below to change
         self.y = 0
 
@@ -41,7 +42,7 @@ class Card():
     def getRank(self):
         return self.rank
 
-    def setLoc(self, loc): # use inherited
+    def setLoc(self, loc): # call setLoc of the ImageCollection
         self.images.setLoc(loc)
 
     def getLoc(self):  # return loc as a tuple

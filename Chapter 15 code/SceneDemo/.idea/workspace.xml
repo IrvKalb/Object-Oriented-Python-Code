@@ -1,64 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc1b2ee-25dc-41e8-828d-afcaa5f071d0" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="cdc1b2ee-25dc-41e8-828d-afcaa5f071d0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/Card.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/images/backgroundORIG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/images/backgroundXX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Three Scenes Example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Three Scenes Example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SceneExample.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <marker date="1576716825000" expanded="true" signature="169:257" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SceneA.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SceneB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SceneC.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Constants.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -89,32 +43,10 @@
       <replace>&quot;&quot;&quot;</replace>
     </replaceStrings>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Scene.py" />
-        <option value="$PROJECT_DIR$/PlayScene.py" />
-        <option value="$PROJECT_DIR$/SplashScene.py" />
-        <option value="$PROJECT_DIR$/Three Scenes Main.py" />
-        <option value="$PROJECT_DIR$/HighScoresScene.py" />
-        <option value="$PROJECT_DIR$/BlankScene.py" />
-        <option value="$PROJECT_DIR$/pygwidgets.py" />
-        <option value="$PROJECT_DIR$/Constants.py" />
-        <option value="$PROJECT_DIR$/SceneMgr.py" />
-        <option value="$PROJECT_DIR$/Scene Demo Main.py" />
-        <option value="$PROJECT_DIR$/SceneB.py" />
-        <option value="$PROJECT_DIR$/SceneA.py" />
-        <option value="$PROJECT_DIR$/SceneC.py" />
-        <option value="$PROJECT_DIR$/SceneExample.py" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="2086" />
-    <option name="y" value="189" />
-    <option name="width" value="1680" />
-    <option name="height" value="963" />
-  </component>
+  <component name="ProjectId" id="1ic6JAGH0ILwVZitZUXPoZ1SmZL" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -131,34 +63,11 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Three Scenes Example" type="cbb8eebc:String" user="Three Scenes Example" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Scene Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scene Demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -170,19 +79,28 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.Scene Demo Main">
+  <component name="RunManager" selected="Python.Main_SceneDemo">
+    <configuration name="Main_SceneDemo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Three Scenes Example" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_SceneDemo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Scene Demo Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Three Scenes Example" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -228,14 +146,17 @@
     <list>
       <item itemvalue="Python.Scene Demo Main" />
       <item itemvalue="Python.Three Scenes Main" />
+      <item itemvalue="Python.Main_SceneDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Main_SceneDemo" />
         <item itemvalue="Python.Scene Demo Main" />
         <item itemvalue="Python.Three Scenes Main" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -249,47 +170,23 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="2086" y="189" width="1680" height="963" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18149467" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.19098458" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.3289941" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32858837" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.19171597" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.3289941" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
+  <component name="WindowStateProjectService">
+    <state width="1665" height="192" key="GridCell.Tab.0.bottom" timestamp="1602194993439">
+      <screen x="1536" y="71" width="1920" height="1080" />
+    </state>
+    <state width="1665" height="192" key="GridCell.Tab.0.bottom/0.23.1536.937/1536.71.1920.1080@1536.71.1920.1080" timestamp="1602194993439" />
+    <state width="1665" height="192" key="GridCell.Tab.0.center" timestamp="1602194993439">
+      <screen x="1536" y="71" width="1920" height="1080" />
+    </state>
+    <state width="1665" height="192" key="GridCell.Tab.0.center/0.23.1536.937/1536.71.1920.1080@1536.71.1920.1080" timestamp="1602194993439" />
+    <state width="1665" height="192" key="GridCell.Tab.0.left" timestamp="1602194993438">
+      <screen x="1536" y="71" width="1920" height="1080" />
+    </state>
+    <state width="1665" height="192" key="GridCell.Tab.0.left/0.23.1536.937/1536.71.1920.1080@1536.71.1920.1080" timestamp="1602194993438" />
+    <state width="1665" height="192" key="GridCell.Tab.0.right" timestamp="1602194993439">
+      <screen x="1536" y="71" width="1920" height="1080" />
+    </state>
+    <state width="1665" height="192" key="GridCell.Tab.0.right/0.23.1536.937/1536.71.1920.1080@1536.71.1920.1080" timestamp="1602194993439" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -301,55 +198,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Scene.py" />
-    <entry file="file://$PROJECT_DIR$/Three Scenes Main.py" />
-    <entry file="file://$PROJECT_DIR$/BlankScene.py" />
-    <entry file="file://$PROJECT_DIR$/SplashScene.py" />
-    <entry file="file://$PROJECT_DIR$/HighScoresScene.py" />
-    <entry file="file://$PROJECT_DIR$/PlayScene.py" />
-    <entry file="file://$PROJECT_DIR$/pygwidgets.py" />
-    <entry file="file://$PROJECT_DIR$/SceneMgr.py" />
-    <entry file="file://$PROJECT_DIR$/Scene Demo Main.py" />
-    <entry file="file://$PROJECT_DIR$/SceneExample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <marker date="1576716825000" expanded="true" signature="169:257" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SceneA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="72" selection-start-line="17" selection-start-column="72" selection-end-line="17" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SceneB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SceneC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

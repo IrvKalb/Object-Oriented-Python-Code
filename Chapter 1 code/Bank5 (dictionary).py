@@ -67,12 +67,12 @@ newAccount("Mary", 12345.67, 'nuts')
 
 while True:
     print()
-    print('Type b to get the balance')
-    print('Type d to make a deposit')
-    print('Type n to create a new account')
-    print('Type w to make a withdrawal')
-    print('Type s to show all accounts')
-    print('Type q to quit')
+    print('Press b to get the balance')
+    print('Press d to make a deposit')
+    print('Press n to create a new account')
+    print('Press w to make a withdrawal')
+    print('Press s to show all accounts')
+    print('Press q to quit')
     print()
 
     action = input('What do you want to do? ')
