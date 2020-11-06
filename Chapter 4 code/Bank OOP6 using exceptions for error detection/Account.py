@@ -37,8 +37,7 @@ class Account():
         return self.balance
 
     # Added for debugging
-    def show(self, accountNo):
-        print('Account', accountNo)
+    def show(self):
         print('       Name', self.name)
         print('       Balance:', self.balance)
         print('       Password:', self.password)

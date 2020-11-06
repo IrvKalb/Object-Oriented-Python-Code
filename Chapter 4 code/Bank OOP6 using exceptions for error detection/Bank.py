@@ -2,6 +2,7 @@
 
 from Account import *
 
+
 class Bank():
 
     def __init__(self):
@@ -38,7 +39,6 @@ class Bank():
         print('You had', theBalance, 'in your account, which is being returned to you.')
         del self.accountsDict[userAccountNumber]
         print('Your account is now closed.')
-        
 
     def balance(self):
         print('*** Get Balance ***')
@@ -46,7 +46,11 @@ class Bank():
         userAccountNumber = int(userAccountNumber)
         userAccountPassword = input('Please enter the password: ')
         oAccount = self.accountsDict[userAccountNumber]
-        theBalance = oAccount.getBalance(userAccountPassword)
+        try:
+            theBalance = oAccount.getBalance(userAccountPassword)
+        except Exception as errorMessage:
+            print(errorMessage)
+            return
         if theBalance >= 0:
             print('Your balance is:', theBalance)
 
@@ -57,10 +61,13 @@ class Bank():
         depositAmount = input('Please enter amount to deposit: ')
         depositAmount = float(depositAmount)
         userAccountPassword = input('Please enter the password: ')
-        oAccount = self.accountsDict[accountNum]        
-        theBalance = oAccount.deposit(depositAmount, userAccountPassword)
-        if theBalance >= 0:
-            print('Your new balance is:', theBalance)
+        oAccount = self.accountsDict[accountNum]
+        try:
+            theBalance = oAccount.deposit(depositAmount, userAccountPassword)
+        except Exception as errorMessage:
+            print(errorMessage)
+            return
+        print('Your new balance is:', theBalance)
 
     def show(self):
         print('*** Show ***')
@@ -68,7 +75,6 @@ class Bank():
             oAccount = self.accountsDict[userAccountNumber]
             print('Account', userAccountNumber)
             oAccount.show()
-
 
     def withdraw(self):
         print('*** Withdraw ***')
@@ -78,9 +84,11 @@ class Bank():
         userAmount = float(userAmount)
         userAccountPassword = input('Please enter the password: ')
         oAccount = self.accountsDict[userAccountNumber]
-        theBalance = oAccount.withdraw(userAmount, userAccountPassword)
-        if theBalance >= 0:
-            print('Withdrew:', userAmount)
-            print('Your new balance is:', theBalance)
+        try:
+            theBalance = oAccount.withdraw(userAmount, userAccountPassword)
+        except Exception as errorMessage:
+            print(errorMessage)
+            return
 
-    
+        print('Withdrew:', userAmount)
+        print('Your new balance is:', theBalance)

@@ -2,51 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88545960-9590-4144-b3cc-dbddf73f8114" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/MoneyExamples/.idea/Money examples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/MoneyExamples/.idea/Money examples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/MoneyExamples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/MoneyExamples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/MoneyExamples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/MoneyExamples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/MoneyExamples/DisplayMoney.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/MoneyExamples/DisplayMoney.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/SquareRectangleInheritance/SquareRectangleInheritance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/SquareRectangleInheritance/SquareRectangleInheritance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/BalloonGameExample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/BalloonGameExample.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/BalloonMgr.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 11 code/BalloonGame/BalloonMgr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Bank OOP5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bank OOP5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/.idea/Bank OOP6 using exceptions for error detection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/.idea/Bank OOP6 using exceptions for error detection.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/SimpleAnimation/SimpleAnimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/SimpleAnimation/SimpleAnimation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/SimpleSpriteSheetAnimation/SimpleSpriteSheetAnimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/SimpleSpriteSheetAnimation/SimpleSpriteSheetAnimation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/Account.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/Account.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/Bank.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Bank OOP6 using exceptions for error detection/Bank.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Bank.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" selection-start-line="10" selection-end-line="17" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1766" />
-    <option name="y" value="71" />
-    <option name="width" value="1639" />
-    <option name="height" value="987" />
-  </component>
+  <component name="ProjectId" id="1jwCiaxxzogsntUvv6pXm6gUsEP" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -64,43 +34,38 @@
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Bank OOP5 - Separate Bank class" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bank OOP5 - Separate Bank class" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="/usr/bin/python" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Main_Bank_Version5">
+    <configuration name="Bank" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bank OOP5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bank.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main version 5" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Bank OOP5" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -122,12 +87,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Main_Bank_Version5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bank OOP5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_Bank_Version5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Main_Bank_Version5" />
+        <item itemvalue="Python.Bank" />
         <item itemvalue="Python.Main version 5" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -141,39 +130,23 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1766" y="71" width="1639" height="987" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25297433" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3298731" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="PlantUML" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main version 5.py" />
-    <entry file="file://$PROJECT_DIR$/Bank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" selection-start-line="10" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state width="1305" height="221" key="GridCell.Tab.0.bottom" timestamp="1604705962131">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state width="1305" height="221" key="GridCell.Tab.0.bottom/0.23.1536.937/1536.71.1920.1080@0.23.1536.937" timestamp="1604705962131" />
+    <state width="1305" height="221" key="GridCell.Tab.0.center" timestamp="1604705962130">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state width="1305" height="221" key="GridCell.Tab.0.center/0.23.1536.937/1536.71.1920.1080@0.23.1536.937" timestamp="1604705962130" />
+    <state width="1305" height="221" key="GridCell.Tab.0.left" timestamp="1604705962130">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state width="1305" height="221" key="GridCell.Tab.0.left/0.23.1536.937/1536.71.1920.1080@0.23.1536.937" timestamp="1604705962130" />
+    <state width="1305" height="221" key="GridCell.Tab.0.right" timestamp="1604705962130">
+      <screen x="0" y="23" width="1536" height="937" />
+    </state>
+    <state width="1305" height="221" key="GridCell.Tab.0.right/0.23.1536.937/1536.71.1920.1080@0.23.1536.937" timestamp="1604705962130" />
   </component>
   <component name="masterDetails">
     <states>

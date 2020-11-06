@@ -1,23 +1,10 @@
-# SimpleAnimation object
+# SimpleAnimation class
 
 import pygame
 import time
 
 class SimpleAnimation():
     def __init__(self, window, loc, picPathsList, durationPerImage):
-        """
-        A simple animation only requires a:
-        window - to draw into
-        loc - location in the window to draw the images
-        picPathsList - a list of paths to images
-        durationPerImage - how long (milliseconds) to show each image
-
-        Save values in instance variables
-        Loop through the list of paths, and load all images into another list
-
-        self.index is the index of the current image to show
-        """
-
         self.window = window
         self.loc = loc
         self.imagesList = []

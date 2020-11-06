@@ -5,23 +5,6 @@ import time
 
 class SimpleSpriteSheetAnimation():
     def __init__(self, window, loc, imagePath, nCols, nImages, width, height, durationPerImage):
-        """
-        A simple sprite sheet animation requires a:
-        window - to draw into
-        loc - screen location to draw the images
-        imagePath - a path to a sprite sheet image (single file)
-        nCols - number of columns
-        nImages - number of images in the sprite sheet
-        width - width of each cell
-        height - height of each cell
-        durationPerImage - how long (milliseconds) to show each image
-
-        Save values in instance variables
-        Loop through the images in the sprite sheet, load each one
-        and save the images in another list
-
-        self.index is the index of the current image to show
-        """
         self.window = window
         self.loc = loc
         self.nImages = nImages
@@ -62,7 +45,7 @@ class SimpleSpriteSheetAnimation():
             return
 
         # How much time has elapsed since we started showing this image
-        self.elapsed = (time.time() - self.imageStartTime)
+        self.elapsed = time.time() - self.imageStartTime
 
         # If enough time has elapsed, move onto the next image
         if self.elapsed > self.durationPerImage:
