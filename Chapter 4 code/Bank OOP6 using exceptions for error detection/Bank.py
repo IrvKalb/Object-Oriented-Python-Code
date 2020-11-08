@@ -2,7 +2,6 @@
 
 from Account import *
 
-
 class Bank():
 
     def __init__(self):
@@ -39,6 +38,7 @@ class Bank():
         print('You had', theBalance, 'in your account, which is being returned to you.')
         del self.accountsDict[userAccountNumber]
         print('Your account is now closed.')
+        
 
     def balance(self):
         print('*** Get Balance ***')
@@ -76,6 +76,7 @@ class Bank():
             print('Account', userAccountNumber)
             oAccount.show()
 
+
     def withdraw(self):
         print('*** Withdraw ***')
         userAccountNumber = input('Please enter your account number: ')
@@ -92,3 +93,5 @@ class Bank():
 
         print('Withdrew:', userAmount)
         print('Your new balance is:', theBalance)
+
+    

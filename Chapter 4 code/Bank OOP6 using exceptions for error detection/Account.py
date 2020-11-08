@@ -12,7 +12,7 @@ class Account():
             raise Exception('You cannot deposit a negative amount!')   
 
         if password != self.password:
-            raise Exception('Sorry, incorrect password')   
+            raise Exception('Deposit:  Sorry, incorrect password')
             
         self.balance = self.balance + amountToDeposit
         return self.balance
@@ -25,7 +25,7 @@ class Account():
             raise Exception('You cannot withdraw more than you have in your account')
 
         if password != self.password:
-            raise Exception('Incorrect password for this account')
+            raise Exception('Withdraw:  Incorrect password for this account')
         
         self.balance = self.balance - amountToWithdraw
         return self.balance
