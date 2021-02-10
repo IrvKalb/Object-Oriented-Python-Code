@@ -1,4 +1,4 @@
-# TV class
+# TV class with test code
 
 class TV():
     def __init__(self):
@@ -19,7 +19,7 @@ class TV():
         if not self.isOn:
             return
         if self.isMuted:
-            self.isMuted = False  # changing the volume while muted, unmutes the sound
+            self.isMuted = False  # changing the volume while isMuted, unmutes the sound
         if self.volume < self.VOLUME_MAXIMUM:
             self.volume = self.volume + 1
 
@@ -69,7 +69,7 @@ class TV():
             print('    TV is: Off')
 
 
-# Test code
+# Main code
 oTV = TV()  # create the TV object
 
 # Turn the TV on and show the status
@@ -98,6 +98,3 @@ oTV.showInfo()
 oTV.setChannel(11)
 oTV.mute()
 oTV.showInfo()
-
-        
-            

@@ -8,10 +8,9 @@ class Monster():
         self.nCols = nCols  # save away
         self.myRow = random.randrange(self.nRows) #chooses a random row
         self.myCol = random.randrange(self.nCols) #chooses a random col
-        self.mySpeedX = random.randrange(-maxSpeed, maxSpeed) # chooses a speed
-        self.mySpeedY = random.randrange(-maxSpeed, maxSpeed) # chooses a speed
-        # maybe set a direction or other instance variables
-        # like health, power, etc.
+        self.mySpeedX = random.randrange(-maxSpeed, maxSpeed) + 1 # chooses an X speed
+        self.mySpeedY = random.randrange(-maxSpeed, maxSpeed + 1) # chooses a Y speed
+        # set other instance variables like health, power, etc.
 
     def move(self):
         self.myRow = (self.myRow + self.mySpeedY) %  self.nRows
@@ -19,15 +18,15 @@ class Monster():
     
 
 N_MONSTERS = 20
-N_ROWS = 1000
-N_COLS = 1000
-MAX_SPEED = 2
+N_ROWS = 100   # (could be any size)
+N_COLS = 200   # (could be any size)
+MAX_SPEED = 4
 
 
-monsterList = []
+monsterList = []  # start with an empty list
 for i in range(N_MONSTERS):
     oMonster = Monster(N_ROWS, N_COLS, MAX_SPEED)   # create a monster
-    monsterList.append(oMonster)
+    monsterList.append(oMonster)  # add monster to our list
 
 # Later, when playing the game ...
 

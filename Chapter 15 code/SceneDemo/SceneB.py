@@ -19,8 +19,9 @@ class SceneB(pyghelpers.Scene):
                                               fontSize=50, textColor=WHITE, width=610, justified='center')
 
         self.gotoAButton = pygwidgets.TextButton(self.window, (100, 100), 'Go to Scene A')
+        self.gotoBButton = pygwidgets.TextButton(self.window, (250, 100), 'Go to Scene B')
         self.gotoCButton = pygwidgets.TextButton(self.window, (400, 100), 'Go to Scene C')
-
+        self.gotoBButton.disable()
 
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:
@@ -57,6 +58,7 @@ class SceneB(pyghelpers.Scene):
         self.window.fill(GRAYB)
         self.messageField.draw()
         self.gotoAButton.draw()
+        self.gotoBButton.draw()
         self.gotoCButton.draw()
 
     def receive(self, msgType, data):

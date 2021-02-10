@@ -20,7 +20,7 @@ class MyScene(pyghelpers.Scene):  # Inherits from the Scene class in the pyghelp
         self.sceneKey = sceneKey
 
         # As a sample, let's create a button
-        self.navButton = pygwidgets.TextButton((self.window, (300, 230), 'Navigate'))
+        self.navButton = pygwidgets.TextButton(self.window, (300, 230), 'Navigate')
 
     def enter(self, data):
         """

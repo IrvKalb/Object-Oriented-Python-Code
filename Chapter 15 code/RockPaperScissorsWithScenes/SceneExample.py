@@ -23,7 +23,7 @@ class MyScene(Scene):  # Inherits from the Scene class in the SceneMgr file
         self.sceneKey = sceneKey
 
         # As a sample, let's create a button
-        self.navButton = pygwidgets.TextButton((self.window, (300, 230), 'Navigate'))
+        self.navButton = pygwidgets.TextButton(self.window, (300, 230), 'Navigate')
 
 
     def enter(self, data):

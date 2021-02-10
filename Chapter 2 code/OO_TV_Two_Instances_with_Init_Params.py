@@ -1,7 +1,11 @@
+# TV that takes initialization parameters
+
 # TV class
 
 class TV():
-    def __init__(self):
+    def __init__(self, brand, location):  # pass in a brand and location for the TV
+        self.brand = brand
+        self.location = location
         self.isOn = False
         self.isMuted = False
         # Some default list of channels
@@ -11,9 +15,9 @@ class TV():
         self.VOLUME_MINIMUM = 0  # constant
         self.VOLUME_MAXIMUM = 10  # constant
         self.volume = self.VOLUME_MAXIMUM // 2  # integer divide
-        
+       
     def power(self):
-        self.isOn = not self.isOn   # toggle
+        self.isOn = not self.isOn  # toggle
 
     def volumeUp(self):
         if not self.isOn:
@@ -51,13 +55,14 @@ class TV():
         self.isMuted = not self.isMuted
 
     def setChannel(self, newChannel):
-        if newChannel in self.channelList:
-            self.channelIndex = self.channelList.index(newChannel)
-        # if the newChannel is not in our list of channels, don't do anything
+        if newChannel not in self.channelList:
+            return  # not in our list of legal channel, don't do anything
+        self.channelIndex = self.channelList.index(newChannel)
 
     def showInfo(self):
         print()
-        print('TV Status:')
+        print('Status of TV:', self.brand)
+        print('    Location:', self.location)
         if self.isOn:
             print('    TV is: On')
             print('    Channel is:', self.channelList[self.channelIndex])
@@ -68,36 +73,29 @@ class TV():
         else:
             print('    TV is: Off')
 
+# Test code - create two
+oTV1 = TV('Sony', 'Family room')  # create one TV object
+oTV2 = TV('Samsung', 'Bedroom')  # create another TV object
 
-# Test code
-oTV = TV()  # create the TV object
+# Turn both TV's on 
+oTV1.power()
+oTV2.power()
 
-# Turn the TV on and show the status
-oTV.power()
-oTV.showInfo()
+# raise the volume of TV1
+oTV1.volumeUp()
+oTV1.volumeUp()
 
-# Change the channel up twice, and raise the volume twice, show status
-oTV.channelUp()
-oTV.channelUp()
-oTV.volumeUp()
-oTV.volumeUp()
-oTV.showInfo()
+# raise the volume of TV2
+oTV2.volumeUp()
+oTV2.volumeUp()
+oTV2.volumeUp()
+oTV2.volumeUp()
+oTV2.volumeUp()
 
-# Turn the TV off, show status, turn TV on, show status
-oTV.power()
-oTV.showInfo()
-oTV.power()
-oTV.showInfo()
+# change TV2's channel and mute it
+oTV2.setChannel(44)
+oTV2.mute()
 
-# Lower the volume, mute the sound, show status
-oTV.volumeDown()
-oTV.mute()
-oTV.showInfo()
-
-# Change the Channel to 11
-oTV.setChannel(11)
-oTV.mute()
-oTV.showInfo()
-
-        
-            
+# Now display both TVs
+oTV1.showInfo()
+oTV2.showInfo()

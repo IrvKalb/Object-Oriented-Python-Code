@@ -2,12 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc1b2ee-25dc-41e8-828d-afcaa5f071d0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/Card.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/Card.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/images/backgroundORIG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/images/backgroundXX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 1 code/Bank1 (one account).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 1 code/Bank2 (one account with functions).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 1 code/Bank3 (two accounts).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 1 code/Bank4 (n accounts).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 1 code/Bank5 (dictionary).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 1 code/BankAccountOOP.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 1 code/HigherOrLower Non OOP.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RockPaperScissorsWithScenes/.idea/SceneMgr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../RockPaperScissorsWithScenes/.idea/SceneMgr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RockPaperScissorsWithScenes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RockPaperScissorsWithScenes/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RockPaperScissorsWithScenes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RockPaperScissorsWithScenes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RockPaperScissorsWithScenes/SceneExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/../RockPaperScissorsWithScenes/SceneExample.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Three Scenes Example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Three Scenes Example.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneA.py" beforeDir="false" afterPath="$PROJECT_DIR$/SceneA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneB.py" beforeDir="false" afterPath="$PROJECT_DIR$/SceneB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneC.py" beforeDir="false" afterPath="$PROJECT_DIR$/SceneC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/SceneExample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 16 Code/Dodger/SceneExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 16 Code/Dodger/SceneExample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/DimmerSwitch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 2 code/DimmerSwitch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/LightSwitch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO DimmerSwitch Two instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO DimmerSwitch with Test Code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO LightSwitch Two instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO LightSwitch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO TV Two Instances with Init Params.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO TV Two instances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/OO TV with Test Code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 2 code/TV.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 2 code/TV.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 3 code/OO DimmerSwitch Model 1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 3 code/OO DimmerSwitch Model 2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP1 - individual object variables/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP1 - individual object variables/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP1 - individual object variables/Account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP1 - individual object variables/Main_Bank_Version1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/.idea/Bank OOP2 - list of account objects.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/.idea/dictionaries/irvkalb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/Account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP2 - list of account objects/Main_Bank_Version2..py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP3 - dictionary of account objects/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP3 - dictionary of account objects/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP3 - dictionary of account objects/Account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP3 - dictionary of account objects/Main_Bank_Version3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/.idea/Bank OOP4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/.idea/dictionaries/irvkalb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/Account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP4 - interactive menu/Main_Bank_Version4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/.idea/Bank OOP5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/.idea/dictionaries/irvkalb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/Account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/Bank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP5 - Separate Bank class/Main_Bank_Version5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.idea/Bank OOP6 using exceptions for error detection.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.idea/dictionaries/irvkalb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/.pydevproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/Account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/Bank.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/Bank OOP6 using exceptions for error detection/Main_Bank_Version6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 4 code/MonsterExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 4 code/MonsterExample.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,22 +248,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1665" height="192" key="GridCell.Tab.0.bottom" timestamp="1602194993439">
-      <screen x="1536" y="71" width="1920" height="1080" />
+    <state width="1665" height="189" key="GridCell.Tab.0.bottom" timestamp="1612125239318">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
-    <state width="1665" height="192" key="GridCell.Tab.0.bottom/0.23.1536.937/1536.71.1920.1080@1536.71.1920.1080" timestamp="1602194993439" />
-    <state width="1665" height="192" key="GridCell.Tab.0.center" timestamp="1602194993439">
-      <screen x="1536" y="71" width="1920" height="1080" />
+    <state width="1665" height="191" key="GridCell.Tab.0.bottom/0.23.1792.1097/1792.0.1920.1080@1792.0.1920.1080" timestamp="1607560801282" />
+    <state width="1665" height="189" key="GridCell.Tab.0.bottom/0.25.1792.1095/1792.0.1920.1080@1792.0.1920.1080" timestamp="1612125239318" />
+    <state width="1665" height="189" key="GridCell.Tab.0.center" timestamp="1612125239318">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
-    <state width="1665" height="192" key="GridCell.Tab.0.center/0.23.1536.937/1536.71.1920.1080@1536.71.1920.1080" timestamp="1602194993439" />
-    <state width="1665" height="192" key="GridCell.Tab.0.left" timestamp="1602194993438">
-      <screen x="1536" y="71" width="1920" height="1080" />
+    <state width="1665" height="191" key="GridCell.Tab.0.center/0.23.1792.1097/1792.0.1920.1080@1792.0.1920.1080" timestamp="1607560801281" />
+    <state width="1665" height="189" key="GridCell.Tab.0.center/0.25.1792.1095/1792.0.1920.1080@1792.0.1920.1080" timestamp="1612125239318" />
+    <state width="1665" height="189" key="GridCell.Tab.0.left" timestamp="1612125239317">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
-    <state width="1665" height="192" key="GridCell.Tab.0.left/0.23.1536.937/1536.71.1920.1080@1536.71.1920.1080" timestamp="1602194993438" />
-    <state width="1665" height="192" key="GridCell.Tab.0.right" timestamp="1602194993439">
-      <screen x="1536" y="71" width="1920" height="1080" />
+    <state width="1665" height="191" key="GridCell.Tab.0.left/0.23.1792.1097/1792.0.1920.1080@1792.0.1920.1080" timestamp="1607560801281" />
+    <state width="1665" height="189" key="GridCell.Tab.0.left/0.25.1792.1095/1792.0.1920.1080@1792.0.1920.1080" timestamp="1612125239317" />
+    <state width="1665" height="189" key="GridCell.Tab.0.right" timestamp="1612125239318">
+      <screen x="1792" y="0" width="1920" height="1080" />
     </state>
-    <state width="1665" height="192" key="GridCell.Tab.0.right/0.23.1536.937/1536.71.1920.1080@1536.71.1920.1080" timestamp="1602194993439" />
+    <state width="1665" height="191" key="GridCell.Tab.0.right/0.23.1792.1097/1792.0.1920.1080@1792.0.1920.1080" timestamp="1607560801281" />
+    <state width="1665" height="189" key="GridCell.Tab.0.right/0.25.1792.1095/1792.0.1920.1080@1792.0.1920.1080" timestamp="1612125239318" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
