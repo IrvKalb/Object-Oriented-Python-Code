@@ -1,4 +1,4 @@
-# pygame demo 4(c), One image, bounce around the window sing X, Y coordinates - with sound
+# pygame demo 4(c), One image, bounce around the window - with sound
 
 # 1 - Import packages
 import pygame
@@ -19,17 +19,19 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
 # 4 - Load assets: image(s), sounds,  etc.
-ballImage = pygame.image.load('images/ball.png')
-bounceSound = pygame.mixer.Sound('sounds/boing.wav')  # was:  boing.wav')
+oBall = pygame.image.load('images/ball.png')
+oBall = pygame.image.load('images/ball.png')
+bounceSound = pygame.mixer.Sound('sounds/boing.wav')
 pygame.mixer.music.load('sounds/background.mp3')
-pygame.mixer.music.play(-1, 0.0)   
+pygame.mixer.music.play(-1, 0.0)
+
 
 # 5 - Initialize variables
-ballRect = ballImage.get_rect()
+ballRect = oBall.get_rect()
 MAX_WIDTH = WINDOW_WIDTH - ballRect.width
 MAX_HEIGHT = WINDOW_HEIGHT - ballRect.height
-ballX = random.randrange(MAX_WIDTH)
-ballY = random.randrange(MAX_HEIGHT)
+ballRect.left = random.randrange(MAX_WIDTH)
+ballRect.top = random.randrange(MAX_HEIGHT)
 xSpeed = N_PIXELS_PER_FRAME
 ySpeed = N_PIXELS_PER_FRAME
  
@@ -45,28 +47,26 @@ while True:
             sys.exit()
     
     # 8 - Do any "per frame" actions
-    if (ballX < 0) or (ballX > MAX_WIDTH):
+    if (ballRect.left < 0) or (ballRect.right >= WINDOW_WIDTH):
         xSpeed = -xSpeed  # reverse X direction
         bounceSound.play()
 
-    if (ballY < 0) or (ballY > MAX_HEIGHT):
+    if (ballRect.top < 0) or (ballRect.bottom >= WINDOW_HEIGHT):
         ySpeed = -ySpeed  # reverse Y direction
         bounceSound.play()
 
-    # update the location of the ball, based on the speed in two directions
-    ballX = ballX + xSpeed
-    ballY = ballY + ySpeed
+    # update the rectangle of the ball, based on the speed in two directions
+    ballRect.left = ballRect.left + xSpeed
+    ballRect.top = ballRect.top + ySpeed
 
     # 9 - Clear the window before drawing it again
     window.fill(BLACK)
     
     # 10 - Draw the window elements
-    window.blit(ballImage, (ballX, ballY))
+    window.blit(oBall, ballRect)
 
     # 11 - Update the window
     pygame.display.update()
 
     # 12 - Slow things down a bit
     clock.tick(FRAMES_PER_SECOND)  # make pygame wait
-
-

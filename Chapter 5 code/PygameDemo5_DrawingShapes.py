@@ -54,16 +54,16 @@ while True:
     pygame.draw.line(window, BLUE, (20, 60), (60, 20), 1)
     
     # Draw a filled circle and an empty circle
-    pygame.draw.circle(window, GREEN, (250, 50), 30, 0)
-    pygame.draw.circle(window, GREEN, (400, 50), 30, 1)
+    pygame.draw.circle(window, GREEN, (250, 50), 30, 0) # filled
+    pygame.draw.circle(window, GREEN, (400, 50), 30, 1) # 1 pixel edge
 
     # Draw a filled rectangle and an empty rectangle
-    pygame.draw.rect(window, RED, (250, 150, 100, 50), 0)
-    pygame.draw.rect(window, RED, (400, 150, 100, 50), 1)
+    pygame.draw.rect(window, RED, (250, 150, 100, 50), 0) # filled
+    pygame.draw.rect(window, RED, (400, 150, 100, 50), 1) # 1 pixel edge
         
     # Draw a filled ellipse and an empty ellipse
-    pygame.draw.ellipse(window, YELLOW, (250, 250, 80, 40), 0)
-    pygame.draw.ellipse(window, YELLOW, (400, 250, 80, 40), 1)
+    pygame.draw.ellipse(window, YELLOW, (250, 250, 80, 40), 0) # filled
+    pygame.draw.ellipse(window, YELLOW, (400, 250, 80, 40), 1) # 1 pixel edge
 
     # Draw a six-sided polygon
     pygame.draw.polygon(window, TEAL, ((240, 350), (350, 350), \

@@ -17,7 +17,7 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
 # 4 - Load assets: image(s), sounds,  etc.
-ball = pygame.image.load('images/ball.png')
+oBall = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables
  
@@ -37,7 +37,7 @@ while True:
     window.fill(BLACK)
     
     # 10 - Draw all window elements
-    window.blit(ball, (100, 200))    # draw ball at position 100 across (X), and 200 down (Y)
+    window.blit(oBall, (100, 200))    # draw ball at position 100 across (X), and 200 down (Y)
 
     # 11 - Update the window
     pygame.display.update()

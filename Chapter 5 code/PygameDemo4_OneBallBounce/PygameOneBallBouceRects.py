@@ -19,14 +19,14 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
 # 4 - Load assets: image(s), sounds,  etc.
-ballImage = pygame.image.load('images/ball.png')
+oBall = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables
-ballRect = ballImage.get_rect()
+ballRect = oBall.get_rect()
 MAX_WIDTH = WINDOW_WIDTH - ballRect.width
 MAX_HEIGHT = WINDOW_HEIGHT - ballRect.height
-ballX = random.randrange(MAX_WIDTH)
-ballY = random.randrange(MAX_HEIGHT)
+ballRect.left = random.randrange(MAX_WIDTH)
+ballRect.top = random.randrange(MAX_HEIGHT)
 xSpeed = N_PIXELS_PER_FRAME
 ySpeed = N_PIXELS_PER_FRAME
  
@@ -42,10 +42,10 @@ while True:
             sys.exit()
     
     # 8 - Do any "per frame" actions
-    if (ballRect.left < 0) or (ballRect.right > WINDOW_WIDTH):
+    if (ballRect.left < 0) or (ballRect.right >= WINDOW_WIDTH):
         xSpeed = -xSpeed  # reverse X direction
 
-    if (ballRect.top < 0) or (ballRect.bottom > WINDOW_HEIGHT):
+    if (ballRect.top < 0) or (ballRect.bottom >= WINDOW_HEIGHT):
         ySpeed = -ySpeed  # reverse Y direction
 
     # update the rectangle of the ball, based on the speed in two directions
@@ -56,12 +56,10 @@ while True:
     window.fill(BLACK)
     
     # 10 - Draw the window elements
-    window.blit(ballImage, ballRect)
+    window.blit(oBall, ballRect)
 
     # 11 - Update the window
     pygame.display.update()
 
     # 12 - Slow things down a bit
     clock.tick(FRAMES_PER_SECOND)  # make pygame wait
-
-
