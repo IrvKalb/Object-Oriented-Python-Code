@@ -9,9 +9,9 @@ from pygame.locals import *
 
 class SimpleButton():
     # used to track the state of the button
-    STATE_IDLE = 'idle'
-    STATE_ARMED = 'armed'
-    STATE_DISARMED = 'disarmed'
+    STATE_IDLE = 'idle' # button is up, mouse not over the button
+    STATE_ARMED = 'armed' # button is down, mouse over button
+    STATE_DISARMED = 'disarmed' # button was down, mouse not over button
         
     def __init__(self, window, loc, up, down):
         self.window = window
@@ -30,7 +30,7 @@ class SimpleButton():
         # This method will return True if user clicks the button.
         # Normally returns False.
 
-        if eventObj.type not in (MOUSEMOTION, MOUSEBUTTONUP, MOUSEBUTTONDOWN) :
+        if eventObj.type not in (MOUSEMOTION, MOUSEBUTTONUP, MOUSEBUTTONDOWN):
             # The button only cares about mouse-related events
             return False
 

@@ -17,14 +17,14 @@ N_BALLS = 3
 # 3 - Initialize the world
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-clock = pygame.time.Clock()  # set the speed (frames per second)
+clock = pygame.time.Clock()  
 
 # 4 - Load assets: image(s), sounds, etc.
 
 # 5 - Initialize variables
 ballList = []
 for oBall in range(0, N_BALLS):
-    # create a ball object for each ball
+    # each time through the loop, create a ball object
     oBall = Ball(window, WINDOW_WIDTH, WINDOW_HEIGHT)
     ballList.append(oBall)  # append the new ball to the list of balls   
 

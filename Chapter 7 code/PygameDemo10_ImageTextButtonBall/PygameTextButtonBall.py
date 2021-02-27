@@ -23,12 +23,11 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()  # set the speed (frames per second)
 
 # 4 - Load assets: image(s), sounds,  etc.
-#ball = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables
 #ballRect = ball.get_rect()
 
-ball = pygwidgets.Image(window, (0, 0), 'images/ball.png')
+oBall = pygwidgets.Image(window, (0, 0), 'images/ball.png')
 ballLeft = 0
 ballTop = 0
 
@@ -39,30 +38,26 @@ ballY = random.randrange(MAX_HEIGHT)
 xSpeed = N_PIXELS_PER_FRAME
 ySpeed = N_PIXELS_PER_FRAME
 
+oBackground = pygwidgets.Image(window, (0, 0), 'images/background.jpg')
 
+oRestartButton = pygwidgets.CustomButton(window, (500, 430), \
+                                        up='images/restartUp.png', \
+                                        down='images/restartDown.png', \
+                                        over='images/restartOver.png', \
+                                        disabled= 'images/restartDisabled.png')
 
-background = pygwidgets.Image(window, (0, 0), 'images/background1.jpg')
+oHitMeButton = pygwidgets.TextButton(window, (500, 370), 'Hit Me')
 
-restartButton = pygwidgets.CustomButton(window, (500, 430), \
-                                        up='images/RestartButtonUp.png', \
-                                        down='images/RestartButtonDown.png', \
-                                        over='images/RestartButtonOver.png', \
-                                        disabled= 'images/RestartButtonDisabled.png')
-
-hitMeButton = pygwidgets.TextButton(window, (500, 370), 'Hit Me')
-
-
-messageTextA = pygwidgets.DisplayText(window, (20, 50), 'Here is some text', \
+oMessageTextA = pygwidgets.DisplayText(window, (20, 50), 'Here is some text', \
                                     fontSize=36, textColor=WHITE)
 
-messageTextB = pygwidgets.DisplayText(window, (20, 150), 'Here is more text\nAnd more text\nAnd even more text', \
+oMessageTextB = pygwidgets.DisplayText(window, (20, 150), 'Here is more text\nAnd more text\nAnd even more text', \
                                     fontSize=36, textColor=WHITE, justified='center')
 
-
-userInputA = pygwidgets.InputText(window, (20, 350), '', \
+oUserInputA = pygwidgets.InputText(window, (20, 350), '', \
                                   fontSize=24, textColor=BLACK, backgroundColor=WHITE)
 
-userInputB= pygwidgets.InputText(window, (20, 430), '', width = 400, \
+oUserInputB= pygwidgets.InputText(window, (20, 430), '', width = 400, \
                                   fontSize=24, textColor=WHITE, backgroundColor=BLACK)
 
 counter = 0
@@ -72,60 +67,60 @@ while True:
 
     # 7 -  Check for and handle events
     for event in pygame.event.get():
-        # check if the event is the X button 
+        # check if the event is the close button 
         if event.type == pygame.QUIT:
-            # if it is quit the game
+            # if it is, quit the game
             pygame.quit()
             sys.exit()
 
-        if  restartButton.handleEvent(event):
+        if  oRestartButton.handleEvent(event):
                 counter = 0
 
-        if  hitMeButton.handleEvent(event):
+        if  oHitMeButton.handleEvent(event):
                 print('Do not hit me')
 
-        if userInputA.handleEvent(event):
-            userText = userInputA.getText()
+        if oUserInputA.handleEvent(event):
+            userText = oUserInputA.getText()
             print('In the first field, the user entered:', userText)
 
-        if userInputB.handleEvent(event):
-            userText = userInputB.getText()
+        if oUserInputB.handleEvent(event):
+            userText = oUserInputB.getText()
             print('The the second field, the user entered:', userText)
 
 
     # Main code
     counter = counter + 1
-    messageTextA.setValue('Here is some text.  Loop counter:' + str(counter))
+    oMessageTextA.setValue('Here is some text.  Loop counter:' + str(counter))
 
-    ballLeft, ballRight = ball.getLoc()
+    ballLeft, ballRight = oBall.getLoc()
 
     # 8 - Do any "per frame" actions
-    if (ballLeft < 0) or (ballLeft + BALL_WIDTH_HEIGHT > WINDOW_WIDTH):
+    if (ballLeft < 0) or (ballLeft + BALL_WIDTH_HEIGHT >= WINDOW_WIDTH):
         xSpeed = -xSpeed  # reverse X direction
 
-    if (ballTop < 0) or (ballTop + BALL_WIDTH_HEIGHT > WINDOW_HEIGHT):
+    if (ballTop < 0) or (ballTop + BALL_WIDTH_HEIGHT >= WINDOW_HEIGHT):
         ySpeed = -ySpeed  # reverse Y direction
 
     # update the rectangle of the ball, based on the speed in two directions
     ballLeft = ballLeft + xSpeed
     ballTop = ballTop + ySpeed
-    ball.setLoc( (ballLeft, ballTop ))
+    oBall.setLoc( (ballLeft, ballTop ))
 
 
     # 9 - Clear the screen before drawing it again
-    background.draw()  # draw a background image
+    oBackground.draw()  # draw a background image
                           
     # 10 - Draw the screen elements
-    ball.draw()
+    oBall.draw()
 
-    restartButton.draw()
-    hitMeButton.draw()
+    oRestartButton.draw()
+    oHitMeButton.draw()
 
-    messageTextA.draw()
-    messageTextB.draw()
+    oMessageTextA.draw()
+    oMessageTextB.draw()
 
-    userInputA.draw()
-    userInputB.draw()
+    oUserInputA.draw()
+    oUserInputB.draw()
 
     # 11 - Update the screen
     pygame.display.update()

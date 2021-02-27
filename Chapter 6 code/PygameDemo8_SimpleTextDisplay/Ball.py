@@ -10,11 +10,11 @@ class Ball():
         self.windowWidth = windowWidth
         self.windowHeight = windowHeight
 
-        self.ballImage = pygame.image.load("images/ball.png")
+        self.image = pygame.image.load('images/ball.png')
         # A rect is made up of [x, y, width, height]
-        ballRect = self.ballImage.get_rect()
-        self.width = ballRect[2]
-        self.height = ballRect[3]
+        ballRect = self.image.get_rect()
+        self.width = ballRect.width
+        self.height = ballRect.height
         self.maxWidth = windowWidth - self.width
         self.maxHeight = windowHeight - self.height
         
@@ -22,32 +22,23 @@ class Ball():
         self.x = random.randrange(0, self.maxWidth)
         self.y = random.randrange(0, self.maxHeight)
 
-        # Choose a random speed in both the x and y directions
-        self.xSpeed = random.randrange(1, 4)
-        if random.randrange(0, 2) == 0:        
-            self.xSpeed = -self.xSpeed
-        
-        self.ySpeed = random.randrange(1, 4)
-        if random.randrange(0, 2) == 0:        
-            self.ySpeed = -self.ySpeed
+        # Choose a random speed between -4 and 4, but not zero
+        # in both the x and y directions
+        speedsList = [-4, -3, -2, -1, 1, 2, 3, 4] 
+        self.xSpeed = random.choice(speedsList)
+        self.ySpeed = random.choice(speedsList)
 
     def update(self):
         # check for hitting a wall.  If so, change that direction
-        if (self.x < 0) or (self.x > self.maxWidth):
+        if (self.x < 0) or (self.x >= self.maxWidth):
             self.xSpeed = -self.xSpeed
 
-        if (self.y < 0) or (self.y > self.maxHeight):
+        if (self.y < 0) or (self.y >= self.maxHeight):
             self.ySpeed = -self.ySpeed
 
         # update the balls x and y, based on the speed in two directions
         self.x = self.x + self.xSpeed
         self.y = self.y + self.ySpeed
 
-    def reverseIfClicked(self, mouseLoc):
-        myRect = pygame.Rect(self.x, self.y, self.width, self.height)
-        if myRect.collidepoint(mouseLoc):
-            self.xSpeed = -self.xSpeed
-            self.ySpeed = -self.ySpeed
-
     def draw(self):
-        self.window.blit(self.ballImage, (self.x, self.y))
+        self.window.blit(self.image, (self.x, self.y))

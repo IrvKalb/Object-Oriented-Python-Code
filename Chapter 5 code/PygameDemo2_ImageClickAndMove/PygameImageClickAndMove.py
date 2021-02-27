@@ -21,7 +21,7 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
 # 4 - Load assets: image(s), sounds,  etc.
-oBall = pygame.image.load('images/ball.png')
+ballImage = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables
 ballX = random.randrange(MAX_WIDTH)
@@ -54,7 +54,7 @@ while True:
     window.fill(BLACK)
     
     # 10 - Draw all window elements
-    window.blit(oBall, (ballX, ballY))    # draw the ball at the randomized location
+    window.blit(ballImage, (ballX, ballY))    # draw the ball at the randomized location
 
     # 11 - Update the window
     pygame.display.update()

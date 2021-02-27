@@ -7,26 +7,27 @@ def orderPizza(size, style='regular', topping=None):
         price = 10.00
     elif size == 'medium':
         price = 14.00
-    else: #large
+    else: # large
         price = 18.00
 
-    line = 'You have ordered a ' + size + ' ' + style + ' pizza with'
+    if style == 'deepdish':
+        price = price + 2.00 # charge extra for deepdish
+
+    line = 'You have ordered a ' + size + ' ' + style + ' pizza with '
     if topping is None:  # check if no topping was passed in
-        print(line +' no topping')
+        print(line +'no topping')
     else:
-        print(line, topping)
+        print(line + topping)
         price = price + PRICE_OF_TOPPING
 
     print('The price is $', price)
     print()
     
-#The caller could then order a pizza in any of the following ways:   
+# You could order a pizza in the following ways:   
 orderPizza('large')   # large, defaults to regular, no topping
 
 orderPizza('large', style='regular')  # same as above
 
-orderPizza('large', style='regular', topping = 'mushrooms')  
-
-orderPizza('medium', style='deep dish', topping='mushrooms')
+orderPizza('medium', style='deepdish', topping='mushrooms')
 
 orderPizza('small', topping='mushrooms') # style defaults to regular
