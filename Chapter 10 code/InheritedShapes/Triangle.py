@@ -5,10 +5,11 @@ from Shape import *
 
 class Triangle(Shape):
 
-    def __init__(self, window):
-        super().__init__(window, 'Triangle')
+    def __init__(self, window, maxWidth, maxHeight):
+        super().__init__(window, 'Triangle', maxWidth, maxHeight)
         self.width = random.randrange(10, 100)
         self.height = random.randrange(10, 100)
+        self.triangleSlope = -1 * (self.height / self.width)
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
 
     def clickedInside(self, mousePoint):
@@ -18,12 +19,12 @@ class Triangle(Shape):
 
         # Do some math to see if the point is inside the triangle
         xOffset = mousePoint[0] - self.x
-        yOffset = self.y + self.height - mousePoint[1]
+        yOffset = mousePoint[1] - self.y
         if xOffset == 0:
             return True
 
-        slope = yOffset / xOffset  # rise over run
-        if slope > 1:
+        pointSlopeFromYIntercept = (yOffset - self.height) / xOffset #rise over run
+        if pointSlopeFromYIntercept < self.triangleSlope:
             return True
         else:
             return False

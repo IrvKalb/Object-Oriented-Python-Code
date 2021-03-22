@@ -6,6 +6,7 @@ from pygame.locals import *
 from Square import *
 from Circle import *
 from Triangle import *
+import pygwidgets
 
 # set up the constants
 WHITE = (255, 255, 255)
@@ -20,16 +21,14 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 clock = pygame.time.Clock()
 
 shapesList = []
-shapeTypesTuple = ('Square', 'Circle', 'Triangle')
+shapeClassesTuple = (Square, Circle, Triangle)
 for i in range(0, N_SHAPES):
-    thisType = random.choice(shapeTypesTuple)
-    if thisType == 'Square':
-        oShape = Square(window)
-    elif thisType == 'Circle':
-        oShape = Circle(window)
-    else:  # must be triangle
-        oShape = Triangle(window)
+    randomlyChosenClass = random.choice(shapeClassesTuple)
+    oShape = randomlyChosenClass(window, WINDOW_WIDTH, WINDOW_HEIGHT)
     shapesList.append(oShape)
+
+oStatusLine = pygwidgets.DisplayText(window, (4, 4), \
+                    'Click on shapes', fontSize=28)
 
 # main loop
 while True:
@@ -43,12 +42,14 @@ while True:
                 if oShape.clickedInside(event.pos):
                     thisArea = oShape.area()
                     thisType = oShape.getType()
-                    print('Clicked on a', thisType,  'whose area is', str(thisArea))
-
+                    newText = 'Clicked on a ' + thisType \
+                                     + ' whose area is ' + str(thisArea)
+                    oStatusLine.setValue(newText)
     window.fill(WHITE)
     # Tell each shape to draw itself
     for oShape in shapesList:
         oShape.draw()
+    oStatusLine.draw()
 
     pygame.display.update()
     clock.tick(FRAMES_PER_SECOND)

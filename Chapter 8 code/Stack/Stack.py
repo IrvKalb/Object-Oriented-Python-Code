@@ -6,7 +6,7 @@ class Stack():
         if startingStackAsList is None:
             self.dataList = [ ]
         else:
-            self.dataList = startingStack[:]  # make a copy 
+            self.dataList = startingStackAsList[:]  # make a copy 
         
     def push(self, item):       
         self.dataList.append(item)

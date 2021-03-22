@@ -3,11 +3,10 @@
 import pygame
 from Shape import *
 
-
 class Rectangle(Shape):
 
-    def __init__(self, window):
-        super().__init__(window, 'Rectangle')
+    def __init__(self, window, maxWidth, maxHeight):
+        super().__init__(window, 'Rectangle', maxWidth, maxHeight)
         self.width = random.randrange(10, 100)
         self.height = random.randrange(10, 100)
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)

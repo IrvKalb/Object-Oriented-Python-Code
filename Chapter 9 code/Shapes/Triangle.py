@@ -10,13 +10,14 @@ BLUE = (0, 0, 255)
 
 class Triangle():
 
-    def __init__(self, window):
+    def __init__(self, window, maxWidth, maxHeight):
         self.window = window
         self.width = random.randrange(10, 100)
         self.height = random.randrange(10, 100)
+        self.triangleSlope = -1 * (self.height / self.width)
         self.color = random.choice((RED, GREEN, BLUE))
-        self.x = random.randrange(0, 400)
-        self.y = random.randrange(0, 400)
+        self.x = random.randrange(1, maxWidth - 100)
+        self.y = random.randrange(25, maxHeight - 100)
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
         self.type = 'Triangle'
         
@@ -27,12 +28,12 @@ class Triangle():
 
         # Do some math to see if the point is inside the triangle
         xOffset = mousePoint[0] - self.x
-        yOffset = self.y + self.height - mousePoint[1]
+        yOffset = mousePoint[1] - self.y
         if xOffset == 0:
             return True
 
-        slope = yOffset / xOffset  # rise over run
-        if slope > 1:
+        pointSlopeFromYIntercept = (yOffset - self.height) / xOffset #rise over run
+        if pointSlopeFromYIntercept < self.triangleSlope:
             return True
         else:
             return False
@@ -45,7 +46,7 @@ class Triangle():
         return theArea
 
     def draw(self):
-        pygame.draw.polygon(self.window, self.color, (\
-            (self.x, self.y + self.height), \
-            (self.x, self.y),\
-            (self.x + self.width, self.y)))
+        pygame.draw.polygon(self.window, self.color,
+            ((self.x, self.y + self.height),
+             (self.x, self.y),
+             (self.x + self.width, self.y)))

@@ -19,15 +19,10 @@ window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 clock = pygame.time.Clock()
 
 shapesList = []
-shapeTypesTuple = ('square', 'circle', 'triangle')
+shapeClassesTuple = (Square, Circle, Triangle)
 for i in range(0, N_SHAPES):
-    thisType = random.choice(shapeTypesTuple)
-    if thisType == 'square':
-        oShape = Square(window)
-    elif thisType == 'circle':
-        oShape = Circle(window)
-    else:  # must be triangle
-        oShape = Triangle(window)
+    randomlyChosenClass = random.choice(shapeClassesTuple)
+    oShape = randomlyChosenClass(window, WINDOW_WIDTH, WINDOW_HEIGHT)
     shapesList.append(oShape)
 
 oStatusLine = pygwidgets.DisplayText(window, (4,4), \

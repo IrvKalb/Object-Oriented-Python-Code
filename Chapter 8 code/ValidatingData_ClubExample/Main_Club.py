@@ -2,17 +2,17 @@
 
 from Club import *
 
-# Create a club with at most 5 students
+# Create a club with at most 5 members
 oProgrammingClub = Club('Programming', 5)
 
-oProgrammingClub.addStudent('Joe Schmoe')
-oProgrammingClub.addStudent('Cindy Lou Hoo')
-oProgrammingClub.addStudent('Dino Richmond')
-oProgrammingClub.addStudent('Susie Sweetness')
-oProgrammingClub.addStudent('Fred Farkle')
+oProgrammingClub.addMember('Joe Schmoe')
+oProgrammingClub.addMember('Cindy Lou Hoo')
+oProgrammingClub.addMember('Dino Richmond')
+oProgrammingClub.addMember('Susie Sweetness')
+oProgrammingClub.addMember('Fred Farkle')
 
 oProgrammingClub.report()
 
-# Attempt to add additional student
+# Attempt to add additional member
 
-oProgrammingClub.addStudent('Iwanna Join')
+oProgrammingClub.addMember('Iwanna Join')

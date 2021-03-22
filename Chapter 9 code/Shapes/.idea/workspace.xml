@@ -1,52 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="344532cc-c981-4fa0-b1c1-ccbc720fd2f4" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="344532cc-c981-4fa0-b1c1-ccbc720fd2f4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Circle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Circle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Main_Shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Main_Shapes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Main_ShapesWithRectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Main_ShapesWithRectangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Rectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Rectangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Shape.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Shape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/ShapeBasic.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/ShapeBasic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Square.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Square.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Triangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/sounds/ding.wav" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/sounds/ding.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/sounds/loser.wav" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/sounds/loser.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f10.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f11.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f13.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f14.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f15.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f16.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f17.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f6.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f7.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f8.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f9.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 8 code/Decorator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 8 code/Stack/Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 8 code/Stack/Stack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 8 code/ValidatingData_ClubExample/Club.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 8 code/ValidatingData_ClubExample/Club.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Chapter 8 code/ValidatingData_ClubExample/Main_Club.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 8 code/ValidatingData_ClubExample/Main_Club.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Shapes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Shapes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Circle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Circle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main_ShapesExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_ShapesExample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Square.py" beforeDir="false" afterPath="$PROJECT_DIR$/Square.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Triangle.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Main_ShapesExample.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Circle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="31" column="15" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Square.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Triangle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,6 +58,9 @@
       <find>centerX</find>
       <find>self.widthAnd</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,6 +81,8 @@
     <option name="width" value="1758" />
     <option name="height" value="763" />
   </component>
+  <component name="ProjectId" id="1q2CFon8I5kS4YDCiYrQy0UVqOz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -99,21 +102,14 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="/usr/bin/python" />
     <property name="settings.editor.selected.configurable" value="Errors" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.Main_ShapesExample">
     <configuration name="Main_ShapesExample" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -165,6 +161,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>

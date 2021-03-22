@@ -11,12 +11,12 @@ BLUE = (0, 0, 255)
 
 class Square():
 
-    def __init__(self, window):
+    def __init__(self, window, maxWidth, maxHeight):
         self.window = window
         self.widthAndHeight = random.randrange(10, 100)
         self.color = random.choice((RED, GREEN, BLUE))
-        self.x = random.randrange(0, 400)
-        self.y = random.randrange(0, 400)
+        self.x = random.randrange(1, maxWidth - 100)
+        self.y = random.randrange(25, maxHeight - 100)
         self.rect = pygame.Rect(self.x, self.y, self.widthAndHeight, self.widthAndHeight)
         self.type = 'Square'
         

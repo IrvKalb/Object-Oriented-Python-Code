@@ -2,22 +2,24 @@
 
 class Club():
 
-    def __init__(self, clubName, maxStudents):
+    def __init__(self, clubName, maxMembers):
         self.clubName = clubName
-        self.maxStudents = maxStudents
-        self.studentsList = []
+        self.maxMembers = maxMembers
+        self.membersList = []
 
-    def addStudent(self, studentName):
-        if len(self.studentsList) < self.maxStudents:
-            self.studentsList.append(studentName)
-            print('OK.', studentName, 'has been added to the', self.clubName, 'club')
+    def addMember(self, name):
+        # Make sure that there is enough room left
+        if len(self.membersList) < self.maxMembers:
+            self.membersList.append(name)
+            print('OK.', name, 'has been added to the', self.clubName, 'club')
         else:
-            print('Sorry, but the', self.clubName, 'club already has', self.maxStudents, 'students') 
+            print('Sorry, but we cannot add', name, 'to the', self.clubName, 'club.')
+            print('This club already has the maximum of', self.maxMembers, 'members.') 
 
     def report(self):
         print()
-        print('Here are the', len(self.studentsList), 'members of the', self.clubName, 'club:')
-        print()
-        for name in self.studentsList:
+        print('Here are the', len(self.membersList), 'members of the', self.clubName, 'club:')
+        for name in self.membersList:
             print('   ' + name)
+        print()
 

@@ -5,8 +5,8 @@ from Shape import *
 
 class Square(Shape):
 
-    def __init__(self, window):
-        super().__init__(window, 'Square')
+    def __init__(self, window, maxWidth, maxHeight):
+        super().__init__(window, 'Square', maxWidth, maxHeight)
         self.widthAndHeight = random.randrange(10, 100)
         self.rect = pygame.Rect(self.x, self.y, self.widthAndHeight, self.widthAndHeight)
 
