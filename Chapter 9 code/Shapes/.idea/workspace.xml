@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="344532cc-c981-4fa0-b1c1-ccbc720fd2f4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Circle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Circle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Main_Shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Main_Shapes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Main_ShapesWithRectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Main_ShapesWithRectangle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Rectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Rectangle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Shape.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Shape.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/ShapeBasic.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/ShapeBasic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Square.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Square.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 10 code/InheritedShapes/Triangle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/sounds/ding.wav" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/sounds/ding.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/sounds/loser.wav" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 12 code/HigherOrLower/sounds/loser.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f10.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f11.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f13.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f14.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f15.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f16.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f17.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f6.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f7.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f8.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f9.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 14 code/AnimationExample/images/Dinowalk/f9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 8 code/Decorator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 8 code/Stack/Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 8 code/Stack/Stack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 8 code/ValidatingData_ClubExample/Club.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 8 code/ValidatingData_ClubExample/Club.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Chapter 8 code/ValidatingData_ClubExample/Main_Club.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Chapter 8 code/ValidatingData_ClubExample/Main_Club.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Shapes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Shapes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Circle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Circle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main_ShapesExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_ShapesExample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Square.py" beforeDir="false" afterPath="$PROJECT_DIR$/Square.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Triangle.py" afterDir="false" />
-    </list>
+    <list default="true" id="344532cc-c981-4fa0-b1c1-ccbc720fd2f4" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -28,6 +28,8 @@ class Rectangle():
     # Magic method called when you compare
     # two rectangle  objects with the == operator
     def __eq__(self, oOtherRectangle):
+        if not isinstance(oOtherRectangle, Rectangle):
+            raise TypeError('Second object was not a Rectangle')
         if self.area == oOtherRectangle.area:
             return True
         else:
@@ -36,6 +38,8 @@ class Rectangle():
     # Magic method called when you compare
     # two rectangle  objects with the < operator
     def __lt__(self, oOtherRectangle):
+        if not isinstance(oOtherRectangle, Rectangle):
+            raise TypeError('Second object was not a Rectangle')
         if self.area < oOtherRectangle.area:
             return True
         else:
@@ -44,6 +48,8 @@ class Rectangle():
     # Magic method called when you compare
     # two rectangle  objects with the > operator
     def __gt__(self, oOtherRectangle):
+        if not isinstance(oOtherRectangle, Rectangle):
+            raise TypeError('Second object was not a Rectangle')
         if self.area > oOtherRectangle.area:
             return True
         else:

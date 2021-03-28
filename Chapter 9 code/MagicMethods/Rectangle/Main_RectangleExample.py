@@ -24,7 +24,6 @@ for i in range(0, N_RECTANGLES):
     rectanglesList.append(oRectangle)
 
 whichRectangle = FIRST_RECTANGLE
-print(oRectangle)
 
 # main loop
 while True:
@@ -52,7 +51,7 @@ while True:
                             print('First rectangle is larger than second rectangle.')
                         whichRectangle = FIRST_RECTANGLE
 
-    # Clear the screen, and draw all rectangles
+    # Clear the window and draw all rectangles
     window.fill(WHITE)
     for oRectangle in rectanglesList:
         oRectangle.draw()
