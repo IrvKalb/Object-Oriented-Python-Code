@@ -1,4 +1,5 @@
 # Vector class
+import math
 
 class Vector():
     '''The Vector class represents two values as a vector, allows for many math calculations'''   
@@ -26,15 +27,17 @@ class Vector():
             raise TypeError('Second value must be a Vector or scalar')
 
     def __abs__(self):
-        return (self.x ** 2 + self.y ** 2) ** 0.5
+        return math.sqrt((self.x ** 2) + (self.y ** 2))
 
     def __eq__(self, oOther):  # called for == operator
+        if not isinstance(oOther, Vector):
+            raise TypeError('Second object must be a Vector')
         return (self.x == oOther.x) and (self.y == oOther.y)
 
     def __ne__(self, oOther):  # called for != operator
         if not isinstance(oOther, Vector):
             raise TypeError('Second object must be a Vector')
-        return not self.__eq__(oOther)  # reuse __eq__
+        return not (self == oOther)  # calls __eq__
 
     def __lt__(self, oOther):    # called for < operator
         if not isinstance(oOther, Vector):
