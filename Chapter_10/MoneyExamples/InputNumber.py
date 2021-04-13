@@ -66,23 +66,7 @@ class InputNumber(pygwidgets.InputText):
             else:
                 returnValue = int(userString)
         except ValueError:
-            raise ValueError('Entry is not a number, needs to have at least one digit.')               
-            
+            raise ValueError('Entry is not a number, needs to have at least one digit.')
+
         return returnValue
 
-
-##    def getValue(self):
-##        OK = False
-##        if char in self.text:
-##            if char.isdigit():
-##                OK = True
-##                break
-##
-##        if not OK:
-##            raise ValueError('Entry is not a number, needs to have at least one digit.')
-##        userString = super().getValue()
-##        if self.allowFloatingNumber:
-##            return float(userString)
-##        else:
-##            return int(userString)
-            

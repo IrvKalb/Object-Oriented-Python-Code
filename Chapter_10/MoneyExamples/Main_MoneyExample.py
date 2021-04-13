@@ -24,27 +24,33 @@ FRAMES_PER_SECOND = 30
 # 3 - Initialize the world
 pygame.init()
 window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
-clock = pygame.time.Clock()  # set the speed (frames per second)
+clock = pygame.time.Clock()
  
 # 4 - Load assets: image(s), sounds,  etc.
 
 # 5 - Initialize variables
-title = pygwidgets.DisplayText(window, (0, 40), 'Demo of InputNumber and DisplayMoney fields', fontSize=36, \
-                                      width=WINDOW_WIDTH, justified='center')
+title = pygwidgets.DisplayText(window, (0, 40),
+                'Demo of InputNumber and DisplayMoney fields',
+                fontSize=36, width=WINDOW_WIDTH, justified='center')
 
-inputCaption = pygwidgets.DisplayText(window, (20, 150), 'Input money amount:', fontSize=24, \
-                                      width=190, justified='right')
+inputCaption = pygwidgets.DisplayText(window, (20, 150),
+                'Input money amount:', fontSize=24,
+                width=190, justified='right')
 inputField = InputNumber(window, (230, 150), '', width=150)
 okButton = pygwidgets.TextButton(window, (430, 150), 'OK')
 
-outputCaption1 = pygwidgets.DisplayText(window, (20, 300), 'Output dollars & cents:', fontSize=24,
-                                        width=190, justified='right')
-moneyField1 = DisplayMoney(window, (230, 300), '', textColor=BLACK, backgroundColor=WHITE, width=150)
+outputCaption1 = pygwidgets.DisplayText(window, (20, 300),
+                'Output dollars & cents:', fontSize=24,
+                width=190, justified='right')
+moneyField1 = DisplayMoney(window, (230, 300), '', textColor=BLACK,
+                backgroundColor=WHITE, width=150)
 
-outputCaption2 = pygwidgets.DisplayText(window, (20, 400), 'Output dollars only:', fontSize=24,
-                                        width=190, justified='right')
-moneyField2 = DisplayMoney(window, (230, 400), '', textColor=BLACK, backgroundColor=WHITE, width=150, \
-                           showCents=False)
+outputCaption2 = pygwidgets.DisplayText(window, (20, 400),
+                'Output dollars only:', fontSize=24,
+                width=190, justified='right')
+moneyField2 = DisplayMoney(window, (230, 400), '', textColor=BLACK,
+                backgroundColor=WHITE, width=150,
+                showCents=False)
 # 6 - Loop forever
 while True:
 
@@ -57,6 +63,7 @@ while True:
 
         # Pressing Return/Enter or clicking OK triggers action
         if inputField.handleEvent(event) or okButton.handleEvent(event):
+            # Could add try/except to catch any remaining error
             theValue = inputField.getValue()
             theText = str(theValue)
             moneyField1.setValue(theText)

@@ -12,20 +12,20 @@ BLACK = (0, 0, 0)
 #
 class DisplayMoney(pygwidgets.DisplayText):
 
-    def __init__(self, window, loc, startingAmount=None, \
-                 currencySymbol='$', currencySymbolOnLeft=True, showCents=True, \
-                 fontName=None, fontSize=24, width=150, height=None, \
-                 textColor=BLACK, backgroundColor=None, justified='left'):
+    def __init__(self, window, loc,
+                 fontName=None, fontSize=24, width=150, height=None, 
+                 textColor=BLACK, backgroundColor=None, justified='left',
+                 value=None, currencySymbol='$', currencySymbolOnLeft=True, showCents=True):
 
         self.currencySymbol = currencySymbol
         self.currencySymbolOnLeft = currencySymbolOnLeft
         self.showCents = showCents
-        if startingAmount == None:
-            startingAmount = 0.00
+        if value is None:
+            value = 0.00
 
         # Call the __init__ method of our base class
-        super().__init__(window, loc, startingAmount, \
-                            fontName, fontSize, width, height, \
+        super().__init__(window, loc, value,
+                            fontName, fontSize, width, height,
                             textColor, backgroundColor, justified)
 
     def setValue(self, money):
@@ -34,10 +34,10 @@ class DisplayMoney(pygwidgets.DisplayText):
 
         money = float(money)
 
-        money = '{:,.2f}'.format(money)  # add commas
-
-        if not self.showCents:  # remove decimal point and last two digits
-            money = money[ : -3]
+        if self.showCents:
+            money = '{:,.2f}'.format(money)
+        else:
+            money = '{:,.0f}'.format(money)
 
         if self.currencySymbolOnLeft:
             theText = self.currencySymbol + money

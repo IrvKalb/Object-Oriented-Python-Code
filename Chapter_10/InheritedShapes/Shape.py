@@ -3,17 +3,16 @@
 # To be used as a base class for other classes
 #
 import random
+from abc import ABC, abstractmethod
 
 # set up the colors
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-class Shape():  # This is an abstract class
+class Shape(ABC):  # Identifies this as an abstract base class
 
     def __init__(self, window, shapeType, maxWidth, maxHeight):
-        if type(shapeType) is Shape:
-            raise TypeError('You cannot instantiate a Shape object directly.')
         self.window = window
         self.shapeType = shapeType
         self.color = random.choice((RED, GREEN, BLUE))
@@ -23,12 +22,15 @@ class Shape():  # This is an abstract class
     def getType(self):
         return self.shapeType
 
+    @abstractmethod
     def clickedInside(self, mousePoint):
-        raise NotImplementedError('Subclass must implement the method: clickedInside')
+        pass
 
+    @abstractmethod
     def getArea(self):
-        raise NotImplementedError('Subclass must implement the method: area')
+        pass
 
+    @abstractmethod
     def draw(self):
-        raise NotImplementedError('Subclass must implement the method: draw')
+        pass
 

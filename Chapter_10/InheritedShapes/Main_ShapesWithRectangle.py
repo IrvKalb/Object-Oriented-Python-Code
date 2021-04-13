@@ -1,4 +1,4 @@
-# Main Shapes with abstract methods
+# Main Shapes program with Rectangle
 
 import pygame
 import sys

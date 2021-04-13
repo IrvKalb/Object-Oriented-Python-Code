@@ -11,10 +11,6 @@ import pygwidgets
 from InputNumber import *
 
 # 2 - Define constants
-BLACK = (0, 0, 0)
-BLACKISH = (10, 10, 10)
-GRAY = (128, 128, 128)
-WHITE = (255, 255, 255)
 BACKGROUND_COLOR = (0, 180, 180)
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
@@ -22,22 +18,22 @@ FRAMES_PER_SECOND = 30
 
 # 3 - Initialize the world
 pygame.init()
-window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
+window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()  # set the speed (frames per second)
  
 # 4 - Load assets: image(s), sounds,  etc.
 
 # 5 - Initialize variables
-title = pygwidgets.DisplayText(window, (0, 40), 'Demo of InputText and InputNumber fields', fontSize=36, \
-                                      width=WINDOW_WIDTH, justified='center')
+title = pygwidgets.DisplayText(window, (0, 40), 'Demo of InputText and InputNumber fields',
+                            fontSize=36, width=WINDOW_WIDTH, justified='center')
 
-inputTextCaption = pygwidgets.DisplayText(window, (20, 150), 'Input any text:', fontSize=24, \
-                                      width=190, justified='right')
+inputTextCaption = pygwidgets.DisplayText(window, (20, 150), 'Input any text:',
+                            fontSize=24, width=190, justified='right')
 oInputText = pygwidgets.InputText(window, (230, 150), '', width=150)
 okButtonText = pygwidgets.TextButton(window, (430, 150), 'OK')
 
-inputNumberCaption = pygwidgets.DisplayText(window, (20, 250), 'Input number only:', fontSize=24, \
-                                      width=190, justified='right')
+inputNumberCaption = pygwidgets.DisplayText(window, (20, 250), 'Input number only:',
+                            fontSize=24, width=190, justified='right')
 oInputNumber = InputNumber(window, (230, 250), '', width=150)
 okButtonNumber = pygwidgets.TextButton(window, (430, 250), 'OK')
 
@@ -58,7 +54,9 @@ while True:
             print('Input text field contains:', theText)
 
         if oInputNumber.handleEvent(event) or okButtonNumber.handleEvent(event):
+            # Could put a try/except around this to catch any remaining error
             theText = oInputNumber.getValue()
+
             print('Input number field contains:', theText)
 
     # 8  Do any "per frame" actions
