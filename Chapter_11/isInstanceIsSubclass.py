@@ -1,4 +1,4 @@
-#  Testing isinstance (and issubclass)
+#  Testing isinstance and issubclass
 class Base():
 
     def __init__(self):

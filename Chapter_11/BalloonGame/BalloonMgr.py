@@ -16,40 +16,42 @@ class BalloonMgr():
         self.window = window
         self.maxWidth = maxWidth
         self.maxHeight = maxHeight
-        self.balloonList = []
-        self.nPopped = 0
-        self.nMissed = 0
-        self.restart()
 
-    def restart(self):
+    def start(self):
         self.balloonList = []
         self.nPopped = 0
         self.nMissed = 0
+        self.score = 0
 
         for balloonNum in range(0, N_BALLOONS):
-            oBalloon = Balloon(self.window, self.maxWidth, self.maxHeight, balloonNum)
+            randomBalloonClass = random.choice((BalloonSmall,
+                                                         BalloonMedium, BalloonLarge))
+            oBalloon = randomBalloonClass(self.window, self.maxWidth,
+                                                        self.maxHeight, balloonNum)
             self.balloonList.append(oBalloon)
-
 
 
     def handleEvent(self, event):
         if event.type == MOUSEBUTTONDOWN:
-            # go 'reversed' thru list so top-most balloon gets popped first
+            # go 'reversed' so top-most balloon gets popped
             for oBalloon in reversed(self.balloonList):
-                nPointsThisBalloon = oBalloon.clickedInside(event.pos)
-                if nPointsThisBalloon > 0:
-                    #print('clicked on a balloon')
-                    self.balloonList.remove(oBalloon)  # remove this balloon
-                    self.nPopped = self.nPopped + 1
-                    return nPointsThisBalloon  # no need to check others
-        # If falls through, no balloon was hit, return 0 points
-        return 0
+                wasHit, nPoints = oBalloon.clickedInside(event.pos)
+                if wasHit:
+                    if nPoints > 0: # remove this balloon
+                        self.balloonList.remove(oBalloon)  
+                        self.nPopped = self.nPopped + 1
+                        self.score = self.score + nPoints
+                    return  # no need to check others
+
+    def getScore(self):
+        return self.score
 
     def update(self):
         for oBalloon in self.balloonList:
             status = oBalloon.update()
             if status == BALLOON_MISSED:
-                self.balloonList.remove(oBalloon)  # balloon went off the top end, remove it
+                # balloon went off the top, remove it
+                self.balloonList.remove(oBalloon)
                 self.nMissed = self.nMissed + 1
 
     def getCountPopped(self):
