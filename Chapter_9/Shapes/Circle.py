@@ -21,7 +21,7 @@ class Circle():
         self.centerX = self.x + self.radius
         self.centerY = self.y + self.radius
         self.rect = pygame.Rect(self.x, self.y, self.radius * 2, self.radius * 2)
-        self.type = 'Circle'
+        self.shapeType = 'Circle'
         
     def clickedInside(self, mousePoint):
         theDistance = (((mousePoint[0] - self.centerX) ** 2) + ((mousePoint[1] - self.centerY)) ** 2) **.5
@@ -37,7 +37,7 @@ class Circle():
         return theArea
 
     def getType(self):
-        return self.type
+        return self.shapeType
 
     def draw(self):
         pygame.draw.circle(self.window, self.color, (self.centerX, self.centerY), self.radius, 0)

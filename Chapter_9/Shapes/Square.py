@@ -18,14 +18,14 @@ class Square():
         self.x = random.randrange(1, maxWidth - 100)
         self.y = random.randrange(25, maxHeight - 100)
         self.rect = pygame.Rect(self.x, self.y, self.widthAndHeight, self.widthAndHeight)
-        self.type = 'Square'
+        self.shapeType = 'Square'
         
     def clickedInside(self, mousePoint):
         clicked = self.rect.collidepoint(mousePoint)
         return clicked
 
     def getType(self):
-        return self.type
+        return self.shapeType
     
     def getArea(self):
         theArea = self.widthAndHeight * self.widthAndHeight

@@ -48,9 +48,10 @@ class Manager(Employee):
 
 
 # Create objects
-oEmployee1 = Employee('Joe Schmoe', 'Software Engineer', 55)
-oEmployee2 = Employee('Chris Smith', 'Firmware Engineer', 58)
-oManager = Manager('Sue Jones', 'Manager of SW Engineering', 125000, [oEmployee1, oEmployee2])
+oEmployee1 = Employee('Joe Schmoe', 'Pizza Maker', 16)
+oEmployee2 = Employee('Chris Smith', 'Cashier', 14)
+oManager = Manager('Sue Jones', 'Pizza Restaurant Manager',
+                             55000, [oEmployee1, oEmployee2])
 
 # Call methods of the Employee objects
 print('Employee name:', oEmployee1.getName())

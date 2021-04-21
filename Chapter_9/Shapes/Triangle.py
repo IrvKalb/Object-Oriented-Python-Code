@@ -19,7 +19,7 @@ class Triangle():
         self.x = random.randrange(1, maxWidth - 100)
         self.y = random.randrange(25, maxHeight - 100)
         self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
-        self.type = 'Triangle'
+        self.shapeType = 'Triangle'
         
     def clickedInside(self, mousePoint):
         inRect = self.rect.collidepoint(mousePoint)
@@ -39,7 +39,7 @@ class Triangle():
             return False
 
     def getType(self):
-        return self.type
+        return self.shapeType
 
     def getArea(self):
         theArea = .5 * self.width * self.height

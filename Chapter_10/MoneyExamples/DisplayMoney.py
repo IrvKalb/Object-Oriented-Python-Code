@@ -15,7 +15,8 @@ class DisplayMoney(pygwidgets.DisplayText):
     def __init__(self, window, loc,
                  fontName=None, fontSize=24, width=150, height=None, 
                  textColor=BLACK, backgroundColor=None, justified='left',
-                 value=None, currencySymbol='$', currencySymbolOnLeft=True, showCents=True):
+                 value=None, currencySymbol='$',
+                 currencySymbolOnLeft=True, showCents=True):
 
         self.currencySymbol = currencySymbol
         self.currencySymbolOnLeft = currencySymbolOnLeft
