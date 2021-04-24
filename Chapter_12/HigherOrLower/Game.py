@@ -5,22 +5,26 @@ from Constants import *
 from Deck import *
 from Card import *
 
-
 class Game():
     CARD_OFFSET = 110
     CARDS_TOP = 300
     CARDS_LEFT = 75
     NCARDS = 8
+    POINTS_CORRECT = 15
+    POINTS_INCORRECT = 10
 
     def __init__(self, window):
         self.window = window
         self.oDeck = Deck(self.window)
         self.score = 100
-        self.scoreText = pygwidgets.DisplayText(window, (450, 164), 'Score: ' + str(self.score), \
-                                                fontSize=36, textColor=WHITE, justified='right')
+        self.scoreText = pygwidgets.DisplayText(window, (450, 164),
+                                   'Score: ' + str(self.score),
+                                    fontSize=36, textColor=WHITE,
+                                    justified='right')
 
-        self.messageText = pygwidgets.DisplayText(window, (50, 460), '', width=900, justified='center', \
-                                                  fontSize=36, textColor=WHITE)
+        self.messageText = pygwidgets.DisplayText(window, (50, 460),
+                                    '', width=900, justified='center',
+                                    fontSize=36, textColor=WHITE)
 
         self.loserSound = pygame.mixer.Sound("sounds/loser.wav")
         self.winnerSound = pygame.mixer.Sound("sounds/ding.wav")
@@ -29,7 +33,7 @@ class Game():
         self.cardXPositionsList = []
         thisLeft = Game.CARDS_LEFT
         # Calculate the x positions of all cards ... once
-        for oCard in range(Game.NCARDS):
+        for cardNum in range(Game.NCARDS):
             self.cardXPositionsList.append(thisLeft)
             thisLeft = thisLeft + Game.CARD_OFFSET
 
@@ -69,22 +73,22 @@ class Game():
 
         if higherOrLower == HIGHER:
             if nextCardValue > self.currentCardValue:
-                self.score = self.score + 15
+                self.score = self.score + Game.POINTS_CORRECT
                 self.messageText.setValue('Yes, the ' + nextCardName + ' was higher')
                 self.winnerSound.play()
             else:
-                self.score = self.score - 10
-                self.messageText.setValue('No, the ' + nextCardName + ' was lower')
+                self.score = self.score - Game.POINTS_INCORRECT
+                self.messageText.setValue('No, the ' + nextCardName + ' was not higher')
                 self.loserSound.play()
 
         else:  # user hit the lower button:
             if nextCardValue < self.currentCardValue:
-                self.score = self.score + 15
+                self.score = self.score + Game.POINTS_CORRECT
                 self.messageText.setValue('Yes, the ' + nextCardName + ' was lower')
                 self.winnerSound.play()
             else:
-                self.score = self.score - 10
-                self.messageText.setValue('No, the ' + nextCardName + ' was higher')
+                self.score = self.score - Game.POINTS_INCORRECT
+                self.messageText.setValue('No, the ' + nextCardName + ' was not lower')
                 self.loserSound.play()
 
         self.scoreText.setValue('Score: ' + str(self.score))
@@ -95,7 +99,7 @@ class Game():
         return done
 
     def draw(self):
-        #Tell each card to draw itself
+        # Tell each card to draw itself
         for oCard in self.cardList:
             oCard.draw()
 

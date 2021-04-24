@@ -28,7 +28,7 @@ class Deck():
 
     def getCard(self):
         if len(self.playingDeckList) == 0:
-            raise Exception('No more cards')
+            raise IndexError('No more cards')
         oCard = self.playingDeckList.pop()  # pop one off the deck and return it
         return oCard
 
