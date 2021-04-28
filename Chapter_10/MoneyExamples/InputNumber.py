@@ -21,23 +21,27 @@ LEGAL_UNICODE_CHARS = ('0123456789.-')
 #
 class InputNumber(pygwidgets.InputText):
 
-    def __init__(self, window, loc, value='', fontName=None, fontSize=24, width=200, 
-                 textColor=BLACK, backgroundColor=WHITE, focusColor=BLACK, 
-                 initialFocus=False, nickName=None, callback=None, mask=None,
-                 keepFocusOnSubmit=False, allowFloatingNumber=True, allowNegativeNumber=True):
+    def __init__(self, window, loc, value='', fontName=None,
+                 fontSize=24, width=200, textColor=BLACK,
+                 backgroundColor=WHITE, focusColor=BLACK, 
+                 initialFocus=False, nickName=None, callback=None,
+                 mask=None, keepFocusOnSubmit=False,
+                 allowFloatingNumber=True, allowNegativeNumber=True):
         self.allowFloatingNumber = allowFloatingNumber
         self.allowNegativeNumber = allowNegativeNumber
 
         # Call the __init__ method of our base class
-        super().__init__(window, loc, value, fontName, fontSize, width, 
-                         textColor, backgroundColor, focusColor, initialFocus, nickName,
-                         callback, mask, keepFocusOnSubmit)
+        super().__init__(window, loc, value, fontName, fontSize,
+                         width, textColor, backgroundColor,
+                         focusColor, initialFocus, nickName,callback,
+                         mask, keepFocusOnSubmit)
 
     # Override handleEvent so we can filter for proper keys
     def handleEvent(self, event):
         if (event.type == pygame.KEYDOWN):  # unicode value is only present on key down
             # Only allow the key to pass if it's an editing key or a numeric key
-            allowableKey = (event.key in LEGAL_KEYS_TUPLE) or (event.unicode in LEGAL_UNICODE_CHARS)
+            allowableKey = (event.key in LEGAL_KEYS_TUPLE) or
+                                  (event.unicode in LEGAL_UNICODE_CHARS)
             if not allowableKey:
                 return False
 
