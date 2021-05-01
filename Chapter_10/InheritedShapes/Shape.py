@@ -24,13 +24,13 @@ class Shape(ABC):  # Identifies this as an abstract base class
 
     @abstractmethod
     def clickedInside(self, mousePoint):
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def getArea(self):
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     def draw(self):
-        pass
+        raise NotImplementedError
 

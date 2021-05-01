@@ -12,10 +12,10 @@ BLACK = (0, 0, 0)
 #
 class DisplayMoney(pygwidgets.DisplayText):
 
-    def __init__(self, window, loc,
+    def __init__(self, window, loc, value=None,
                  fontName=None, fontSize=24, width=150, height=None, 
                  textColor=BLACK, backgroundColor=None, justified='left',
-                 value=None, currencySymbol='$',
+                 nickname=None, currencySymbol='$',
                  currencySymbolOnLeft=True, showCents=True):
 
         self.currencySymbol = currencySymbol
@@ -25,9 +25,9 @@ class DisplayMoney(pygwidgets.DisplayText):
             value = 0.00
 
         # Call the __init__ method of our base class
-        super().__init__(window, loc, value,
-                            fontName, fontSize, width, height,
-                            textColor, backgroundColor, justified)
+        super().__init__(window, loc, value, fontName, fontSize,
+                            width, height, textColor, backgroundColor,
+                            justified, nickname)
 
     def setValue(self, money):
         if money == '':

@@ -53,12 +53,11 @@ while True:
             oBalloonMgr.handleEvent(event)
             theScore = oBalloonMgr.getScore()
             oScoreDisplay.setValue('Score: ' + str(theScore))
-        else:
-            if oStartButton.handleEvent(event):
-                oBalloonMgr.start()
-                oScoreDisplay.setValue('Score: 0')
-                playing = True
-                oStartButton.disable()
+        elif oStartButton.handleEvent(event):
+            oBalloonMgr.start()
+            oScoreDisplay.setValue('Score: 0')
+            playing = True
+            oStartButton.disable()
 
     # 8  Do any "per frame" actions
     if playing:

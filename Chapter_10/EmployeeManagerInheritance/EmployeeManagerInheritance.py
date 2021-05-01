@@ -23,15 +23,17 @@ class Employee():
 
 # Define a Manager subclass that inherits from Employee
 class Manager(Employee):
-    def __init__(self, name, title, salary, reportsList):
+    def __init__(self, name, title, salary, reportsList=None):
         self.salary = float(salary)
+        if reportsList is None:
+            reportsList = []
         self.reportsList = reportsList
         super().__init__(name, title)
 
     def getReports(self):
         return self.reportsList
 
-    def payPerYear(self, giveBonus):
+    def payPerYear(self, giveBonus=False):
         pay = self.salary
         if giveBonus:
             pay = pay + (.10 * self.salary)  # add a bonus of 10%
@@ -40,11 +42,11 @@ class Manager(Employee):
 
 
     # Additional methods unique to Manager
-    def addEmployee(self, employeeToAdd):
-        self.reports.append(employeeToAdd)
+    def addEmployee(self, oEmployeeToAdd):
+        self.reportsList.append(oEmployeeToAdd)
 
-    def removeEmployee(self, employeeToRemove):
-        self.reports.pop(employeeToRemove)
+    def removeEmployee(self, oEmployeeToRemove):
+        self.reportsList.remove(oEmployeeToRemove)
 
 
 # Create objects

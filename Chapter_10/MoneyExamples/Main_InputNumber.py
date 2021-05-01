@@ -54,10 +54,12 @@ while True:
             print('Input text field contains:', theText)
 
         if oInputNumber.handleEvent(event) or okButtonNumber.handleEvent(event):
-            # Could put a try/except around this to catch any remaining error
-            theText = oInputNumber.getValue()
-
-            print('Input number field contains:', theText)
+            try:  # see if any error remains
+                theText = oInputNumber.getValue()
+            except ValueError:
+                oInputNumber.setValue('(not a number)')
+            else:  # input was OK
+                print('Input number field contains:', theText)
 
     # 8  Do any "per frame" actions
 

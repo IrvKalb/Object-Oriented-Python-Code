@@ -42,7 +42,7 @@ class Card():
 
     def getLoc(self):  # get the location from the ImageCollection
         loc = self.images.getLoc()
-        return(loc)
+        return loc
 
     def draw(self):
         self.images.draw()

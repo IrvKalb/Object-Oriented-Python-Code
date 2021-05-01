@@ -33,33 +33,37 @@ class InputNumber(pygwidgets.InputText):
         # Call the __init__ method of our base class
         super().__init__(window, loc, value, fontName, fontSize,
                          width, textColor, backgroundColor,
-                         focusColor, initialFocus, nickName,callback,
+                         focusColor, initialFocus, nickName, callback,
                          mask, keepFocusOnSubmit)
 
     # Override handleEvent so we can filter for proper keys
     def handleEvent(self, event):
-        if (event.type == pygame.KEYDOWN):  # unicode value is only present on key down
-            # Only allow the key to pass if it's an editing key or a numeric key
-            allowableKey = (event.key in LEGAL_KEYS_TUPLE) or
-                                  (event.unicode in LEGAL_UNICODE_CHARS)
+        if (event.type == pygame.KEYDOWN):
+            # if it's not an editing or numeric key ignore it
+            # unicode value is only present on key down
+            allowableKey = ((event.key in LEGAL_KEYS_TUPLE) or
+                            (event.unicode in LEGAL_UNICODE_CHARS))
             if not allowableKey:
                 return False
 
             if event.unicode == '-':  # user typed a minus sign
                 if not self.allowNegativeNumber:
-                    return False  # if negatives are now allowed, don't pass minus through
+                    # if no negatives, don't pass it through
+                    return False  
                 if self.cursorPosition > 0:
-                    return False  # can't put minus sign after first char
+                    return False # can't put minus sign after 1st char
                 if '-' in self.text:
                     return False  # can't enter a second minus sign
 
             if event.unicode == '.':
                 if not self.allowFloatingNumber:
-                    return False  # if floats are not allowed, don't pass the period through
+                    # if no floats, don't pass the period through
+                    return False  
                 if '.' in self.text:
                     return False  # can't enter a second period
 
-        result = super().handleEvent(event)  # allow the key or event to go through to the base class
+        # allow the key to go through to the base class
+        result = super().handleEvent(event)  
         return result
 
     def getValue(self):

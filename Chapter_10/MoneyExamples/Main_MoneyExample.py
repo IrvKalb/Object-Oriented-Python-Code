@@ -63,11 +63,14 @@ while True:
 
         # Pressing Return/Enter or clicking OK triggers action
         if inputField.handleEvent(event) or okButton.handleEvent(event):
-            # Could add try/except to catch any remaining error
-            theValue = inputField.getValue()
-            theText = str(theValue)
-            moneyField1.setValue(theText)
-            moneyField2.setValue(theText)
+            try:
+                theValue = inputField.getValue()
+            except ValueError:  # Any remaining error
+                inputField.setValue('(not a number)')
+            else:  # input was OK
+                theText = str(theValue)
+                moneyField1.setValue(theText)
+                moneyField2.setValue(theText)
 
     # 8  Do any "per frame" actions
 
