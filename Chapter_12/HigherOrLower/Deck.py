@@ -11,8 +11,8 @@ class Deck():
                                   'Jack':11, 'Queen':12, 'King':13}
 
     def __init__(self, window, rankValueDict=STANDARD_DICT):
-        # rankValueDict defaults to standard dict, but you can call 
-        # with different dict, e.g., special dict for Blackjack values
+        # rankValueDict defaults to STANDARD_DICT, but you can call 
+        # with a different dict, e.g., a special dict for Blackjack
         self.startingDeckList = []
         self.playingDeckList = []
         for suit in Deck.SUIT_TUPLE:
@@ -23,7 +23,7 @@ class Deck():
         self.shuffle()
 
     def shuffle(self):
-        # copy of the starting deck and save in the playing deck list
+        # copy the starting deck and save it in the playing deck list
         self.playingDeckList = self.startingDeckList[:]
         for oCard in self.playingDeckList:
             oCard.conceal()
