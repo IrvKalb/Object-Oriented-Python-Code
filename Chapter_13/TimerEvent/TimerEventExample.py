@@ -46,13 +46,14 @@ while True:
             sys.exit()
 
         if startButton.handleEvent(event):
-            pygame.time.set_timer(TIMER_EVENT_ID, int(TIMER_LENGTH * 1000))
+            pygame.time.set_timer(TIMER_EVENT_ID,
+                                               int(TIMER_LENGTH * 1000), True)
             startButton.disable()
             timerMessage.show()
             print('Starting timer')
 
         if event.type == TIMER_EVENT_ID:
-            pygame.time.set_timer(TIMER_EVENT_ID, 0)
+            #pygame.time.set_timer(TIMER_EVENT_ID, 0)
             startButton.enable()
             timerMessage.hide()
             print('Timer ended by event')

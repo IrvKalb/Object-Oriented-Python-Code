@@ -58,26 +58,25 @@ while True:
                 oCountUpTimer.stop()  
 
         if restartButton.handleEvent(event):
-                print('Got click on restart button')
-                oGame.startNewGame()
-                oCountUpTimer.start()
+            oGame.startNewGame()
+            oCountUpTimer.start()
 
     # 8 - Do any "per frame" actions
     timeToShow = oCountUpTimer.getTimeInHHMMSS()  # ask the Timer object for the elapsed time
     timerDisplay.setValue('Time: ' + str(timeToShow))  # put that into a text field
 
-    # 9 - Clear the screen before drawing it again
+    # 9 - Clear the window before drawing it again
     window.fill(BLACK)
 
-    # 10 - Draw the screen elements
+    # 10 - Draw the window elements
     oGame.draw()  # tell the game to draw itself
     restartButton.draw()
 
     timerDisplay.draw()  # draw the text field
     messageDisplay.draw()  # draw the message display
 
-    # 11 - Update the screen
+    # 11 - Update the window
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make PyGame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait

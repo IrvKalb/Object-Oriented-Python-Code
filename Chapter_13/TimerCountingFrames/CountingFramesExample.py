@@ -9,8 +9,8 @@ import pygwidgets
 # 2 - Define constants
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 240
-FRAMES_PER_SECOND = 30
 WHITE = (255, 255, 255)
+FRAMES_PER_SECOND = 30
 TIMER_LENGTH = 2.5 # seconds
 
 # 3 - Initialize the world
@@ -34,7 +34,6 @@ timerMessage = pygwidgets.DisplayText(window, (0, 160), 'Message showing during 
 
 timerMessage.hide()  # start off with this message hidden
 timerRunning = False
-nFramesToWait = int(FRAMES_PER_SECOND * TIMER_LENGTH)
 
 # 6 - Loop forever
 while True:
@@ -48,7 +47,8 @@ while True:
 
         if startButton.handleEvent(event):
             timerRunning = True
-            nFramesElapsed = 0
+            nFramesElapsed = 0  # initialize a counter
+            nFramesToWait = int(FRAMES_PER_SECOND * TIMER_LENGTH)
             startButton.disable()
             timerMessage.show()
             print('Starting timer')
@@ -58,7 +58,7 @@ while True:
 
     # 8 - Do any "per frame" actions
     if timerRunning:
-        nFramesElapsed = nFramesElapsed + 1
+        nFramesElapsed = nFramesElapsed + 1  # increment the counter
         if nFramesElapsed >= nFramesToWait:
             timerRunning = False
             startButton.enable()

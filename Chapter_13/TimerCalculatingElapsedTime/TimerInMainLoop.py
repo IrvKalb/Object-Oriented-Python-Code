@@ -1,4 +1,4 @@
-# Timer In the Main Loop
+# Timer in the Main Loop
 
 # 1 - Import packages
 import pygame
@@ -10,8 +10,8 @@ import time
 # 2 - Define constants
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 240
-FRAMES_PER_SECOND = 30
 WHITE = (255, 255, 255)
+FRAMES_PER_SECOND = 30
 TIMER_LENGTH = 2.5  # seconds
 
 # 3 - Initialize the world
@@ -66,17 +66,17 @@ while True:
             print('Timer ended')
             timerRunning = False
 
-    # 9 - Clear the screen
+    # 9 - Clear the window
     window.fill(WHITE)
 
-    # 10 - Draw all screen elements
+    # 10 - Draw all window elements
     headerMessage.draw()
     startButton.draw()
     clickMeButton.draw()
     timerMessage.draw()
 
-    # 11 - Update the screen
+    # 11 - Update the window
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make PyGame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait

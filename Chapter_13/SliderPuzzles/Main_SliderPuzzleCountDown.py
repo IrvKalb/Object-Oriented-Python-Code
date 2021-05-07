@@ -36,7 +36,7 @@ messageDisplay = pygwidgets.DisplayText(window, (50, 510), 'Click on a square to
 oGame = Game(window)  # create the main game object
 soundBuzz = pygame.mixer.Sound('sounds/buzz.wav')
 
-oCountDownTimer = pyghelpers.CountDownTimer(100)  # create a count down clock timer
+oCountDownTimer = pyghelpers.CountDownTimer(180)  # create a count down clock timer
 oCountDownTimer.start()  # start the clock running
 
 # 6 - Loop forever
@@ -59,7 +59,7 @@ while True:
                 oCountDownTimer.stop()
 
         if restartButton.handleEvent(event):
-            print('Got click on restart button')
+            #print('Got click on restart button')
             oGame.startNewGame()
             oCountDownTimer.start()
 
@@ -72,18 +72,18 @@ while True:
             messageDisplay.setValue('Doh!  You ran out of time.')
             oGame.stopPlaying()
 
-    # 9 - Clear the screen before drawing it again
+    # 9 - Clear the window before drawing it again
     window.fill(BLACK)
 
-    # 10 - Draw the screen elements
+    # 10 - Draw the window elements
     oGame.draw()  # tell the game to draw itself
     restartButton.draw()
 
     timerDisplay.draw()   # draw the text field
     messageDisplay.draw()  # draw the message display
 
-    # 11 - Update the screen
+    # 11 - Update the window
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make PyGame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait
