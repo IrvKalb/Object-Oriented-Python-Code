@@ -63,7 +63,7 @@ while True:
 
     # 8 - Do any "per frame" actions
     timeToShow = oCountUpTimer.getTimeInHHMMSS()  # ask the Timer object for the elapsed time
-    timerDisplay.setValue('Time: ' + str(timeToShow))  # put that into a text field
+    timerDisplay.setValue('Time: ' + timeToShow)  # put that into a text field
 
     # 9 - Clear the window before drawing it again
     window.fill(BLACK)
