@@ -23,11 +23,11 @@ class Game():
         yPos = Game.START_TOP
         self.tilesList = []
 
+        # Create list of Tile objects
         for row in range(0, 4):
             xPos = Game.START_LEFT
             for col in range(0, 4):
                 tileNumber = (row * 4) + col
-                # Instantiate a Tile object
                 oTile = Tile(self.window, xPos, yPos, tileNumber)
                 self.tilesList.append(oTile)
                 xPos = xPos + TILE_WIDTH
@@ -37,9 +37,14 @@ class Game():
         self.soundApplause = pygame.mixer.Sound('sounds/applause.wav')
         self.soundNope = pygame.mixer.Sound('sounds/nope.wav')
 
+        self.playing = False
         self.startNewGame()
 
     def startNewGame(self):
+        # Reset all tiles to starting numbers and images
+        for index, oTile in enumerate(self.tilesList):
+            oTile.reset(index)
+
         self.openSpaceIndex = STARTING_OPEN_TILE_INDEX  # index of the open space
 
         for i in range(0, 200):  # make 200 arbitrary moves to randomize

@@ -32,20 +32,22 @@ class Tile():
         14:(10, 13, 15),
         15:(11, 14)}
 
+    font = pygame.font.SysFont(None, 60)
+
     def __init__(self, window, left, top, tileNumber):
         self.window = window
         self.loc = (left, top)
+        self.rect = pygame.Rect(left, top, TILE_WIDTH, TILE_HEIGHT)
         self.tileNumber = tileNumber
         self.legalMovesTuple = Tile.LEGAL_MOVES_DICT[self.tileNumber]
-        self.rect = pygame.Rect(left, top, TILE_WIDTH, TILE_HEIGHT)
 
-        font = pygame.font.SysFont(None, 60)
-
+    def reset(self, tileNumber):
         # Use drawing calls to create a surface for each tile
-        # For the empty tile, just a filled tile
-        # For all others a black tile, draw a circle, and center a number in it
+        #   For the empty tile, just a filled tile
+        #   For all others, draw a circle, and center a number in it
+        self.tileNumber = tileNumber
         surface = pygame.Surface((TILE_WIDTH, TILE_HEIGHT))
-        if tileNumber == STARTING_OPEN_TILE_INDEX: # draw empty image
+        if self.tileNumber == STARTING_OPEN_TILE_INDEX: # draw empty image
             surface.fill(GRAY)
             pygame.draw.rect(surface, BLACK,
                              pygame.Rect((0, 0, TILE_WIDTH, TILE_HEIGHT)),
@@ -58,7 +60,7 @@ class Tile():
             centerX = TILE_WIDTH // 2
             centerY = TILE_HEIGHT // 2
             pygame.draw.circle(surface, YELLOW, (centerX, centerY), 35)
-            numberAsImage = font.render(str(self.tileNumber + 1), True, BLACK)
+            numberAsImage = Tile.font.render(str(self.tileNumber + 1), True, BLACK)
             widthOfNumber = numberAsImage.get_width()
             leftPos = (TILE_WIDTH - widthOfNumber) // 2
             heightOfNumber = numberAsImage.get_height()
