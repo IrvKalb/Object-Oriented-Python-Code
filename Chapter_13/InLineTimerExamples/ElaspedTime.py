@@ -22,19 +22,18 @@ clock = pygame.time.Clock()
 # 4 - Load assets: image(s), sounds,  etc.
 
 # 5 - Initialize variables
-headerMessage = pygwidgets.DisplayText(window, (0, 50), 'Click the button to start a ' +
-                                       str(TIMER_LENGTH) + ' second timer:', \
+headerMessage = pygwidgets.DisplayText(window, (0, 50), 'Click "Start" to start a ' +
+                                       str(TIMER_LENGTH) + ' second timer:', 
                                        fontSize=36, justified='center', width=WINDOW_WIDTH)
 
 startButton = pygwidgets.TextButton(window, (200, 100), 'Start')
 
 clickMeButton = pygwidgets.TextButton(window, (320, 100), 'Click Me')
 
-timerMessage = pygwidgets.DisplayText(window, (0, 160), 'Message showing during timer', \
+timerMessage = pygwidgets.DisplayText(window, (0, 160), 'Message showing during timer', 
                                       fontSize=36, justified='center', width=WINDOW_WIDTH)
 
 timerMessage.hide()  # start off with this message hidden
-
 timerRunning = False
 
 # 6 - Loop forever
@@ -63,7 +62,7 @@ while True:
         if elapsed >= TIMER_LENGTH:  # True here means timer has ended
             startButton.enable()
             timerMessage.hide()
-            print('Timer ended')
+            print('Timer ended by elapsed time')
             timerRunning = False
 
     # 9 - Clear the window
