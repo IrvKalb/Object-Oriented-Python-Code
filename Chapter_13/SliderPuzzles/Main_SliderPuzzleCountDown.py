@@ -19,7 +19,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 
 # 4 - Load assets: image(s), sounds,  etc.
-restartButton = pygwidgets.CustomButton(window, (320, 455), \
+restartButton = pygwidgets.CustomButton(window, (320, 455),
                                         up='images/restartButtonUp.jpg',
                                         down='images/restartButtonDown.jpg',
                                         over='images/restartButtonOver.jpg')
@@ -27,10 +27,10 @@ restartButton = pygwidgets.CustomButton(window, (320, 455), \
 # 5 - Initialize variables
 clock = pygame.time.Clock()
 
-timerDisplay = pygwidgets.DisplayText(window, (50, 465), '', \
+timerDisplay = pygwidgets.DisplayText(window, (50, 465), '',
                                     fontSize=36, textColor=WHITE)
 
-messageDisplay = pygwidgets.DisplayText(window, (50, 510), 'Click on a square to move it.', \
+messageDisplay = pygwidgets.DisplayText(window, (50, 510), 'Click on a square to move it.',
                                     fontSize=36, textColor=WHITE)
 
 oGame = Game(window)  # create the main game object
