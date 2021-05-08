@@ -11,7 +11,8 @@ class Game():
     def __init__(self, window):
         self.window = window
         '''
-        The game board is made up of 4 rows and 4 columns - 16 tiles.
+        The game board is made up of 4 rows and 4 columns - 16 tiles,
+        15 labelled images (1 to 15) and a blank square image.
         However, because Python lists and tuples start at zero, the tiles
         are internally numbered (indexed) 0 to 15, like this:
              0  1  2  3
