@@ -11,7 +11,8 @@ WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 240
 FRAMES_PER_SECOND = 30
 WHITE = (255, 255, 255)
-TIMER_EVENT_ID = pygame.USEREVENT + 1  # define an ID for our timer event
+#TIMER_EVENT_ID = pygame.USEREVENT + 1  # pygame 1.x approach
+TIMER_EVENT_ID = pygame.event.custom_type()  # new in pygame 2.0
 TIMER_LENGTH = 2.5 # seconds
 
 # 3 - Initialize the world
