@@ -1,4 +1,4 @@
-# Slider Puzzle Game
+# Slider Puzzle Game with Count Up Timer
 
 # 1 - Import packages
 import pygame
@@ -6,7 +6,6 @@ from pygame.locals import *
 import pygwidgets
 import pyghelpers
 import sys
-from Constants import *
 from Game import *
 
 # 2 - Define constants
@@ -30,7 +29,7 @@ clock = pygame.time.Clock()
 timerDisplay = pygwidgets.DisplayText(window, (50, 465), '',
                                     fontSize=36, textColor=WHITE)
 
-messageDisplay = pygwidgets.DisplayText(window, (50, 510), 'Click on a square to move it.',
+messageDisplay = pygwidgets.DisplayText(window, (50, 510), 'Click on a tile to move it.',
                                     fontSize=36, textColor=WHITE)
 
 oGame = Game(window)  # create the main game object
