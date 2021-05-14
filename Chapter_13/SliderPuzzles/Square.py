@@ -7,7 +7,7 @@ from Tile import *
 class Square():
     '''
     A Square is a square area of the game board, in the application window.
-    Each square has a location, rectangle, a tuple of legal moves, and
+    Each square has a location, rectangle, a tuple of legal moves, and a
     Tile that is drawn on the Square.  For each user move, the game tells
     the clicked on Square to exchange its Tile with the blank (empty space) Square.
     '''
@@ -24,7 +24,7 @@ class Square():
         # Create starting Tile associated with this Square
         self.oTile = Tile(self.window, self.squareNumber)
 
-    def isTileInProperPlace(self, number):
+    def isTileInProperPlace(self):
         tileNumber = self.oTile.getTileNumber()
         return (self.squareNumber == tileNumber)
 

@@ -19,7 +19,7 @@ class Tile():
         #   For all others, draw a circle, and center a number in it
         #
         # Alternatively, we could load image tiles from a folder:
-        # self.image = pygame.image.load('images/tile' + str(self.tileNumber) + '.png')
+        # self.image = pygame.image.load('images/tile' + str(self.tileNumber + 1) + '.png')
 
         surface = pygame.Surface((SQUARE_WIDTH, SQUARE_HEIGHT))
         if self.tileNumber == STARTING_OPEN_SQUARE_NUMBER: # draw empty image

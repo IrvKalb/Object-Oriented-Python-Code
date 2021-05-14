@@ -6,8 +6,6 @@ import random
 class Game():
     START_LEFT = 35
     START_TOP = 30
-    PLAY_SOUND = True
-    DONT_PLAY_SOUND = False
 
     def __init__(self, window):
         self.window = window
@@ -48,7 +46,7 @@ class Game():
         yPos = Game.START_TOP
         self.squaresList = []
 
-        # Create list of Tile objects
+        # Create list of Square objects
         for row in range(0, 4):
             xPos = Game.START_LEFT
             for col in range(0, 4):
@@ -71,18 +69,17 @@ class Game():
         for oSquare in self.squaresList:
             oSquare.reset()
 
-        self.openSquareNumber = STARTING_OPEN_SQUARE_NUMBER  # index of the open space
+        self.oOpenSquare = self.squaresList[STARTING_OPEN_SQUARE_NUMBER]
 
         for i in range(0, 200):  # make 200 arbitrary moves to randomize
-            legalMovesForThisTile = self.squaresList[self.openSquareNumber].getLegalMoves()
+            legalMovesForThisTile = self.oOpenSquare.getLegalMoves()
             nextMoveNumber = random.choice(legalMovesForThisTile)
+            oSquare = self.squaresList[nextMoveNumber]
 
-            # switch Tiles associated with Squares
-            self.switch(nextMoveNumber, Game.DONT_PLAY_SOUND)
-            self.openSquareNumber = nextMoveNumber
+            # switch the randomly chosen Square & the open Square
+            self.switch(oSquare, playMoveSound=False)
 
         self.playing = True
-        #print('Open space is at index:', self.openSquareNumber)
 
     def gotClick(self, clickLoc):
         if not self.playing:
@@ -92,33 +89,30 @@ class Game():
             if oSquare.clickedInside(clickLoc):
                 squareNumber = oSquare.getSquareNumber()
                 # print('Got a mouseDown on square number:', squareNumber)
-                legalMovesForOpenSpaceTuple = self.squaresList[self.openSquareNumber].getLegalMoves()
-                legalMove = squareNumber in legalMovesForOpenSpaceTuple
+                legalMovesForOpenSquareTuple = self.oOpenSquare.getLegalMoves()
+                legalMove = squareNumber in legalMovesForOpenSquareTuple
 
                 if legalMove:
-                    self.switch(squareNumber, Game.PLAY_SOUND)
+                    self.switch(oSquare, playMoveSound=True)
                 else:  # illegal move (not next to the open space)
                     self.soundNope.play()
                 return
 
-    # Switch the Tile of a Square with the open space
-    def switch(self, squareNumberToSwitch, playMoveSound):
-        oSquareToMove1 = self.squaresList[squareNumberToSwitch]
-        oSquareToMove2 = self.squaresList[self.openSquareNumber]
+    # Switch the Tile of a given Square with the open square
+    def switch(self, oSquareToSwitch, playMoveSound=False):
+        oSquareToSwitch.switch(self.oOpenSquare)
+        # Re-assign the open square
+        self.oOpenSquare = oSquareToSwitch
 
-        oSquareToMove1.switch(oSquareToMove2)
-
-        self.openSquareNumber = squareNumberToSwitch  # set the new number of open space
-
-        if playMoveSound == Game.PLAY_SOUND:
+        if playMoveSound:
             self.soundTick.play()
 
     def checkForWin(self):
         if not self.playing:
             return False
 
-        for number in range(0, NSQUARES):
-            if not self.squaresList[number].isTileInProperPlace(number):
+        for oSquare in self.squaresList:
+            if not oSquare.isTileInProperPlace():
                 return False
 
         # All in proper place, game over
