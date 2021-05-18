@@ -1,8 +1,8 @@
 # DimmerSwitch class with Test Code
 
-# Dimmer Switch class
+# DimmerSwitch class
 
-class Dimmer():
+class DimmerSwitch():
     def __init__(self):
         self.isOn = False
         self.brightness = 0
@@ -28,8 +28,8 @@ class Dimmer():
 
 # Main code
 
-oDimmer1 = Dimmer( )
-oDimmer2 = Dimmer( )
+oDimmer1 = DimmerSwitch( )
+oDimmer2 = DimmerSwitch( )
 
 print(type(oDimmer1))
 
