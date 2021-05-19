@@ -17,7 +17,7 @@ print()
 
 # Call some methods on the different accounts
 print('Calling methods of the two accounts ...')
-oJoesAccount.deposit(50.00, 'JoesPassword')
+oJoesAccount.deposit(50, 'JoesPassword')
 oMarysAccount.withdraw(345, 'MarysPassword')
 oMarysAccount.deposit(100, 'MarysPassword')
 
@@ -29,7 +29,7 @@ oMarysAccount.show()
 print()
 userName = input('What is the name for a new user account? ')
 userBalance = input('What is the starting balance for this account? ')
-userBalance = float(userBalance)
+userBalance = int(userBalance)
 userPassword = input('What is the password you want to use for this account? ')
 oNewAccount = Account(userName, userBalance, userPassword)
 

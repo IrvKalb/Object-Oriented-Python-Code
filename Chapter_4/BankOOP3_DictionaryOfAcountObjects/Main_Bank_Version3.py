@@ -38,7 +38,7 @@ accountsDict[marysAccountNumber].show()
 print()
 userName = input('What is the name for a new user account? ')
 userBalance = input('What is the starting balance for this account? ')
-userBalance = float(userBalance)
+userBalance = int(userBalance)
 userPassword = input('What is the password you want to use for this account? ')
 oAccount = Account(userName, userBalance, userPassword)
 newAccountNumber = nextAccountNumber
