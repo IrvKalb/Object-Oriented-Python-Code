@@ -21,7 +21,7 @@ clock = pygame.time.Clock()
 # 4 - Load assets: images(s), sounds, etc.
 
 # 5 - Initialize variables
-oWaterAnimation = SimpleSpriteSheetAnimation(window, (22, 140), 'images/water_003.png', 5, 50, 192, 192, .05)
+oWaterAnimation = SimpleSpriteSheetAnimation(window, (22, 140), 'images/water_003.png', 50, 192, 192, .05)
 oPlayButton = pygwidgets.TextButton(window, (60, 320), "Play")
 
 # 6 - Loop forever

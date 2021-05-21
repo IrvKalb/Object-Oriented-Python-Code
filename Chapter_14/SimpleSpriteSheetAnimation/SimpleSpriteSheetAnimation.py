@@ -4,16 +4,20 @@ import pygame
 import time
 
 class SimpleSpriteSheetAnimation():
-    def __init__(self, window, loc, imagePath, nCols, nImages, width, height, durationPerImage):
+    def __init__(self, window, loc, imagePath, nImages, width, height, durationPerImage):
         self.window = window
         self.loc = loc
         self.nImages = nImages
         self.imagesList = []
 
-        # Load the sprite sheet and break it up into sub surfaces.
+        # Load the sprite sheet
         spriteSheetImage = pygame.image.load(imagePath)
         spriteSheetImage = pygame.Surface.convert_alpha(spriteSheetImage)  # optimizes blitting
 
+        # Calculate the number of columns in the starting image
+        nCols = spriteSheetImage.get_width() // width
+
+        # Break the starting image into sub-images
         row = 0
         col = 0
         for imageNumber in range(nImages):
@@ -21,7 +25,8 @@ class SimpleSpriteSheetAnimation():
             y = row * width
 
             # Create a subsurface from the bigger spriteSheet
-            image = spriteSheetImage.subsurface(x, y, width, height)
+            subsurfaceRect = pygame.Rect(x, y, width, height)
+            image = spriteSheetImage.subsurface(subsurfaceRect)
             self.imagesList.append(image)
 
             col = col + 1
@@ -60,7 +65,7 @@ class SimpleSpriteSheetAnimation():
 
     def draw(self):
         # Assumes that self.index has been set earlier - in update method
-        # it is used as the index into the imagesList to find the the current image
+        # it is used as the index into the imagesList to find the current image
         theImage = self.imagesList[self.index]  # choose the image to show
 
         self.window.blit(theImage, self.loc)   #show it

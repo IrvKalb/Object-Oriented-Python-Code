@@ -4,12 +4,12 @@ import pygame
 import time
 
 class SimpleAnimation():
-    def __init__(self, window, loc, picPathsList, durationPerImage):
+    def __init__(self, window, loc, picPaths, durationPerImage):
         self.window = window
         self.loc = loc
         self.imagesList = []
-        for picPath in picPathsList:
-            image = pygame.image.load(picPath)  # normal case, load an image
+        for picPath in picPaths:
+            image = pygame.image.load(picPath)  # load an image
             image = pygame.Surface.convert_alpha(image)  # optimizes blitting
             self.imagesList.append(image)
 
@@ -30,7 +30,7 @@ class SimpleAnimation():
             return
 
         # How much time has elapsed since we started showing this image
-        self.elapsed = (time.time() - self.imageStartTime)
+        self.elapsed = time.time() - self.imageStartTime
 
         # If enough time has elapsed, move onto the next image
         if self.elapsed > self.durationPerImage:

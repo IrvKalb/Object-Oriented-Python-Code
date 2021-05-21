@@ -20,20 +20,20 @@ window = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 clock = pygame.time.Clock()
 
 # 4 - Load assets: images(s), sounds, etc.
-dinosaurAnimTuple = ('images/Dinobike/f1.gif', \
-                      'images/Dinobike/f2.gif', \
-                      'images/Dinobike/f3.gif', \
-                      'images/Dinobike/f4.gif', \
-                      'images/Dinobike/f5.gif', \
-                      'images/Dinobike/f6.gif', \
-                      'images/Dinobike/f7.gif', \
-                      'images/Dinobike/f8.gif', \
-                      'images/Dinobike/f9.gif', \
-                      'images/Dinobike/f10.gif'
-                     )
+dinosaurAnimTuple = ('images/Dinobike/f1.gif',
+                      'images/Dinobike/f2.gif',
+                      'images/Dinobike/f3.gif',
+                      'images/Dinobike/f4.gif',
+                      'images/Dinobike/f5.gif',
+                      'images/Dinobike/f6.gif',
+                      'images/Dinobike/f7.gif',
+                      'images/Dinobike/f8.gif',
+                      'images/Dinobike/f9.gif',
+                      'images/Dinobike/f10.gif')
 
 # 5 - Initialize variables
-oDinosaurAnimation = SimpleAnimation(window, (22, 140), dinosaurAnimTuple, .1)
+oDinosaurAnimation = SimpleAnimation(window, (22, 140),
+                                     dinosaurAnimTuple, .1)
 oPlayButton = pygwidgets.TextButton(window, (20, 240), "Play")
 
 # 6 - Loop forever
@@ -64,4 +64,4 @@ while True:
     pygame.display.update()
     
     # 12 - slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make Pygame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait
