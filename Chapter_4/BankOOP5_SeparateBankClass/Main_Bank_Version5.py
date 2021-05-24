@@ -8,10 +8,10 @@ oBank = Bank()
 
 # Main code
 # Create two test accounts
-joesAccountNumber = oBank.openAccount('Joe', 100, 'JoesPassword')
+joesAccountNumber = oBank.createAccount('Joe', 100, 'JoesPassword')
 print("Joe's account number is:", joesAccountNumber)
 
-marysAccountNumber = oBank.openAccount('Mary', 12345, 'MarysPassword')
+marysAccountNumber = oBank.createAccount('Mary', 12345, 'MarysPassword')
 print("Mary's account number is:", marysAccountNumber)
 
 while True:
