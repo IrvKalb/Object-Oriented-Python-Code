@@ -71,7 +71,7 @@ while True:
     print()
 
     action = input('What do you want to do? ')
-    action = action.lower() # force lower case
+    action = action.lower()  # force lowercase
     action = action[0]  # just use first letter
     print()
     

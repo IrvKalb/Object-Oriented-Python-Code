@@ -76,7 +76,7 @@ while True:
     print()
 
     action = input('What do you want to do? ')
-    action = action.lower() # force lower case
+    action = action.lower()  # force lowercase
     action = action[0]  # just use first letter
     print()
     
@@ -104,7 +104,7 @@ while True:
     elif action == 'n':
         print('New Account:')
         userName = input('What is your name? ')
-        userStartingAmount = input('How much money to have to start your account with? ')
+        userStartingAmount = input('What is the amount of your initial deposit? ')
         userStartingAmount = int(userStartingAmount)
         userPassword = input('What password would you like to use for this account? ')
 

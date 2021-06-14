@@ -18,7 +18,7 @@ class LightSwitch():
 # Main code
 oLightSwitch = LightSwitch()  # create a LightSwitch object
 
-#  Calls to methods:
+#  Calls to methods
 oLightSwitch.show() # call the show method of oLightSwitch
 oLightSwitch.turnOn() # call the turnOn method of oLightSwitch
 oLightSwitch.show()

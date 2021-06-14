@@ -16,7 +16,7 @@ while True:
     print()
 
     action = input('What do you want to do? ')
-    action = action.lower() # force lower case
+    action = action.lower()  # force lowercase
     action = action[0]  # just use first letter
     print()
     
@@ -45,7 +45,7 @@ while True:
             print('Your new balance is:', accountBalance)
         
 
-    elif action == 's':   #show
+    elif action == 's':  # show
         print('Show:')
         print('       Name', accountName)
         print('       Balance:', accountBalance)

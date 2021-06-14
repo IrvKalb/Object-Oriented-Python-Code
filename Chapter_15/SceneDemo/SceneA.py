@@ -9,10 +9,8 @@ from pygame.locals import *
 from Constants import *
 
 class SceneA(pyghelpers.Scene):
-    def __init__(self, window, sceneKey):
-        # Save window and sceneKey in instance variables
+    def __init__(self, window):
         self.window = window
-        self.sceneKey = sceneKey
 
         self.messageField = pygwidgets.DisplayText(self.window, (15, 25), 'This is Scene A', \
                                               fontSize=50, textColor=WHITE, width=610, justified='center')
@@ -21,6 +19,9 @@ class SceneA(pyghelpers.Scene):
         self.gotoBButton = pygwidgets.TextButton(self.window, (250, 100), 'Go to Scene B')
         self.gotoCButton = pygwidgets.TextButton(self.window, (400, 100), 'Go to Scene C')
         self.gotoAButton.disable()
+
+    def getSceneKey(self):
+        return SCENE_A
 
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:

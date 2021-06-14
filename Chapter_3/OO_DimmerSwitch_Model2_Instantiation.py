@@ -32,23 +32,16 @@ class DimmerSwitch():
     
 # Main code
 
-# Create first DimmerSwitch, turn on and raise level twice
+# Create three DimmerSwitch objects 
 oDimmer1 = DimmerSwitch('Dimmer1')
-oDimmer1.turnOn()
-oDimmer1.raiseLevel()
-oDimmer1.raiseLevel()
-
-# Create second DimmerSwitch, turn on and raise level 3 times
+print(type(oDimmer1))
+print(oDimmer1)
+print()
 oDimmer2 = DimmerSwitch('Dimmer2')
-oDimmer2.turnOn()
-oDimmer2.raiseLevel()
-oDimmer2.raiseLevel()
-oDimmer2.raiseLevel()
-
-# Create third DimmerSwitch, no changes to settings
+print(type(oDimmer2))
+print(oDimmer2)
+print()
 oDimmer3 = DimmerSwitch('Dimmer3')
-
-# Ask each switch to show itself
-oDimmer1.show()
-oDimmer2.show()
-oDimmer3.show()
+print(type(oDimmer3))
+print(oDimmer3)
+print()

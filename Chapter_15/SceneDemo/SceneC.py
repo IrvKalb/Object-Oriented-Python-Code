@@ -10,10 +10,8 @@ from Constants import *
 
 
 class SceneC(pyghelpers.Scene):
-    def __init__(self, window, sceneKey):
-        # Save window and sceneKey in instance variables
+    def __init__(self, window):
         self.window = window
-        self.sceneKey = sceneKey
 
         self.messageField = pygwidgets.DisplayText(self.window, (15, 25), 'This is Scene C', \
                                               fontSize=50, textColor=WHITE, width=610, justified='center')
@@ -22,6 +20,9 @@ class SceneC(pyghelpers.Scene):
         self.gotoBButton = pygwidgets.TextButton(self.window, (250, 100), 'Go to Scene B')
         self.gotoCButton = pygwidgets.TextButton(self.window, (400, 100), 'Go to Scene C')
         self.gotoCButton.disable()
+
+    def getSceneKey(self):
+        return SCENE_C
 
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:

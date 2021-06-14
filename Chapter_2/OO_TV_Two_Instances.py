@@ -72,22 +72,22 @@ class TV():
 oTV1 = TV()  # create one TV object
 oTV2 = TV()  # create another TV object
 
-# Turn both TV's on 
+# Turn both TVs on 
 oTV1.power()
 oTV2.power()
 
-# raise the volume of TV1
+# Raise the volume of TV1
 oTV1.volumeUp()
 oTV1.volumeUp()
 
-# raise the volume of TV2
+# Raise the volume of TV2
 oTV2.volumeUp()
 oTV2.volumeUp()
 oTV2.volumeUp()
 oTV2.volumeUp()
 oTV2.volumeUp()
 
-# change TV2's channel then mute it
+# Change TV2's channel then mute it
 oTV2.setChannel(44)
 oTV2.mute()
 

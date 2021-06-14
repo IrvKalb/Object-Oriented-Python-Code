@@ -10,10 +10,8 @@ import pygame
 from Constants import *
 
 class SceneResults(pyghelpers.Scene):
-    def __init__(self, window, sceneKey):
-        # Save window and sceneKey in instance variables
+    def __init__(self, window):
         self.window = window
-        self.sceneKey = sceneKey
 
         self.playerScore = 0
         self.computerScore = 0
@@ -46,6 +44,8 @@ class SceneResults(pyghelpers.Scene):
         self.tieSound = pygame.mixer.Sound("sounds/push.wav")
         self.loserSound = pygame.mixer.Sound("sounds/buzz.wav")
 
+    def getSceneKey(self):
+        return SCENE_RESULTS
 
     def enter(self, data):
         # data is a dictionary (comes from Play scene) that looks like this:

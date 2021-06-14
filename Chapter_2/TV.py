@@ -19,7 +19,7 @@ class TV():
         if not self.isOn:
             return
         if self.isMuted:
-            self.isMuted = False  # changing the volume while muted, unmutes the sound
+            self.isMuted = False  # changing the volume while muted unmutes the sound
         if self.volume < self.VOLUME_MAXIMUM:
             self.volume = self.volume + 1
 
@@ -27,7 +27,7 @@ class TV():
         if not self.isOn:
             return
         if self.isMuted:
-            self.isMuted = False  # changing the volume while muted, unmutes the sound
+            self.isMuted = False  # changing the volume while muted unmutes the sound
         if self.volume > self.VOLUME_MINIMUM:
             self.volume = self.volume - 1
 

@@ -12,10 +12,8 @@ import random
 
 
 class ScenePlay(pyghelpers.Scene):
-    def __init__(self, window, sceneKey):
-        # Save window and sceneKey in instance variables
+    def __init__(self, window):
         self.window = window
-        self.sceneKey = sceneKey
 
         self.RPSTuple = (ROCK, PAPER, SCISSORS)
 
@@ -39,6 +37,9 @@ class ScenePlay(pyghelpers.Scene):
                                                 up="images/Scissors.png", \
                                                 over="images/ScissorsOver.png", \
                                                 down="images/ScissorsDown.png")
+
+    def getSceneKey(self):
+        return SCENE_PLAY
 
     def handleInputs(self, eventsList, keyPressedList):
         playerChoice = ''

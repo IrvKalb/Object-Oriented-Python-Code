@@ -1,4 +1,4 @@
-# Rock Paper Scissors in PyGame
+# Rock Paper Scissors in pygame
 # Demonstration of a state machine
 
 # 1 - Import packages
@@ -32,55 +32,55 @@ clock = pygame.time.Clock()
 # 4 - Load assets: image(s), sounds,  etc.
 
 # For Splash screen
-messageField = pygwidgets.DisplayText(window, (15, 25),  'Welcome to Rock, Paper, Scissors!', \
+messageField = pygwidgets.DisplayText(window, (15, 25),  'Welcome to Rock, Paper, Scissors!', 
                                     fontSize=50, textColor = WHITE, width = 610, justified = 'center')
 
 rockImage = pygwidgets.Image(window, (25, 120), 'images/Rock.png')
 paperImage = pygwidgets.Image(window, (225, 120), 'images/Paper.png')
 scissorsImage = pygwidgets.Image(window, (425, 120), 'images/Scissors.png')
 
-startButton = pygwidgets.CustomButton(window, (210, 300), \
-                                           up='images/startButtonUp.png', \
-                                           down='images/startButtonDown.png', \
+startButton = pygwidgets.CustomButton(window, (210, 300), 
+                                           up='images/startButtonUp.png', 
+                                           down='images/startButtonDown.png', 
                                            over='images/startButtonHighlight.png')
 
 # For Player Choice screen
-rockButton = pygwidgets.CustomButton(window, (25, 120), \
-                                 up = 'images/Rock.png', \
-                                 over = 'images/RockOver.png', \
+rockButton = pygwidgets.CustomButton(window, (25, 120), 
+                                 up = 'images/Rock.png', 
+                                 over = 'images/RockOver.png', 
                                  down = 'images/RockDown.png')
 
-paperButton =  pygwidgets.CustomButton(window, (225, 120), \
-                                 up = 'images/Paper.png', \
-                                 over = 'images/PaperOver.png', \
+paperButton =  pygwidgets.CustomButton(window, (225, 120), 
+                                 up = 'images/Paper.png', 
+                                 over = 'images/PaperOver.png', 
                                  down = 'images/PaperDown.png')
 
-scissorButton =  pygwidgets.CustomButton(window, (425, 120), \
-                                 up = 'images/Scissors.png', \
-                                 over = 'images/ScissorsOver.png', \
+scissorButton =  pygwidgets.CustomButton(window, (425, 120), 
+                                 up = 'images/Scissors.png',
+                                 over = 'images/ScissorsOver.png', 
                                  down = 'images/ScissorsDown.png')
 
-chooseText = pygwidgets.DisplayText(window, (15, 395), 'Choose!', \
+chooseText = pygwidgets.DisplayText(window, (15, 395), 'Choose!', 
                                     fontSize=50, textColor = WHITE, width = 610, justified = 'center')
 
 resultsField = pygwidgets.DisplayText(window, (20, 275), '', \
                                     fontSize=50, textColor=WHITE, width=610, justified='center')
 
 # For results screen
-rpsCollectionPlayer = pygwidgets.ImageCollection(window, (50, 62), \
+rpsCollectionPlayer = pygwidgets.ImageCollection(window, (50, 62), 
                     {ROCK:'images/Rock.png', PAPER:'images/Paper.png', SCISSORS:'images/Scissors.png'}, '')
-rpsCollectionComputer = pygwidgets.ImageCollection(window, (350, 62), \
+rpsCollectionComputer = pygwidgets.ImageCollection(window, (350, 62), 
                     {ROCK:'images/Rock.png', PAPER:'images/Paper.png', SCISSORS:'images/Scissors.png'}, '')
 
-restartButton = pygwidgets.CustomButton(window, (220, 310), \
-                                    up='images/restartButtonUp.png', \
-                                    down='images/restartButtonDown.png', \
+restartButton = pygwidgets.CustomButton(window, (220, 310), 
+                                    up='images/restartButtonUp.png',
+                                    down='images/restartButtonDown.png', 
                                     over='images/restartButtonHighlight.png')
 
-playerScoreCounter = pygwidgets.DisplayText(window, (15, 315), 'Player Score:', \
+playerScoreCounter = pygwidgets.DisplayText(window, (15, 315), 'Player Score:', 
                                     fontSize=50, textColor = WHITE)
 
-computerScoreCounter = pygwidgets.DisplayText(window, (300, 315), 'Computer Score:', \
+computerScoreCounter = pygwidgets.DisplayText(window, (300, 315), 'Computer Score:', 
                                     fontSize=50, textColor = WHITE)
 
 # Sounds
@@ -174,6 +174,9 @@ while True:
             if  restartButton.handleEvent(event):
                 state = STATE_PLAYER_CHOICE  # change state
 
+        else:
+            raise ValueError('Unknown value for state:', state)
+
     # 8  Do any 'per frame' actions
     if state == STATE_PLAYER_CHOICE:
         messageField.setValue('       Rock             Paper         Scissors')
@@ -207,9 +210,12 @@ while True:
         playerScoreCounter.draw()
         computerScoreCounter.draw()
         restartButton.draw()
+        
+    else:
+        raise ValueError('Unknown value for state:', state)
 
-    # 11 - Update the screen
+    # 11 - Update the window
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make PyGame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait 

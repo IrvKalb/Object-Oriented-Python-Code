@@ -2,7 +2,7 @@
 
 import random
 
-# Card Constants
+# Card constants
 SUIT_TUPLE = ('Spades', 'Hearts', 'Clubs', 'Diamonds')
 RANK_TUPLE = ('Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King')
 
@@ -10,7 +10,7 @@ NCARDS = 8
 
 # Pass in a deck and this function returns a random card from the deck
 def getCard(deckListIn):
-    thisCard = deckListIn.pop() # pops one off of the top of the deck and returns
+    thisCard = deckListIn.pop() # pops one off the top of the deck and returns
     return thisCard
     
 # Pass in a deck and this function returns a shuffled copy of the deck
@@ -46,9 +46,10 @@ while True:  # play multiple games
     print()
 
     for cardNumber in range(0, NCARDS):   # play one game of this many cards
-        answer = input('Will the next card be higher or lower than the ' + \
-                       currentCardRank + ' of ' + currentCardSuit + '?  (enter h or l): ')
-        answer = answer.casefold()   # force lower case
+        answer = input('Will the next card be higher or lower than the ' + 
+                               currentCardRank + ' of ' + 
+                               currentCardSuit + '?  (enter h or l): ')
+        answer = answer.casefold()  # force lower case
         nextCardDict = getCard(gameDeckList)
         nextCardRank = nextCardDict['rank']
         nextCardSuit = nextCardDict['suit']

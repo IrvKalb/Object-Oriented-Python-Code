@@ -1,4 +1,4 @@
-# Procedural Light Switch
+# Procedural light switch
 
 def turnOn():
     global switchIsOn
@@ -13,7 +13,7 @@ def turnOff():
 # Main code
 switchIsOn = False     # a global Boolean variable
 
-# Test code:
+# Test code
 print(switchIsOn)
 turnOn()
 print(switchIsOn)

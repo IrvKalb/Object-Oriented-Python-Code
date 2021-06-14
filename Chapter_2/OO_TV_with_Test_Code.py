@@ -76,7 +76,7 @@ oTV = TV()  # create the TV object
 oTV.power()
 oTV.showInfo()
 
-# Change the channel up twice, and raise the volume twice, show status
+# Change the channel up twice,  raise the volume twice, show status
 oTV.channelUp()
 oTV.channelUp()
 oTV.volumeUp()
@@ -94,7 +94,7 @@ oTV.volumeDown()
 oTV.mute()
 oTV.showInfo()
 
-# Change the Channel to 11
+# Change the channel to 11
 oTV.setChannel(11)
 oTV.mute()
 oTV.showInfo()

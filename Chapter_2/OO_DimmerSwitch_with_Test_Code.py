@@ -1,4 +1,4 @@
-# DimmerSwitch class with Test code
+# DimmerSwitch class with test code
 
 class DimmerSwitch():
     def __init__(self):

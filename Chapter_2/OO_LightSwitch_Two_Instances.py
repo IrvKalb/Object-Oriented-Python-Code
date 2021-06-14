@@ -19,7 +19,7 @@ class LightSwitch():
 oLightSwitch1 = LightSwitch()  # create a LightSwitch object
 oLightSwitch2 = LightSwitch()  # create another LightSwitch object
 
-#  Test code:
+#  Test code
 oLightSwitch1.show()
 oLightSwitch2.show()
 oLightSwitch1.turnOn() # Turn switch 1 on
