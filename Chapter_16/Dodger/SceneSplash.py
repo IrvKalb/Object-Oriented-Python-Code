@@ -9,10 +9,8 @@ import pyghelpers
 from Constants import *
 
 class SceneSplash(pyghelpers.Scene):
-    def __init__(self, window, sceneKey):
-        # Save window and sceneKey in instance variables
+    def __init__(self, window):
         self.window = window
-        self.sceneKey = sceneKey
 
         self.backgroundImage = pygwidgets.Image(self.window, (0, 0), "images/splashBackground.jpg")
         self.dodgerImage = pygwidgets.Image(self.window, (150, 30), "images/dodger.png")
@@ -36,6 +34,9 @@ class SceneSplash(pyghelpers.Scene):
                                                    down='images/gotoHighScoresDown.png',\
                                                    over='images/gotoHighScoresOver.png',\
                                                    disabled='images/gotoHighScoresDisabled.png')
+
+    def getSceneKey(self):
+        return SCENE_SPLASH
 
     def handleInputs(self, events, keyPressedList):
         for event in events:

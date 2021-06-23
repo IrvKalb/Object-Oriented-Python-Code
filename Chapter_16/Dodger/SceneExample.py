@@ -5,22 +5,23 @@
 #
 
 import pygwidgets
-iimport pyghelpers
-mport pygame
+import pyghelpers
+import pygame
 
 class MyScene(pyghelpers.Scene):  # Inherits from the Scene class in the pyghelpers file
-    def __init__(self, window, sceneKey):
+    def __init__(self, window):
         """
         This method is called when the scene is created
         Create and/or load any assets (images, buttons, sounds)
         that you need for this scene
         """
-        # Save window and sceneKey in instance variables
         self.window = window
-        self.sceneKey = sceneKey
 
         # As a sample, let's create a button
         self.navButton = pygwidgets.TextButton(self.window, (300, 230), 'Navigate')
+
+    def getSceneKey(self):
+        return 'Some string or CONSTANT that uniquely represents this scene'
 
     def enter(self, data):
         """
@@ -60,7 +61,7 @@ class MyScene(pyghelpers.Scene):  # Inherits from the Scene class in the pyghelp
 
     def leave(self):
         """
-        This method is called when your code has asked to move on to a new scene
+        This method is called once when your code has asked to move on to a new scene
         It should return any data that this scene wants to pass on to the next scene
         """
         pass

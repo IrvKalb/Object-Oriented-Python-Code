@@ -4,6 +4,7 @@ import pygwidgets
 import random
 from Constants import *
 
+
 class Baddie():
     MIN_SIZE = 10
     MAX_SIZE = 40
