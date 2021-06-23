@@ -1,5 +1,5 @@
 #
-# This the Splash Scene
+# This is the Splash Scene
 #
 # This is where the player sees the intro screen
 #

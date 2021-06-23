@@ -1,4 +1,4 @@
-# Bank that manages a dictionary of account objects
+# Bank that manages a dictionary of Account objects
 
 from Account import *
 

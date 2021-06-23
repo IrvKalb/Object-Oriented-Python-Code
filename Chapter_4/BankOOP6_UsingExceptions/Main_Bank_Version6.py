@@ -1,9 +1,8 @@
-# Main program for controlling a bank made up of accounts
+# Main program for controlling a Bank made up of Accounts
 from Bank import *
    
 # Create an instance of the Bank
-oBank = Bank('9 to 5', '123 Main Street, Anytown, USA',
-             '(650) 555-1212')
+oBank = Bank('9 to 5', '123 Main Street, Anytown, USA', '(650) 555-1212')
 
 #Main code
 while True:
@@ -41,7 +40,7 @@ while True:
         elif action == 'w':
             oBank.withdraw()
     except AbortTransaction as error:
-        # print out the text of the error message
+        # Print out the text of the error message
         print(error)
         
 print('Done')

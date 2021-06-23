@@ -1,4 +1,4 @@
-# Bank that manages a dictionary of account objects
+# Bank that manages a dictionary of Account objects
 
 from Account import *
 
@@ -18,10 +18,10 @@ class Bank():
 
     def openAccount(self):
         print('*** Open Account ***')
-        userName = input('What is your name? ')
-        userStartingAmount = input('How much money to have to start you account with? ')
+        userName = input('What is the name for the new user account? ')
+        userStartingAmount = input('What is the starting balance for this account? ')
         userStartingAmount = int(userStartingAmount)
-        userPassword = input('What password would you like to use for this account? ')
+        userPassword = input('What password would you want to use for this account? ')
 
         userAccountNumber = self.createAccount(userName, userStartingAmount, userPassword)
         print('Your new account number is:', userAccountNumber)

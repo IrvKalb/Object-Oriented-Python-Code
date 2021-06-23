@@ -1,5 +1,5 @@
 #
-# This the Results Scene
+# This is the Results Scene
 #
 # The player is shown the results of the current round
 #
@@ -16,29 +16,40 @@ class SceneResults(pyghelpers.Scene):
         self.playerScore = 0
         self.computerScore = 0
 
-        self.rpsCollectionPlayer = pygwidgets.ImageCollection(window, (50, 62), \
-                                    {ROCK: 'images/Rock.png', PAPER: 'images/Paper.png',
-                                    SCISSORS: 'images/Scissors.png'}, '')
-        self.rpsCollectionComputer = pygwidgets.ImageCollection(window, (350, 62), \
-                                    {ROCK: 'images/Rock.png', PAPER: 'images/Paper.png',
-                                    SCISSORS: 'images/Scissors.png'}, '')
+        self.rpsCollectionPlayer = pygwidgets.ImageCollection(
+                                window, (50, 62),
+                                {ROCK: 'images/Rock.png',
+                                PAPER: 'images/Paper.png',
+                                SCISSORS: 'images/Scissors.png'}, '')
+        self.rpsCollectionComputer = pygwidgets.ImageCollection(
+                                window, (350, 62),
+                                {ROCK: 'images/Rock.png',
+                                PAPER: 'images/Paper.png',
+                                SCISSORS: 'images/Scissors.png'}, '')
 
-        self.youComputerField = pygwidgets.DisplayText(window, (22, 25), 'You                     Computer', \
-                                                fontSize=50, textColor=WHITE, width=610, justified='center')
+        self.youComputerField = pygwidgets.DisplayText(
+                                window, (22, 25),
+                                'You                     Computer',
+                                fontSize=50, textColor=WHITE, width=610, justified='center')
 
-        self.resultsField = pygwidgets.DisplayText(self.window, (20, 275), '', \
-                                              fontSize=50, textColor=WHITE, width=610, justified='center')
+        self.resultsField = pygwidgets.DisplayText(
+                                self.window, (20, 275), '',
+                                fontSize=50, textColor=WHITE,
+                                width=610, justified='center')
 
-        self.restartButton = pygwidgets.CustomButton(self.window, (220, 310), \
-                                                up='images/restartButtonUp.png', \
-                                                down='images/restartButtonDown.png', \
-                                                over='images/restartButtonHighlight.png')
+        self.restartButton = pygwidgets.CustomButton(
+                                self.window, (220, 310),
+                                up='images/restartButtonUp.png',
+                                down='images/restartButtonDown.png',
+                                over='images/restartButtonHighlight.png')
 
-        self.playerScoreCounter = pygwidgets.DisplayText(self.window, (86, 315), 'Score:', \
-                                                fontSize=50, textColor=WHITE)
+        self.playerScoreCounter = pygwidgets.DisplayText(
+                                self.window, (86, 315), 'Score:',
+                                fontSize=50, textColor=WHITE)
 
-        self.computerScoreCounter = pygwidgets.DisplayText(self.window, (384, 315), 'Score:', \
-                                                fontSize=50, textColor=WHITE)
+        self.computerScoreCounter = pygwidgets.DisplayText(
+                                self.window, (384, 315), 'Score:',
+                                fontSize=50, textColor=WHITE)
         # Sounds
         self.winnerSound = pygame.mixer.Sound("sounds/ding.wav")
         self.tieSound = pygame.mixer.Sound("sounds/push.wav")
@@ -48,26 +59,14 @@ class SceneResults(pyghelpers.Scene):
         return SCENE_RESULTS
 
     def enter(self, data):
-        # data is a dictionary (comes from Play scene) that looks like this:
+        # data is a dictionary (comes from Play scene) that looks like:
         #      {'player':playerChoice, 'computer':computerChoice}
         playerChoice = data['player']
         computerChoice = data['computer']
 
         # Set the player and computer images
-        if playerChoice == ROCK:
-            self.rpsCollectionPlayer.replace(ROCK)
-        elif playerChoice == PAPER:
-            self.rpsCollectionPlayer.replace(PAPER)
-        else:
-            self.rpsCollectionPlayer.replace(SCISSORS)
-
-        if computerChoice == ROCK:
-            self.rpsCollectionComputer.replace(ROCK)
-        elif computerChoice == PAPER:
-            self.rpsCollectionComputer.replace(PAPER)
-        else:
-            self.rpsCollectionComputer.replace(SCISSORS)
-
+        self.rpsCollectionPlayer.replace(playerChoice)
+        self.rpsCollectionComputer.replace(computerChoice)
 
         # Evaluate the game  Win/Lose/Tie Conditions
         if playerChoice == computerChoice:
@@ -105,15 +104,18 @@ class SceneResults(pyghelpers.Scene):
             self.loserSound.play()
 
         # Shows the player's and computer's score.
-        self.playerScoreCounter.setValue('Score: ' + str(self.playerScore))
-        self.computerScoreCounter.setValue('Score: ' + str(self.computerScore))
+        self.playerScoreCounter.setValue(
+                               'Score: ' + str(self.playerScore))
+        self.computerScoreCounter.setValue(
+                               'Score: ' + str(self.computerScore))
 
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:
             if self.restartButton.handleEvent(event):
                 self.goToScene(SCENE_PLAY)
 
-    # No need to include update method defaults to inherited one which does nothing.
+    # No need to include update method,
+    # defaults to inherited one which does nothing.
 
     def draw(self):
         self.window.fill(OTHER_GRAY)
@@ -125,6 +127,3 @@ class SceneResults(pyghelpers.Scene):
         self.playerScoreCounter.draw()
         self.computerScoreCounter.draw()
         self.restartButton.draw()
-
-
-

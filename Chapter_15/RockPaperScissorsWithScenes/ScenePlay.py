@@ -1,15 +1,13 @@
 #
-# This the Play Scene
+# This is the Play Scene
 #
 # The player chooses among Rock, Paper, or Scissors
 #
-
 import pygwidgets
 import pyghelpers
 import pygame
 from Constants import *
 import random
-
 
 class ScenePlay(pyghelpers.Scene):
     def __init__(self, window):
@@ -42,7 +40,7 @@ class ScenePlay(pyghelpers.Scene):
         return SCENE_PLAY
 
     def handleInputs(self, eventsList, keyPressedList):
-        playerChoice = ''
+        playerChoice = None
 
         for event in eventsList:
             if self.rockButton.handleEvent(event):
@@ -54,7 +52,7 @@ class ScenePlay(pyghelpers.Scene):
             if self.scissorButton.handleEvent(event):
                 playerChoice = SCISSORS
 
-            if playerChoice != '':  # user has made a choice
+            if playerChoice is not None:  # user has made a choice
                 computerChoice = random.choice(self.RPSTuple)  # Computer chooses
                 dataDict = {'player': playerChoice, 'computer': computerChoice}
                 self.goToScene(SCENE_RESULTS, dataDict)  # go to results scene

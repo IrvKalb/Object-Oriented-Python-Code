@@ -57,10 +57,10 @@ while True:
         
     elif action == 'o':
         print('*** Open Account ***')
-        userName = input('What is your name? ')
-        userStartingAmount = input('How much cash to start? ')
+        userName = input('What is the name for the new user account? ')
+        userBalance = input('What is the starting balance for this account? ')
         userStartingAmount = int(userStartingAmount)
-        userPassword = input('What password would you like to use for this account? ')
+        userPassword = input('What is the password you want to use for this account? ')
         oAccount = Account(userName, userStartingAmount, userPassword)
         accountsDict[nextAccountNumber] = oAccount
         print('Your new account number is:', nextAccountNumber)

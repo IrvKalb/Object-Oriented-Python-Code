@@ -1,10 +1,10 @@
 # Test program using accounts
-# Version 1 using explicit variables for each account object
+# Version 1 using explicit variables for each Account object
 
 # Bring in all the code from the Account class file
 from Account import *
 
-# Create two accounts:
+# Create two accounts
 oJoesAccount = Account('Joe', 100, 'JoesPassword')
 print("Created an account for Joe")
 
@@ -27,7 +27,7 @@ oMarysAccount.show()
 
 # Create another account with information from the user
 print()
-userName = input('What is the name for a new user account? ')
+userName = input('What is the name for the new user account? ')
 userBalance = input('What is the starting balance for this account? ')
 userBalance = int(userBalance)
 userPassword = input('What is the password you want to use for this account? ')

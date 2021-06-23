@@ -1,5 +1,5 @@
 #
-# This the Scene C
+# This is Scene C
 #
 
 import pygwidgets
@@ -13,12 +13,16 @@ class SceneC(pyghelpers.Scene):
     def __init__(self, window):
         self.window = window
 
-        self.messageField = pygwidgets.DisplayText(self.window, (15, 25), 'This is Scene C', \
-                                              fontSize=50, textColor=WHITE, width=610, justified='center')
+        self.messageField = pygwidgets.DisplayText(self.window,
+                            (15, 25), 'This is Scene C', fontSize=50,
+                            textColor=WHITE, width=610, justified='center')
 
-        self.gotoAButton = pygwidgets.TextButton(self.window, (100, 100), 'Go to Scene A')
-        self.gotoBButton = pygwidgets.TextButton(self.window, (250, 100), 'Go to Scene B')
-        self.gotoCButton = pygwidgets.TextButton(self.window, (400, 100), 'Go to Scene C')
+        self.gotoAButton = pygwidgets.TextButton(self.window,
+                                    (100, 100), 'Go to Scene A')
+        self.gotoBButton = pygwidgets.TextButton(self.window,
+                                    (250, 100), 'Go to Scene B')
+        self.gotoCButton = pygwidgets.TextButton(self.window,
+                                    (400, 100), 'Go to Scene C')
         self.gotoCButton.disable()
 
     def getSceneKey(self):
@@ -36,23 +40,26 @@ class SceneC(pyghelpers.Scene):
             #           Press x to send message to all scenes
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_a:
-                    self.send(SCENE_A, 'message', 'Sending message to Scene A')
+                    self.send(SCENE_A, SEND_MESSAGE,
+                              'Sending message to Scene A')
 
                 if event.key == pygame.K_b:
-                    self.send(SCENE_B, 'message', 'Sending message to Scene B')
+                    self.send(SCENE_B, SEND_MESSAGE,
+                              'Sending message to Scene B')
 
                 if event.key == pygame.K_1:
-                    answer = self.request(SCENE_A, 'get data')
-                    print('Recevied data from Scene A')
+                    answer = self.request(SCENE_A, GET_DATA)
+                    print('Received data from Scene A')
                     print('Answer was:', answer)
 
                 if event.key == pygame.K_2:
-                    answer = self.request(SCENE_B, 'get data')
-                    print('Recevied data from Scene B')
+                    answer = self.request(SCENE_B, GET_DATA)
+                    print('Received data from Scene B')
                     print('Answer was:', answer)
 
                 if event.key == pygame.K_x:
-                    self.sendAll('all message', 'Sending message to All scenes')
+                    self.sendAll(SEND_MESSAGE,
+                                 'Sending message to All scenes')
 
     def draw(self):
         self.window.fill(GRAYC)
@@ -61,11 +68,11 @@ class SceneC(pyghelpers.Scene):
         self.gotoBButton.draw()
         self.gotoCButton.draw()
 
-    def receive(self, msgType, data):
+    def receive(self, receiveID, data):
         print('In C')
-        print('Received a message of type:', msgType)
+        print('Received a message of type:', receiveID)
         print('The data received was:', data)
 
-    def respond(self, msgType):
-        if msgType == 'get data':
+    def respond(self, requestID):
+        if requestID == GET_DATA:
             return 'Here is data from scene C'

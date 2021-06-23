@@ -36,7 +36,7 @@ accountsDict[marysAccountNumber].show()
 
 # Create another account with information from the user
 print()
-userName = input('What is the name for a new user account? ')
+userName = input('What is the name for the new user account? ')
 userBalance = input('What is the starting balance for this account? ')
 userBalance = int(userBalance)
 userPassword = input('What is the password you want to use for this account? ')

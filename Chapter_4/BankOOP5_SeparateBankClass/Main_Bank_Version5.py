@@ -1,4 +1,4 @@
-# Main program for controlling a bank made up of accounts
+# Main program for controlling a Bank made up of Accounts
 
 # Bring in all the code of the Bank class
 from Bank import *
@@ -19,11 +19,12 @@ while True:
     print('To get an account balance, press b')
     print('To close an account, press c')
     print('To make a deposit, press d')
-    print('To get bank Information, press i')
+    print('To get bank information, press i')
     print('To open a new account, press o')
     print('To quit, press q')
     print('To show all accounts, press s')
     print('To make a withdrawal, press w ')
+    print()
 
     action = input('What do you want to do? ')
     action = action.lower()

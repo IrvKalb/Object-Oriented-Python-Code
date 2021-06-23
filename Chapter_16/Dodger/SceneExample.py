@@ -60,7 +60,7 @@ class MyScene(pyghelpers.Scene):  # Inherits from the Scene class in the pyghelp
 
     def leave(self):
         """
-        This method is called once when your code has asked to move on to a new scene
+        This method is called when your code has asked to move on to a new scene
         It should return any data that this scene wants to pass on to the next scene
         """
         pass

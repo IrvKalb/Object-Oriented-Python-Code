@@ -44,7 +44,7 @@ startButton = pygwidgets.CustomButton(window, (210, 300),
                                            down='images/startButtonDown.png', 
                                            over='images/startButtonHighlight.png')
 
-# For Player Choice screen
+# For Player Choice
 rockButton = pygwidgets.CustomButton(window, (25, 120), 
                                  up = 'images/Rock.png', 
                                  over = 'images/RockOver.png', 
@@ -66,7 +66,7 @@ chooseText = pygwidgets.DisplayText(window, (15, 395), 'Choose!',
 resultsField = pygwidgets.DisplayText(window, (20, 275), '', \
                                     fontSize=50, textColor=WHITE, width=610, justified='center')
 
-# For results screen
+# For results
 rpsCollectionPlayer = pygwidgets.ImageCollection(window, (50, 62), 
                     {ROCK:'images/Rock.png', PAPER:'images/Paper.png', SCISSORS:'images/Scissors.png'}, '')
 rpsCollectionComputer = pygwidgets.ImageCollection(window, (350, 62), 
@@ -183,10 +183,10 @@ while True:
     elif state == STATE_SHOW_RESULTS:
         messageField.setValue('You                     Computer')
 
-    # 9 - Clear the screen
+    # 9 - Clear the window
     window.fill(GRAY)
 
-    # 10 - Draw all screen elements
+    # 10 - Draw all window elements
     messageField.draw()
 
     if state == STATE_SPLASH:
@@ -195,14 +195,14 @@ while True:
         scissorsImage.draw()
         startButton.draw()
 
-    # Draw player choices on window
+    # Draw player choices
     elif state == STATE_PLAYER_CHOICE:
         rockButton.draw()
         paperButton.draw()
         scissorButton.draw()
         chooseText.draw()       
 
-    # Draw the results on to the window
+    # Draw the results
     elif state == STATE_SHOW_RESULTS:
         resultsField.draw()
         rpsCollectionPlayer.draw()
