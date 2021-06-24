@@ -18,7 +18,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
-# 4 - Load assets: image(s), sounds,  etc.
+# 4 - Load assets: image(s), sound(s),  etc.
 ballImage = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables
@@ -35,9 +35,8 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # check if the event is the X button 
+        # Clicked the close button? Quit pygame and end the program 
         if event.type == pygame.QUIT:
-            # if it is quit the game
             pygame.quit()
             sys.exit()
     
@@ -48,7 +47,7 @@ while True:
     if (ballRect.top < 0) or (ballRect.bottom >= WINDOW_HEIGHT):
         ySpeed = -ySpeed  # reverse Y direction
 
-    # update the rectangle of the ball, based on the speed in two directions
+    # Update the ball's rectangle using the speed in two directions
     ballRect.left = ballRect.left + xSpeed
     ballRect.top = ballRect.top + ySpeed
 

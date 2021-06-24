@@ -61,11 +61,12 @@ class Rectangle():
     def draw(self):
         pygame.draw.rect(self.window, self.color, (self.x, self.y, self.width, self.height))
 
-    # def __str__(self):
-    #     print('width:', self.width)
-    #     print('height', self.height)
-    #     print('color', self.color)
-    #     print('x', self.x)
-    #     print('y', self.y)
-    #     print('area', self.area)
-    #     return 'string version of rect'
+##    def __str__(self):
+##        output = 'String version of rect:\n'
+##        output = output + '   width: ' +  str(self.width) + '\n'
+##        output = output + '   height: ' + str(self.height) + '\n'
+##        output = output + '   color: ' + str(self.color) + '\n'
+##        output = output + '   x: ' + str(self.x) + '\n'
+##        output = output + '   y: '  + str(self.y) + '\n'
+##        output = output + '   area: ' + str(self.area) +'\n'
+##        return output

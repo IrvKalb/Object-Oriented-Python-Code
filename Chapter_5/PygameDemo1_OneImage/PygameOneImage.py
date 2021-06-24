@@ -16,7 +16,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
-# 4 - Load assets: image(s), sounds,  etc.
+# 4 - Load assets: image(s), sound(s),  etc.
 ballImage = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables
@@ -26,7 +26,7 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # If the event was a click on the close box, quit pygame and the program 
+        # Clicked the close button? Quit pygame and end the program 
         if event.type == pygame.QUIT:           
             pygame.quit()  
             sys.exit()
@@ -37,7 +37,7 @@ while True:
     window.fill(BLACK)
     
     # 10 - Draw all window elements
-    # draw ball at position 100 across (X), and 200 down (Y)
+    # draw ball at position 100 across (x), and 200 down (y)
     window.blit(ballImage, (100, 200))    
 
     # 11 - Update the window

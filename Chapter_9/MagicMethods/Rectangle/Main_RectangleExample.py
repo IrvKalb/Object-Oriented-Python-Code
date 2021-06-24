@@ -22,6 +22,7 @@ rectanglesList = []
 for i in range(0, N_RECTANGLES):
     oRectangle = Rectangle(window)
     rectanglesList.append(oRectangle)
+    print(oRectangle)
 
 whichRectangle = FIRST_RECTANGLE
 

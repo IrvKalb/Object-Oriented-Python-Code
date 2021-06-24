@@ -16,7 +16,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
-# 4 - Load assets: image(s), sounds,  etc.
+# 4 - Load assets: image(s), sound(s),  etc.
 
 # 5 - Initialize variables
  
@@ -25,7 +25,7 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # If the event was a click on the close box, quit pygame and the program 
+        # Clicked the close button? Quit pygame and end program 
         if event.type == pygame.QUIT:           
             pygame.quit()  
             sys.exit()

@@ -17,7 +17,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()  
 
-# 4 - Load assets: image(s), sounds, etc.
+# 4 - Load assets: image(s), sound(s), etc.
 barkSound = pygame.mixer.Sound('bark.wav')
 meowSound = pygame.mixer.Sound('meow.wav')
 
@@ -33,9 +33,8 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # check if the event is the X button 
+        # Clicked the close button? Quit pygame and end the program  
         if event.type == pygame.QUIT:
-            # if it is quit the game
             pygame.quit()
             sys.exit()
 
@@ -47,7 +46,6 @@ while True:
             print('User pressed the Meow button.  Program has run this many loops:', counter)
             meowSound.play()
 
-
     # 8 - Do any "per frame" actions
     counter = counter + 1
     
@@ -58,13 +56,8 @@ while True:
     buttonA.draw()
     buttonB.draw()
 
-
     # 11 - Update the screen
     pygame.display.update()
 
     # 12 - Slow things down a bit
     clock.tick(FRAMES_PER_SECOND)  # make pygame wait the correct amount
-
-
-
-

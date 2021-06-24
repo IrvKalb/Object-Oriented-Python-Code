@@ -20,7 +20,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
-# 4 - Load assets: image(s), sounds,  etc.
+# 4 - Load assets: image(s), sound(s),  etc.
 ballImage = pygame.image.load('images/ball.png')
 
 # 5 - Initialize variables
@@ -33,7 +33,7 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # If the event was a click on the close box, quit pygame and the program 
+        # Clicked the close button? Quit pygame and end the program 
         if event.type == pygame.QUIT:           
             pygame.quit()  
             sys.exit()
@@ -42,7 +42,8 @@ while True:
         if event.type == pygame.MOUSEBUTTONUP:
             #  mouseX, mouseY = event.pos   #  Could do this if we needed it
             
-            # Check if the click was in the rect of the ball, if so, choose a random new location
+            # Check if the click was in the rect of the ball
+            # If so, choose a random new location
             if ballRect.collidepoint(event.pos):
                 ballX = random.randrange(MAX_WIDTH)
                 ballY = random.randrange(MAX_HEIGHT)
@@ -54,7 +55,8 @@ while True:
     window.fill(BLACK)
     
     # 10 - Draw all window elements
-    window.blit(ballImage, (ballX, ballY))    # draw the ball at the randomized location
+    # Draw the ball at the randomized location
+    window.blit(ballImage, (ballX, ballY))    
 
     # 11 - Update the window
     pygame.display.update()

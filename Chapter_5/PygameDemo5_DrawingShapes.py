@@ -24,7 +24,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
-# 4 - Load assets: image(s), sounds,  etc.
+# 4 - Load assets: image(s), sound(s),  etc.
 
 # 5 - Initialize variables
  
@@ -33,7 +33,7 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # If the event was a click on the close box, quit pygame and the program 
+        # Clicked the close button? Quit pygame and end the program
         if event.type == pygame.QUIT:           
             pygame.quit()  
             sys.exit()
@@ -66,16 +66,18 @@ while True:
     pygame.draw.ellipse(window, YELLOW, (400, 250, 80, 40), 1) # 1 pixel edge
 
     # Draw a six-sided polygon
-    pygame.draw.polygon(window, TEAL, ((240, 350), (350, 350), \
-                                       (410, 410), (350, 470), (240, 470), (170, 410)))
+    pygame.draw.polygon(window, TEAL, ((240, 350), (350, 350), 
+                                                            (410, 410), (350, 470),
+                                                            (240, 470), (170, 410)))
 
     # Draw an arc
     pygame.draw.arc(window, PURPLE, (20, 400, 100, 100), 0, 2, 5)
     
-    # Draw anti aliased lines, first a single line, then a list of points
+    # Draw anti-aliased lines, a single line, then a list of points
     pygame.draw.aaline(window, GREEN, (500, 400),  (540, 470), 1)
-    pygame.draw.aalines(window, BLUE, True, \
-                ((580, 400), (587, 450), (595, 460), (600, 444)), 1)
+    pygame.draw.aalines(window, BLUE, True, 
+                                  ((580, 400), (587, 450),
+                                   (595, 460), (600, 444)), 1)
 
     # 11 - Update the window
     pygame.display.update()

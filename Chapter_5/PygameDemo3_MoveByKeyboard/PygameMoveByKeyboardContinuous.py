@@ -27,7 +27,7 @@ pygame.init()
 window = pygame.display.set_mode([WINDOW_WIDTH, WINDOW_HEIGHT])
 clock = pygame.time.Clock()
  
-# 4 - Load assets: image(s), sounds,  etc.
+# 4 - Load assets: image(s), sound(s),  etc.
 ballImage = pygame.image.load('images/ball.png')
 targetImage = pygame.image.load('images/target.jpg')
 
@@ -41,7 +41,7 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # If the event was a click on the close box, quit pygame and the program 
+        # Clicked the close button? Quit pygame and end the program
         if event.type == pygame.QUIT:           
             pygame.quit()  
             sys.exit()
@@ -63,7 +63,8 @@ while True:
         ballY = ballY + N_PIXELS_TO_MOVE            
 
     # Check if the ball is colliding with the target
-    ballRect = pygame.Rect(ballX, ballY, BALL_WIDTH_HEIGHT, BALL_WIDTH_HEIGHT)
+    ballRect = pygame.Rect(ballX, ballY,
+                                       BALL_WIDTH_HEIGHT, BALL_WIDTH_HEIGHT)
     if ballRect.colliderect(targetRect):
         print('Ball is touching the target')
      
