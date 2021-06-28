@@ -29,14 +29,14 @@ class Ball():
         self.ySpeed = random.choice(speedsList)
 
     def update(self):
-        # check for hitting a wall.  If so, change that direction
+        # Check for hitting a wall.  If so, change that direction.
         if (self.x < 0) or (self.x >= self.maxWidth):
             self.xSpeed = -self.xSpeed
 
         if (self.y < 0) or (self.y >= self.maxHeight):
             self.ySpeed = -self.ySpeed
 
-        # update the balls x and y, based on the speed in two directions
+        # Update the ball's x and y, using the speed in two directions
         self.x = self.x + self.xSpeed
         self.y = self.y + self.ySpeed
 

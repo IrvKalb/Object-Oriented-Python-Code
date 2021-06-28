@@ -1,4 +1,4 @@
-# pygame demo 8 SimpleText, SimpleButton, and Ball
+# pygame demo 8  - SimpleText, SimpleButton, and Ball
 
 # 1 - Import packages
 import pygame
@@ -25,10 +25,10 @@ clock = pygame.time.Clock()
 
 # 5 - Initialize variables
 oBall = Ball(window, WINDOW_WIDTH, WINDOW_HEIGHT)
-oFrameCountLabel = SimpleText(window, (60, 20), \
+oFrameCountLabel = SimpleText(window, (60, 20), 
                              'Program has run through this many loops: ', WHITE)
 oFrameCountDisplay = SimpleText(window, (500, 20), '', WHITE)
-oRestartButton = SimpleButton(window, (280, 60), \
+oRestartButton = SimpleButton(window, (280, 60), 
                       'images/restartUp.png', 'images/restartDown.png')
 frameCounter = 0
 

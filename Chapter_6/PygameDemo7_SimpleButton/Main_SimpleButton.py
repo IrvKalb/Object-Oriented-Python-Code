@@ -1,4 +1,4 @@
-#  Pygame demo 7  3-Button test
+# Pygame demo 7  SimpleButton test
 
 # 1 - Import packages
 import pygame
@@ -20,16 +20,10 @@ clock = pygame.time.Clock()
 # 4 - Load assets: image(s), sounds, etc.
 
 # 5 - Initialize variables
-# Create instances of SimpleButton
-oButtonA = SimpleButton(window, (25, 30), 
-                        'images/buttonAUp.png', 
-                        'images/buttonADown.png')
-oButtonB = SimpleButton(window, (150, 30),
-                        'images/buttonBUp.png', 
-                        'images/buttonBDown.png')
-oButtonC = SimpleButton(window, (275, 30), 
-                        'images/buttonCUp.png', 
-                        'images/buttonCDown.png')
+# Create an instance of SimpleButton
+oButton = SimpleButton(window, (150, 30),
+                        'images/buttonUp.png',
+                        'images/buttonDown.png')
 
 # 6 - Loop forever
 while True:
@@ -40,14 +34,9 @@ while True:
             pygame.quit()
             sys.exit()
 
-        # Pass the event to each button, see if one has been clicked
-        if oButtonA.handleEvent(event):
-            print('User clicked button A.')
-        elif oButtonB.handleEvent(event):
-            print('User clicked button B.')
-        elif oButtonC.handleEvent(event):
-            print('User clicked button C.')
-
+        # Pass the event to the button, see if it has been clicked on
+        if oButton.handleEvent(event):
+            print('User has clicked the button.')
 
     # 8 - Do any "per frame" actions
     
@@ -55,9 +44,7 @@ while True:
     window.fill(GRAY)
     
     # 10 - Draw all window elements
-    oButtonA.draw()
-    oButtonB.draw()
-    oButtonC.draw()
+    oButton.draw() # draw the button
 
     # 11 - Update the window
     pygame.display.update()

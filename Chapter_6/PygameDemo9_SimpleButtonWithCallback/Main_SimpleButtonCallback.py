@@ -1,4 +1,4 @@
-#  pygame demo 9 3-Button Test with callbacks
+#  pygame demo 9 - 3-button test with callbacks
 
 # 1 - Import packages
 import pygame
@@ -37,17 +37,17 @@ clock = pygame.time.Clock()
 oCallBackTest = CallBackTest()
 # Create instances of SimpleButton
 # No call back
-oButtonA = SimpleButton(window, (25, 30), \
-                        'images/buttonAUp.png', \
+oButtonA = SimpleButton(window, (25, 30), 
+                        'images/buttonAUp.png', 
                         'images/buttonADown.png')
 # Specifying a function to call back
-oButtonB = SimpleButton(window, (150, 30), \
-                        'images/buttonBUp.png', \
+oButtonB = SimpleButton(window, (150, 30), 
+                        'images/buttonBUp.png', 
                         'images/buttonBDown.png',
                         callBack=myCallBackFunction)  
 # Specifying method to call back
-oButtonC = SimpleButton(window, (275, 30), \
-                        'images/buttonCUp.png', \
+oButtonC = SimpleButton(window, (275, 30), 
+                        'images/buttonCUp.png', 
                         'images/buttonCDown.png',
                         callBack=oCallBackTest.myMethod)  
 counter = 0
@@ -58,9 +58,7 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # check if the event is the X button 
         if event.type == pygame.QUIT:
-            # if it is quit the game
             pygame.quit()
             sys.exit()
 
@@ -68,7 +66,8 @@ while True:
         if oButtonA.handleEvent(event):
             print('User pressed button A, handled in the main loop')
 
-        # oButtonB and oButtonC have callbacks, no need to check result of these calls.
+        # oButtonB and oButtonC have callbacks,
+        # no need to check result of these calls
         oButtonB.handleEvent(event)
 
         oButtonC.handleEvent(event)

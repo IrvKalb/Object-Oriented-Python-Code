@@ -6,17 +6,12 @@
 
 import pygame
 from pygame.locals import *
-import random
-import sys
 import pygwidgets
 import pyghelpers
 from Constants import *
 from Player import *
 from Baddies import *
 from Goodies import *
-
-
-
 
 def showCustomYesNoDialog(theWindow, theText):
     oDialogBackground = pygwidgets.Image(theWindow, (35, 250), 'images/dialog.png')

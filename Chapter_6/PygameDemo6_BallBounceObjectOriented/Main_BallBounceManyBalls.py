@@ -1,4 +1,4 @@
-# pygame demo 6(b) using Ball class, bounce many balls
+# pygame demo 6(b) - using the Ball class, bounce many balls
 
 # 1 - Import packages
 import pygame
@@ -24,9 +24,9 @@ clock = pygame.time.Clock()
 # 5 - Initialize variables
 ballList = []
 for oBall in range(0, N_BALLS):
-    # each time through the loop, create a ball object
+    # Each time through the loop, create a Ball object
     oBall = Ball(window, WINDOW_WIDTH, WINDOW_HEIGHT)
-    ballList.append(oBall)  # append the new ball to the list of balls   
+    ballList.append(oBall)  # append the new Ball to the list of Balls   
 
 # 6 - Loop forever
 while True:
@@ -39,14 +39,14 @@ while True:
 
     # 8 - Do any "per frame" actions
     for oBall in ballList:
-        oBall.update()  # tell each ball to update itself
+        oBall.update()  # tell each Ball to update itself
 
    # 9 - Clear the window before drawing it again
     window.fill(BLACK)
     
     # 10 - Draw the window elements
     for oBall in ballList:
-        oBall.draw()   # tell each ball to draw itself
+        oBall.draw()   # tell each Ball to draw itself
 
     # 11 - Update the window
     pygame.display.update()

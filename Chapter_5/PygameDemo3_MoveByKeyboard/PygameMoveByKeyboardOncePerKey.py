@@ -66,7 +66,7 @@ while True:
     
     # 10 - Draw all window elements
     window.blit(targetImage, (TARGET_X, TARGET_Y))  # draw the target
-    window.blit(ballImage, (ballX, ballY))    # draw the ball at the randomized location
+    window.blit(ballImage, (ballX, ballY))    # draw the ball 
 
     # 11 - Update the window
     pygame.display.update()

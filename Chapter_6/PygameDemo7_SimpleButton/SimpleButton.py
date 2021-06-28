@@ -1,4 +1,4 @@
-# SIMPLE BUTTON
+# SimpleButton Class
 #
 # Uses a "state machine" approach
 #
@@ -7,10 +7,10 @@ import pygame
 from pygame.locals import *
 
 class SimpleButton():
-    # used to track the state of the button
-    STATE_IDLE = 'idle' # button is up, mouse not over the button
+    # Used to track the state of the button
+    STATE_IDLE = 'idle' # button is up, mouse not over button
     STATE_ARMED = 'armed' # button is down, mouse over button
-    STATE_DISARMED = 'disarmed' # button was down, mouse not over button
+    STATE_DISARMED = 'disarmed' # clicked down on button, rolled off
         
     def __init__(self, window, loc, up, down):
         self.window = window
@@ -18,7 +18,7 @@ class SimpleButton():
         self.surfaceUp = pygame.image.load(up)
         self.surfaceDown = pygame.image.load(down)
 
-        # get the rect of the button, (used to see if the mouse is within the button)
+        # Get the rect of the button (used to see if the mouse is over the button)
         self.rect = self.surfaceUp.get_rect()
         self.rect[0] = loc[0]
         self.rect[1] = loc[1]
@@ -56,7 +56,7 @@ class SimpleButton():
         return False
 
     def draw(self):
-        # Draw the button's current appearance to the window.
+        # Draw the button's current appearance to the window
         if self.state == SimpleButton.STATE_ARMED:
             self.window.blit(self.surfaceDown, self.loc)
 

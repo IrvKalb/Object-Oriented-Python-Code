@@ -1,4 +1,4 @@
-# pygame demo 6(a) using Ball class, bounce one ball
+# pygame demo 6(a) - using the Ball class, bounce one ball
 
 # 1 - Import packages
 import pygame
@@ -33,13 +33,13 @@ while True:
             sys.exit()          
 
     # 8 - Do any "per frame" actions
-    oBall.update()  # tell the ball to update itself
+    oBall.update()  # tell the Ball to update itself
 
    # 9 - Clear the window before drawing it again
     window.fill(BLACK)
     
     # 10 - Draw the window elements
-    oBall.draw()   # tell the ball to draw itself
+    oBall.draw()   # tell the Ball to draw itself
 
 
     # 11 - Update the window

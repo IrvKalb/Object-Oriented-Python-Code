@@ -12,7 +12,7 @@ class SimpleText():
         self.font = pygame.font.SysFont(None, 30)
         self.textColor = textColor
         self.text = None # so that the call to setText below will force the creation of the text image
-        self.setValue(value) # Set the initial text for drawing
+        self.setValue(value) # set the initial text for drawing
 
     def setValue(self, newText):  
         if self.text == newText:
@@ -23,4 +23,3 @@ class SimpleText():
 
     def draw(self):
         self.window.blit(self.textSurface, self.loc)
-

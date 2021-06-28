@@ -73,7 +73,7 @@ while True:
     # Draw an arc
     pygame.draw.arc(window, PURPLE, (20, 400, 100, 100), 0, 2, 5)
     
-    # Draw anti-aliased lines, a single line, then a list of points
+    # Draw anti-aliased lines: a single line, then a list of points
     pygame.draw.aaline(window, GREEN, (500, 400),  (540, 470), 1)
     pygame.draw.aalines(window, BLUE, True, 
                                   ((580, 400), (587, 450),

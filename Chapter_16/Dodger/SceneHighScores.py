@@ -1,9 +1,7 @@
 #
-# This the High Scores Scene
+# This is the High Scores Scene
 #
 
-import pygame
-import sys
 from pygame.locals import *
 import pygwidgets
 import pyghelpers
