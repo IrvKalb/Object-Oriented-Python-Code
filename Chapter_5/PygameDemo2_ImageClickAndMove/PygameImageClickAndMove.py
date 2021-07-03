@@ -1,4 +1,4 @@
-# pygame demo 2 - One image, click and move
+# pygame demo 2 - one image, click and move
 
 # 1 - Import packages
 import pygame

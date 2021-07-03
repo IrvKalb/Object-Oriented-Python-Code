@@ -1,4 +1,4 @@
-#  Pygame demo 7  3-Button test
+#  pygame demo 7  3-Button test
 
 # 1 - Import packages
 import pygame

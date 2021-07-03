@@ -1,4 +1,4 @@
-# Person Example main program using getters and setters
+# Person example main program using getters and setters
 
 from Person import *
 

@@ -42,8 +42,7 @@ while True:
 
         else:  #OK
             accountBalance = accountBalance + userDepositAmount
-            print('Your new balance is:', accountBalance)
-        
+            print('Your new balance is:', accountBalance)       
 
     elif action == 's':  # show
         print('Show:')

@@ -1,4 +1,4 @@
-# SimpleButton Class
+# SimpleButton class
 #
 # Uses a "state machine" approach
 #

@@ -1,4 +1,4 @@
-# Club Example main program
+# Club example main program
 
 from Club import *
 

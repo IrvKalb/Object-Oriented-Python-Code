@@ -1,4 +1,4 @@
-# pygame demo 3(a) - One image, move by keyboard
+# pygame demo 3(a) - one image, move by keyboard
 
 # 1 - Import packages
 import pygame

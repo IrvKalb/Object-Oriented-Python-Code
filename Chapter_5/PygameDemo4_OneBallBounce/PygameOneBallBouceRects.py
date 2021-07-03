@@ -1,4 +1,4 @@
-# pygame demo 4(b), One image, bounce around the window using rects
+# pygame demo 4(b), one image, bounce around the window using rects
 
 # 1 - Import packages
 import pygame

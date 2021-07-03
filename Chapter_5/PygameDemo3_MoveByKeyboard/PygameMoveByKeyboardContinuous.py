@@ -1,6 +1,4 @@
-# pygame demo 3(b), One image, move long as the key is down (handles multiple keys at the same time)
-
-# pygame demo 3 - One image, move by keyboard
+# pygame demo 3(b) - one image, continuous mode, move as long as a key is down
 
 # 1 - Import packages
 import pygame

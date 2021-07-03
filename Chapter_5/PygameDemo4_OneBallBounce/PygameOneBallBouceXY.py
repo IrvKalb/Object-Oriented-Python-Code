@@ -1,4 +1,4 @@
-# pygame demo 4(a), One image, bounce around the window using X, Y coords
+# pygame demo 4(a), one image, bounce around the window using (x, y) coords
 
 # 1 - Import packages
 import pygame

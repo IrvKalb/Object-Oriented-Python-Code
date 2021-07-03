@@ -1,4 +1,4 @@
-# pygame demo 4(c), One image, bounce around the window - with sound
+# pygame demo 4(c), one image, bounce around the window - with sound
 
 # 1 - Import packages
 import pygame

@@ -19,7 +19,6 @@ def shuffle(deckListIn):
     random.shuffle(deckListOut)
     return deckListOut
 
-
 #  Main code
 print('Welcome to Higher Or Lower')
 print('You have to choose if the next card to be shown will be higher or lower than the current card.')

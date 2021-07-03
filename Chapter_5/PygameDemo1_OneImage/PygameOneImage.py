@@ -1,4 +1,4 @@
-# pygame demo 1 - Draw one image
+# pygame demo 1 - draw one image
 
 # 1 - Import packages
 import pygame

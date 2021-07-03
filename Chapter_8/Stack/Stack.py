@@ -18,7 +18,7 @@ class Stack():
         return element
 
     def peek(self):
-        # retrieve the top item, without removing it
+        # Retrieve the top item, without removing it
         item = self.dataList[-1]
         return item
 
@@ -27,7 +27,7 @@ class Stack():
         return nElements
 
     def show(self):
-        # show the stack in a vertical orientation
+        # Show the stack in a vertical orientation
         print('Stack is:')
         for value in reversed(self.dataList):
             print('   ', value)

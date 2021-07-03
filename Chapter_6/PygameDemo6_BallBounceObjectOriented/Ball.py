@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 import random
 
-# BALL CLASS 
+# Ball class 
 class Ball():
 
     def __init__(self, window, windowWidth, windowHeight):
@@ -36,7 +36,7 @@ class Ball():
         if (self.y < 0) or (self.y >= self.maxHeight):
             self.ySpeed = -self.ySpeed
 
-        # Update the ball's x and y, using the speed in two directions
+        # Update the Ball's x and y, using the speed in two directions
         self.x = self.x + self.xSpeed
         self.y = self.y + self.ySpeed
 
