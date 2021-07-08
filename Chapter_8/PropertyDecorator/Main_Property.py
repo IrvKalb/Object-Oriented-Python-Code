@@ -1,4 +1,4 @@
-# Main Student Property Example
+# Main Student property example
 
 from Student import *
 

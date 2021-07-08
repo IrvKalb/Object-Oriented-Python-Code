@@ -1,4 +1,4 @@
-# Pets Polymorphism
+# Pets polymorphism
 # Three classes, all with a different "speak" method
 
 class Dog():

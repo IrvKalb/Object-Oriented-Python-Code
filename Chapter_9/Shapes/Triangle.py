@@ -3,7 +3,7 @@
 import pygame
 import random
 
-# set up the colors
+# Set up the colors
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
@@ -18,7 +18,8 @@ class Triangle():
         self.color = random.choice((RED, GREEN, BLUE))
         self.x = random.randrange(1, maxWidth - 100)
         self.y = random.randrange(25, maxHeight - 100)
-        self.rect = pygame.Rect(self.x, self.y, self.width, self.height)
+        self.rect = pygame.Rect(self.x, self.y,
+                                            self.width, self.height)
         self.shapeType = 'Triangle'
         
     def clickedInside(self, mousePoint):
@@ -32,7 +33,8 @@ class Triangle():
         if xOffset == 0:
             return True
 
-        pointSlopeFromYIntercept = (yOffset - self.height) / xOffset #rise over run
+        # Calculate the slope (rise over run)
+        pointSlopeFromYIntercept = (yOffset - self.height) / xOffset
         if pointSlopeFromYIntercept < self.triangleSlope:
             return True
         else:

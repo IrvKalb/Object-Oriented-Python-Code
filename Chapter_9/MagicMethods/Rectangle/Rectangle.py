@@ -3,11 +3,10 @@
 import pygame
 import random
 
-# set up the colors
+# Set up the colors
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
-
 
 class Rectangle():
 
@@ -26,7 +25,7 @@ class Rectangle():
         return clicked
 
     # Magic method called when you compare
-    # two rectangle  objects with the == operator
+    # two Rectangle  objects with the == operator
     def __eq__(self, oOtherRectangle):
         if not isinstance(oOtherRectangle, Rectangle):
             raise TypeError('Second object was not a Rectangle')
@@ -36,7 +35,7 @@ class Rectangle():
             return False
 
     # Magic method called when you compare
-    # two rectangle  objects with the < operator
+    # two Rectangle  objects with the < operator
     def __lt__(self, oOtherRectangle):
         if not isinstance(oOtherRectangle, Rectangle):
             raise TypeError('Second object was not a Rectangle')
@@ -46,7 +45,7 @@ class Rectangle():
             return False
 
     # Magic method called when you compare
-    # two rectangle  objects with the > operator
+    # two Rectangle  objects with the > operator
     def __gt__(self, oOtherRectangle):
         if not isinstance(oOtherRectangle, Rectangle):
             raise TypeError('Second object was not a Rectangle')

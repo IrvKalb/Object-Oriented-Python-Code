@@ -2,7 +2,8 @@
 import math
 
 class Vector():
-    '''The Vector class represents two values as a vector, allows for many math calculations'''   
+    '''The Vector class represents two values as a vector,
+       allows for many math calculations'''   
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -24,7 +25,7 @@ class Vector():
         elif isinstance(oOther, (int, float)):  # multiply by a scalar
             return Vector((self.x * oOther), (self.y * oOther))
         else:
-            raise TypeError('Second value must be a Vector or scalar')
+            raise TypeError('Second value must be a vector or scalar')
 
     def __abs__(self):
         return math.sqrt((self.x ** 2) + (self.y ** 2))

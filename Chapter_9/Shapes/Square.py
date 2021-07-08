@@ -3,11 +3,10 @@
 import pygame
 import random
 
-# set up the colors
+# Set up the colors
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
-
 
 class Square():
 
@@ -17,7 +16,8 @@ class Square():
         self.color = random.choice((RED, GREEN, BLUE))
         self.x = random.randrange(1, maxWidth - 100)
         self.y = random.randrange(25, maxHeight - 100)
-        self.rect = pygame.Rect(self.x, self.y, self.widthAndHeight, self.widthAndHeight)
+        self.rect = pygame.Rect(self.x, self.y, self.widthAndHeight,
+                                            self.widthAndHeight)
         self.shapeType = 'Square'
         
     def clickedInside(self, mousePoint):

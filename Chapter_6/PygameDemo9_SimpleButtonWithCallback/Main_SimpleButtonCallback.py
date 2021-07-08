@@ -24,7 +24,6 @@ class CallBackTest():
     def myMethod(self):
         print('User pressed Button C, called myMethod of the CallBackTest object')
 
-
 # 3 - Initialize the world
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))

@@ -25,9 +25,9 @@ class Fraction():
 
     def __str__(self):
         '''Create a string representation of the fraction'''
-        output = '  Fraction: ' + str(self.numerator) + '/' + \
+        output = 'Fraction: ' + str(self.numerator) + '/' + \
                  str(self.denominator) + '\n' +\
-                '  Value: ' + str(self.value) + '\n'
+                'Value: ' + str(self.value) + '\n'
         return output     
 
     def __add__(self, oOtherFraction):
@@ -61,22 +61,18 @@ class Fraction():
  # Test code       
 oFraction1 = Fraction(1, 3)  # create a Fraction object
 oFraction2 = Fraction(2, 5)
-print('Fraction1\n', oFraction1)  # print the object ... calls  __str__
-print('Fraction2\n', oFraction2)
+print(oFraction1)  # print the object ... calls  __str__
+print(oFraction2)
 
 oSumFraction = oFraction1 + oFraction2  # calls __add__
-print('Sum is\n', oSumFraction)
+print(oSumFraction)
 
-print('Are fractions 1 and 2 equal?', (oFraction1 == oFraction2)) # expect False
-print()
+print('Are fractions 1 and 2 equal?', (oFraction1 == oFraction2))  # should be False
 
-oFraction3 = Fraction(-20, 80)
-oFraction4 = Fraction(4, -16)
-print('Fraction3\n', oFraction3)  
-print('Fraction4\n', oFraction4)
-print('Are fractions 3 and 4 equal?', (oFraction3 == oFraction4)) # expect True
-print()
+oFraction3 = Fraction(5, 2)
+oFraction4 = Fraction(500, 200)
+print(oFraction3 + oFraction4)
 
-oFraction5 = Fraction(5, 2)
-oFraction6 = Fraction(500, 200)
-print('Sum of 5/2 and 500/2\n', oFraction5 + oFraction6)
+oFraction5 = Fraction(-20, 80)
+oFraction6 = Fraction(4, -16)
+print('Are fractions 5 and 6 equal?', (oFraction5 == oFraction6))  # should be True

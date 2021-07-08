@@ -3,8 +3,7 @@ import sys
 from pygame.locals import *
 from Rectangle import *
 
-
-# set up the constants
+# Set up the constants
 WHITE = (255, 255, 255)
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
@@ -13,7 +12,7 @@ N_RECTANGLES = 10
 FIRST_RECTANGLE = 'first'
 SECOND_RECTANGLE = 'second'
 
-# set up the window
+# Set up the window
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 clock = pygame.time.Clock()
@@ -26,7 +25,7 @@ for i in range(0, N_RECTANGLES):
 
 whichRectangle = FIRST_RECTANGLE
 
-# main loop
+# Main loop
 while True:
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -43,10 +42,11 @@ while True:
                         whichRectangle = SECOND_RECTANGLE
 
                     elif whichRectangle == SECOND_RECTANGLE:
-                        # user has chosen 2 rectangles, let’s compare
-                        if oFirstRectangle == oRectangle:
+                        oSecondRectangle = oRectangle
+                        # User has chosen 2 rectangles, let's compare
+                        if oFirstRectangle == oSecondRectangle:
                             print('Rectangles are the same size.')
-                        elif oFirstRectangle < oRectangle:
+                        elif oFirstRectangle < oSecondRectangle:
                             print('First rectangle is smaller than second rectangle.')
                         else: # must be larger
                             print('First rectangle is larger than second rectangle.')
