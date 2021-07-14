@@ -40,7 +40,6 @@ class Manager(Employee):
             print(self.name, 'gets a bonus for good work')
         return pay       
 
-
     # Additional methods unique to Manager
     def addEmployee(self, oEmployeeToAdd):
         self.reportsList.append(oEmployeeToAdd)
