@@ -14,7 +14,8 @@ class Circle(Shape):
         self.rect = pygame.Rect(self.x, self.y, self.radius * 2, self.radius * 2)
         
     def clickedInside(self, mousePoint):
-        theDistance = math.sqrt(((mousePoint[0] - self.centerX) ** 2) + (mousePoint[1] - self.centerY) ** 2)
+        theDistance = math.sqrt(((mousePoint[0] - self.centerX) ** 2) + 
+                                             ((mousePoint[1] - self.centerY) ** 2))
         if theDistance <= self.radius:
             return True
         else:

@@ -1,7 +1,6 @@
-# DisplayMoney class, displays a number as an amount of money
+# DisplayMoney class - displays a number as an amount of money
 #
-#  Demo of inheritance
-#
+# Demo of inheritance
 
 import pygwidgets
 
@@ -14,8 +13,8 @@ class DisplayMoney(pygwidgets.DisplayText):
 
     def __init__(self, window, loc, value=None,
                  fontName=None, fontSize=24, width=150, height=None, 
-                 textColor=BLACK, backgroundColor=None, justified='left',
-                 nickname=None, currencySymbol='$',
+                 textColor=BLACK, backgroundColor=None,
+                 justified='left', nickname=None, currencySymbol='$',
                  currencySymbolOnLeft=True, showCents=True):
 
         self.currencySymbol = currencySymbol

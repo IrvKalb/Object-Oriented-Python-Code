@@ -1,7 +1,6 @@
-#  InputNumber class, allows the user to only enter numbers
+# InputNumber class - allows the user to enter only numbers
 #
 #  Demo of inheritance
-#
 
 import pygame
 from pygame.locals import *
@@ -39,8 +38,8 @@ class InputNumber(pygwidgets.InputText):
     # Override handleEvent so we can filter for proper keys
     def handleEvent(self, event):
         if (event.type == pygame.KEYDOWN):
-            # if it's not an editing or numeric key ignore it
-            # unicode value is only present on key down
+            # If it's not an editing or numeric key ignore it
+            # Unicode value is only present on key down
             allowableKey = ((event.key in LEGAL_KEYS_TUPLE) or
                             (event.unicode in LEGAL_UNICODE_CHARS))
             if not allowableKey:
@@ -48,7 +47,7 @@ class InputNumber(pygwidgets.InputText):
 
             if event.unicode == '-':  # user typed a minus sign
                 if not self.allowNegativeNumber:
-                    # if no negatives, don't pass it through
+                    # If no negatives, don't pass it through
                     return False  
                 if self.cursorPosition > 0:
                     return False # can't put minus sign after 1st char
@@ -57,12 +56,12 @@ class InputNumber(pygwidgets.InputText):
 
             if event.unicode == '.':
                 if not self.allowFloatingNumber:
-                    # if no floats, don't pass the period through
+                    # If no floats, don't pass the period through
                     return False  
                 if '.' in self.text:
                     return False  # can't enter a second period
 
-        # allow the key to go through to the base class
+        # Allow the key to go through to the base class
         result = super().handleEvent(event)  
         return result
 

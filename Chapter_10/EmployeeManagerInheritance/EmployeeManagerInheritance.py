@@ -1,4 +1,4 @@
-#  Employee Manager Inheritance
+#  Employee Manager inheritance
 #
 # Define the Employee class, which we will use as a base class
 class Employee():
@@ -16,7 +16,7 @@ class Employee():
         return self.title
 
     def payPerYear(self):
-        # 52 weeks times 5 days a week * 8 hours per day
+        # 52 weeks * 5 days a week * 8 hours per day
         pay = 52 * 5 * 8 * self.ratePerHour
         return pay
 
@@ -64,6 +64,7 @@ print()
 # Call methods of the Manager object
 managerName = oManager.getName()
 print('Manager name:', managerName)
+
 # Give the manager a bonus
 print('Manager salary:', '{:,.2f}'.format(oManager.payPerYear(True)))
 print(managerName, '(' + oManager.getTitle() + ')', 'direct reports:')

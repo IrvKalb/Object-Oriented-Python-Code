@@ -1,8 +1,8 @@
 # Shape class - basic
-#
+
 import random
 
-# set up the colors
+# Set up the colors
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)

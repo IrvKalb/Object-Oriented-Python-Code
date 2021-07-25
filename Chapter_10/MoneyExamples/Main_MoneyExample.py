@@ -1,7 +1,6 @@
-#  Money Example
+#  Money example
 #
-#  demonstrates overriding inherited DisplayText and InputText methods
-#
+#  Demonstrates overriding inherited DisplayText and InputText methods
 
 # 1 - Import packages
 import pygame
@@ -65,7 +64,7 @@ while True:
         if inputField.handleEvent(event) or okButton.handleEvent(event):
             try:
                 theValue = inputField.getValue()
-            except ValueError:  # Any remaining error
+            except ValueError:  # any remaining error
                 inputField.setValue('(not a number)')
             else:  # input was OK
                 theText = str(theValue)

@@ -1,16 +1,16 @@
 # Shape class
 #
 # To be used as a base class for other classes
-#
+
 import random
 from abc import ABC, abstractmethod
 
-# set up the colors
+# Set up the colors
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-class Shape(ABC):  # Identifies this as an abstract base class
+class Shape(ABC):  # identifies this as an abstract base class
 
     def __init__(self, window, shapeType, maxWidth, maxHeight):
         self.window = window
