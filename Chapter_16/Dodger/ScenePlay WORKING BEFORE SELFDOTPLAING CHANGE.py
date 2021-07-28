@@ -1,4 +1,9 @@
-#  Play scene - the main game play scene
+#
+#  Scene Play - the main game play scene
+#
+#  Original version by Al Swiegart from his book "Invent With Python"
+#    (concept, graphics, and sounds used by permission from Al Swiegart)
+
 from pygame.locals import *
 import pygwidgets
 import pyghelpers
@@ -25,6 +30,10 @@ def showCustomYesNoDialog(theWindow, theText):
                                             down='images/noThanksDown.png',
                                             disabled='images/noThanksDisabled.png')
 
+    # Text buttons would look like this:
+    #oYesButton = pygwidgets.TextButton(theWindow, (320, 370), 'Go to high scores')
+    #oNoButton = pygwidgets.TextButton(theWindow, (62, 370), 'No thanks')
+
     choiceAsBoolean = pyghelpers.customYesNoDialog(theWindow,
                                             oDialogBackground, oPromptDisplayText,
                                             oYesButton, oNoButton)
@@ -32,9 +41,6 @@ def showCustomYesNoDialog(theWindow, theText):
 
 BOTTOM_RECT = (0, GAME_HEIGHT + 1, WINDOW_WIDTH,
                                 WINDOW_HEIGHT - GAME_HEIGHT)
-STATE_WAITING = 'waiting'
-STATE_PLAYING = 'playing'
-STATE_GAME_OVER = 'game over'
 
 class ScenePlay(pyghelpers.Scene):
 
@@ -53,6 +59,7 @@ class ScenePlay(pyghelpers.Scene):
                                                 over='images/quitOver.png',
                                                 disabled='images/quitDisabled.png')
 
+        #self.highScoresButton = pygwidgets.TextButton(self.window, (240, GAME_HEIGHT + 90), 'Show high scores')
         self.highScoresButton = pygwidgets.CustomButton(self.window,
                                                 (190, GAME_HEIGHT + 90),
                                                 up='images/gotoHighScoresNormal.png',
@@ -82,7 +89,7 @@ class ScenePlay(pyghelpers.Scene):
                                                 fontSize=24, textColor=WHITE)
 
         self.scoreText = pygwidgets.DisplayText(self.window,
-                                                (80, GAME_HEIGHT + 47), '0',
+                                                (80, GAME_HEIGHT + 47), '',
                                                 fontSize=36, textColor=WHITE,
                                                 justified='right')
 
@@ -102,27 +109,23 @@ class ScenePlay(pyghelpers.Scene):
 
         self.highScore = 0
         self.backgroundMusic = True
-        self.score = 0
-        self.playingState = STATE_WAITING
 
     def getSceneKey(self):
         return SCENE_PLAY
 
-    def enter(self, data):
-        self.getHiAndLow()
+    def enter(self, data):  # no data passed in
+        self.reset()
 
-    def getHiAndLow(self):
+    def reset(self):   # Start a new game
+        self.score = 0
+        self.scoreText.setValue(str(self.score))
+
         # Ask the High Scores scene for a dict of high scores that looks like this:
         #  {'highest': highestScore, 'lowest': lowestScore}
         infoDict = self.request(SCENE_HIGH_SCORES, HIGH_SCORES_DATA)
         self.highScore = infoDict['highest']
-        self.highScoreText.setValue(self.highScore)
+        self.highScoreText.setValue(str(self.highScore))
         self.lowestHighScore = infoDict['lowest']
-
-    def reset(self):   # Start a new game
-        self.score = 0
-        self.scoreText.setValue(self.score)
-        self.getHiAndLow()
 
         # Tell the managers to reset themselves
         self.oBaddieMgr.reset()
@@ -135,69 +138,71 @@ class ScenePlay(pyghelpers.Scene):
         self.soundCheckBox.disable()
         self.quitButton.disable()
         pygame.mouse.set_visible(False)
+        self.playing = True
 
     def handleInputs(self, eventsList, keyPressedList):
-        if self.playingState == STATE_PLAYING:
-            return  # ignore button events while playing
-
         for event in eventsList:
-            if self.startButton.handleEvent(event):
-                self.reset()
-                self.playingState = STATE_PLAYING
 
-            if self.highScoresButton.handleEvent(event):
-                self.goToScene(SCENE_HIGH_SCORES)
+            if not self.playing:
+                if self.startButton.handleEvent(event):
+                    self.reset()
+                    
+                if self.highScoresButton.handleEvent(event):
+                    self.goToScene(SCENE_HIGH_SCORES)
 
-            if self.soundCheckBox.handleEvent(event):
-                self.backgroundMusic = self.soundCheckBox.getValue()
-
-            if self.quitButton.handleEvent(event):
-                self.quit()
-
+                if self.quitButton.handleEvent(event):
+                    self.quit()
+    
+                if self.soundCheckBox.handleEvent(event):
+                    self.backgroundMusic = self.soundCheckBox.getValue()
+                    
     def update(self):
-        if self.playingState != STATE_PLAYING:
-            return  # only update when playing
-        playerRect = self.oPlayer.update()  # move the player
+        if self.playing:
+            playerRect = self.oPlayer.update()  # move the player
+    
+            # Tell the Baddie mgr to move all the baddies
+            # It returns the number of baddies that fell off the bottom
+            nPointsScored = self.oBaddieMgr.update()
+            self.score = self.score + nPointsScored
+    
+            # Tell the Goodie mgr to move any goodies
+            self.oGoodieMgr.update()
 
-        # Tell the Baddie mgr to move all the baddies
-        # It returns the number of baddies that fell off the bottom
-        nPointsScored = self.oBaddieMgr.update()
-        self.score = self.score + nPointsScored
+            # Check if the player has hit any of the goodies
+            if self.oGoodieMgr.hasPlayerHitGoodie(playerRect):
+                self.score = self.score + POINTS_FOR_GOODIE   # add points for each goodie.
+                self.dingSound.play()
+            self.scoreText.setValue(str(self.score))
+    
+            # Check if the player has hit any of the baddies
+            if self.oBaddieMgr.hasPlayerHitBaddie(playerRect):
+                pygame.mouse.set_visible(True)
+                pygame.mixer.music.stop()
 
-        # Tell the Goodie manager to move all goodies
-        self.oGoodieMgr.update()
+                self.gameOverSound.play()
+                self.playing = False
+                self.draw()  # force drawing of game over message
 
-        # Check if the player has hit any of the goodies
-        nHit = self.oGoodieMgr.hasPlayerHitGoodie(playerRect)
-        if nHit > 0:  # add points for each goodie hit
-            self.score = self.score + (nHit * POINTS_FOR_GOODIE)
-            self.dingSound.play()
-        self.scoreText.setValue(self.score)
+                if self.score > self.lowestHighScore:
+                    scoreAsString = str(self.score)
+                    if self.score > self.highScore:
+                        dialogText = 'Congratulations: ' + scoreAsString + ' is a new high score!'
+                    else:
+                        dialogText = scoreAsString + ' gets you on the high scores list.'
 
-        # Check if the player has hit any of the baddies
-        if self.oBaddieMgr.hasPlayerHitBaddie(playerRect):
-            pygame.mouse.set_visible(True)
-            pygame.mixer.music.stop()
+                    result = showCustomYesNoDialog(self.window, dialogText)
 
-            self.gameOverSound.play()
-            self.playingState = STATE_GAME_OVER
-            self.draw()  # force drawing of game over message
+                    # Anternatively, this would build a basic text-button based dialog box
+                    #result = textYEsNoDialog(self.window, (35, 250, DIALOG_BOX_WIDTH, 150), \
+                    #                              dialogText', 'Go to high scores', 'No thanks)
 
-            if self.score > self.lowestHighScore:
-                scoreAsString = str(self.score)
-                if self.score > self.highScore:
-                    dialogText = 'Congratulations: ' + scoreAsString + ' is a new high score!'
-                else:
-                    dialogText = scoreAsString + ' gets you on the high scores list.'
+                    if result:
+                        self.goToScene(SCENE_HIGH_SCORES, self.score)  # send the new high score
 
-                result = showCustomYesNoDialog(self.window, dialogText)
-                if result:
-                    self.goToScene(SCENE_HIGH_SCORES, self.score)  # navigate
-
-            self.startButton.enable()
-            self.highScoresButton.enable()
-            self.soundCheckBox.enable()
-            self.quitButton.enable()
+                self.startButton.enable()
+                self.highScoresButton.enable()
+                self.soundCheckBox.enable()
+                self.quitButton.enable()
     
     def draw(self):
         # Draw everything
@@ -221,7 +226,7 @@ class ScenePlay(pyghelpers.Scene):
         self.highScoresButton.draw()
         self.startButton.draw()
 
-        if self.playingState == STATE_GAME_OVER:
+        if not self.playing:
             self.gameOverImage.draw()
 
     def leave(self):

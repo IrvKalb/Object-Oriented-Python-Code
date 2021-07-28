@@ -1,7 +1,9 @@
 # High Scores scene
+
 import pygwidgets
 import pyghelpers
-from HighScoresData import *
+from Constants import *
+import json  # Write and read the data file in JSON format
 
 def showCustomAnswerDialog(theWindow, theText):
     oDialogBackground = pygwidgets.Image(theWindow, (35, 450),
@@ -50,15 +52,25 @@ def showCustomResetDialog(theWindow, theText):
 
 
 class SceneHighScores(pyghelpers.Scene):
-
+    DATA_FILE_PATH = 'HighScores.json'
+    N_HIGH_SCORES = 10
+    
     def __init__(self, window):
         self.window = window
         self.backgroundImage = pygwidgets.Image(self.window, (0, 0),
                                                 'images/highScoresBackground.jpg')
 
-        self.oHighScoresData = HighScoresData()
-
-        self.scoresList = self.oHighScoresData.getScores()
+        # The following will create a list of lists
+        # Either by building a blank one from scratch, or by reading from a json file
+        # The result will look like:
+        # [[name, score], [name, score], [name, score] ...]
+        # and will always be kept in order of the score (highest to lowest)
+        if not pyghelpers.fileExists(SceneHighScores.DATA_FILE_PATH):
+            self.setEmptyHighScores()
+        else:
+            data = pyghelpers.readFile(SceneHighScores.DATA_FILE_PATH)
+            # read in all the data in json format, converts to a list of lists
+            self.scoresList = json.loads(data)
 
         self.namesField = pygwidgets.DisplayText(self.window, (260, 84), '',
                                                     fontSize=48, textColor=BLACK,
@@ -89,50 +101,49 @@ class SceneHighScores(pyghelpers.Scene):
 
         self.showHighScores()
 
+    def setEmptyHighScores(self):
+            self.scoresList = SceneHighScores.N_HIGH_SCORES * [['-----', 0]]
+            pyghelpers.writeFile(SceneHighScores.DATA_FILE_PATH,
+                                            json.dumps(self.scoresList))
+
     def getSceneKey(self):
         return SCENE_HIGH_SCORES
 
     def enter(self, data):
         # This can be called two different ways:
         # 1. If there is no new high score, data will be None
-        # 2. Or, data is the score of the current game - in top 10
+        # 2. Otherwise, data will be the score of the current game
         if data is None:
             return  # nothing to do
-
         self.draw()
         # We have a new high score sent in from the play scene
-        newHighScoreValue = data
+        newHighScoreValue = data  # this is the score
+
         dialogQuestion = ('To record your score of ' +
                                  str(newHighScoreValue) + ',\n' +
                                  'please enter your name:')
+
         playerName = showCustomAnswerDialog(self.window, dialogQuestion)
-        if playerName is None:
-            return  # user pressed Cancel
+        if playerName is not None:  # user said yes, add to high scores
+            if playerName == '':
+                playerName = 'Anonymous'
 
-        # Add user and score to high scores
-        if playerName == '':
-            playerName = 'Anonymous'
-
-        # Find the appropriate place to add the new high score
-        placeFound = False
-        for index, nameScoreList in enumerate(self.scoresList):
-            thisScore = nameScoreList[1]
-            if newHighScoreValue > thisScore:
-                # Insert into proper place, remove last entry
-                self.scoresList.insert(index, [playerName, newHighScoreValue])
-                self.scoresList.pop(N_HIGH_SCORES)
-                placeFound = True
-                break
-        if not placeFound:
-            return  # score does not belong in the list
-
-        # Save the scores
-        self.oHighScoresData.saveScores(self.scoresList)
-        # Show the new high scores table
-        self.showHighScores()
+            # Find the appropriate place to add the new high score
+            for index, nameScoreList in enumerate(self.scoresList):
+                thisScore = nameScoreList[1]
+                if newHighScoreValue > thisScore:
+                    self.scoresList.insert(index, [playerName, newHighScoreValue])
+                    break
+            # Remove the lowest score entry from the list (last element)
+            self.scoresList.pop(SceneHighScores.N_HIGH_SCORES)
+            # Show the new high scores table
+            self.showHighScores()
+            # Write out updated file of high scores
+            pyghelpers.writeFile(SceneHighScores.DATA_FILE_PATH,
+                                            json.dumps(self.scoresList))
 
     def showHighScores(self):
-        # Build up strings and show them in two DisplayText fields
+        # Build up strings and show them in text display fields
         scoresText = ''
         namesText = ''
         for nameScoreList in self.scoresList:
@@ -140,8 +151,8 @@ class SceneHighScores(pyghelpers.Scene):
             namesText = namesText + nameScoreList[0] + '\n'
             scoresText = scoresText + str(nameScoreList[1]) + '\n'
 
-        self.namesField.setValue(namesText)
         self.scoresField.setValue(scoresText)
+        self.namesField.setValue(namesText)
 
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:
@@ -155,7 +166,7 @@ class SceneHighScores(pyghelpers.Scene):
                 confirmed = showCustomResetDialog(self.window,
                                         'Are you sure you want to \nRESET the high scores?')
                 if confirmed:
-                    self.scoresList = self.oHighScoresData.resetScores()
+                    self.setEmptyHighScores()
                     self.showHighScores()
 
     def draw(self):
@@ -169,7 +180,7 @@ class SceneHighScores(pyghelpers.Scene):
     def respond(self, requestID):
         if requestID == HIGH_SCORES_DATA:
             # This is a request to get a dictionary made up of
-            # the highest and the lowest score of all scores in the list
+            # the highest score so far, and the lowest high score of all scores in the list
             highestOnList = self.scoresList[0]
             lowestOnList = self.scoresList[-1]
             highestScore = highestOnList[1]
