@@ -1,7 +1,7 @@
 # Sample class
 class Sample():
 
-    nObjects = 0  # This is a class variable of the Sample class
+    nObjects = 0  # this is a class variable of the Sample class
     def __init__(self, name):
         self.name = name
         Sample.nObjects = Sample.nObjects + 1
@@ -18,8 +18,8 @@ oSample2 = Sample('B')
 oSample3 = Sample('C')
 oSample4 = Sample('D')
 
-# Delete one object
+# Delete 1 object
 del oSample3
 
-# Let's see how many we have:
+# See how many we have
 oSample1.howManyObjects()

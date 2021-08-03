@@ -1,9 +1,11 @@
 # Baddie and BaddieMgr classes
+
 import pygame
 import pygwidgets
 import random
 from Constants import *
 
+# Baddie
 class Baddie():
     MIN_SIZE = 10
     MAX_SIZE = 40
@@ -14,7 +16,6 @@ class Baddie():
 
     def __init__(self, window):
         self.window = window
-
         # Create the image object
         size = random.randrange(Baddie.MIN_SIZE, Baddie.MAX_SIZE + 1)
         self.x = random.randrange(0, WINDOW_WIDTH - size)
@@ -28,7 +29,7 @@ class Baddie():
         self.speed = random.randrange(Baddie.MIN_SPEED,
                                                       Baddie.MAX_SPEED + 1)
 
-    def update(self):   # Move the baddie down
+    def update(self):  # move the baddie down
         self.y = self.y + self.speed
         self.image.setLoc((self.x, self.y))
         if self.y > GAME_HEIGHT:
@@ -43,9 +44,9 @@ class Baddie():
         collidedWithPlayer = self.image.overlaps(playerRect)
         return collidedWithPlayer
 
-
+# BaddieMgr
 class BaddieMgr():
-    ADD_NEW_BADDIE_RATE = 8  # add a new baddie every 8 frames
+    ADD_NEW_BADDIE_RATE = 8  # how often to add a new Baddie
 
     def __init__(self, window):
         self.window = window
@@ -53,20 +54,11 @@ class BaddieMgr():
 
     def reset(self):  # Called when starting a new game
         self.baddiesList = []
-        self.frameCounter = 0
+        self.nFramesTilNextBaddie = BaddieMgr.ADD_NEW_BADDIE_RATE
 
     def update(self):
-        # Check if it's time to add a new Baddie
-        if self.frameCounter < BaddieMgr.ADD_NEW_BADDIE_RATE:
-                        self.frameCounter = self.frameCounter + 1
-        else:   # time to add a new baddie           
-            oBaddie = Baddie(self.window)
-            self.baddiesList.append(oBaddie)
-            self.frameCounter = 0
-
-        # Tell each baddie to update itself
-        # Count how many baddies have fallen off the bottom.
-        # Return that count (so score can increase for each one that falls off).
+        # Tell each Baddie to update itself
+        # Count how many Baddies have fallen off the bottom.
         nBaddiesRemoved = 0
         baddiesListCopy = self.baddiesList.copy()
         for oBaddie in baddiesListCopy:
@@ -75,6 +67,14 @@ class BaddieMgr():
                 self.baddiesList.remove(oBaddie)
                 nBaddiesRemoved = nBaddiesRemoved + 1
 
+        # Check if it's time to add a new Baddie
+        self.nFramesTilNextBaddie = self.nFramesTilNextBaddie - 1
+        if self.nFramesTilNextBaddie == 0:
+            oBaddie = Baddie(self.window)
+            self.baddiesList.append(oBaddie)
+            self.nFramesTilNextBaddie = BaddieMgr.ADD_NEW_BADDIE_RATE
+
+        # Return that count of Baddies that were removed
         return nBaddiesRemoved
 
     def draw(self):

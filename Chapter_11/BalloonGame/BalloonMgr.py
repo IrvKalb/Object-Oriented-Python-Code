@@ -1,4 +1,4 @@
-#  Balloon Manager
+#  Balloon manager
 
 import pygame
 import random
@@ -33,7 +33,7 @@ class BalloonMgr():
 
     def handleEvent(self, event):
         if event.type == MOUSEBUTTONDOWN:
-            # go 'reversed' so top-most balloon gets popped
+            # Go 'reversed' so top-most balloon gets popped
             for oBalloon in reversed(self.balloonList):
                 wasHit, nPoints = oBalloon.clickedInside(event.pos)
                 if wasHit:
@@ -50,7 +50,7 @@ class BalloonMgr():
         for oBalloon in self.balloonList:
             status = oBalloon.update()
             if status == BALLOON_MISSED:
-                # balloon went off the top, remove it
+                # Balloon went off the top, remove it
                 self.balloonList.remove(oBalloon)
                 self.nMissed = self.nMissed + 1
 

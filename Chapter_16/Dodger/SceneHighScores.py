@@ -50,93 +50,81 @@ def showCustomResetDialog(theWindow, theText):
 
 
 class SceneHighScores(pyghelpers.Scene):
-
     def __init__(self, window):
         self.window = window
-        self.backgroundImage = pygwidgets.Image(self.window, (0, 0),
+        self.oHighScoresData = HighScoresData()
+        
+        self.backgroundImage = pygwidgets.Image(self.window,
+                                                (0, 0),
                                                 'images/highScoresBackground.jpg')
 
-        self.oHighScoresData = HighScoresData()
-
-        self.scoresList = self.oHighScoresData.getScores()
-
         self.namesField = pygwidgets.DisplayText(self.window, (260, 84), '',
-                                                    fontSize=48, textColor=BLACK,
-                                                    width=300, justified='left')
-        self.scoresField = pygwidgets.DisplayText(self.window, (25, 84), '',
-                                                    fontSize=48, textColor=BLACK,
-                                                    width=175, justified='right')
+                                                   fontSize=48, textColor=BLACK,
+                                                   width=300, justified='left')
+        self.scoresField = pygwidgets.DisplayText(self.window,
+                                                  (25, 84), '', fontSize=48,
+                                                  textColor=BLACK,
+                                                  width=175, justified='right')
 
-        self.quitButton = pygwidgets.CustomButton(self.window, (30, 650),
-                                                    up='images/quitNormal.png',
-                                                    down='images/quitDown.png',
-                                                    over='images/quitOver.png',
-                                                    disabled='images/quitDisabled.png')
+        self.quitButton = pygwidgets.CustomButton(self.window,
+                                                  (30, 650),
+                                                  up='images/quitNormal.png',
+                                                  down='images/quitDown.png',
+                                                  over='images/quitOver.png',
+                                                  disabled='images/quitDisabled.png')
+
+        self.backButton = pygwidgets.CustomButton(self.window,
+                                                 (240, 650),
+                                                 up='images/backNormal.png',
+                                                 down='images/backDown.png',
+                                                 over='images/backOver.png',
+                                                 disabled='images/backDisabled.png')
 
         self.resetScoresButton = pygwidgets.CustomButton(self.window,
-                                                    (240, 650),
-                                                    up='images/resetNormal.png',
-                                                    down='images/resetDown.png',
-                                                    over='images/resetOver.png',
-                                                    disabled='images/resetDisabled.png')
-
-        self.startNewGameButton = pygwidgets.CustomButton(self.window,
-                                                    (450, 650),
-                                                    up='images/startNewNormal.png',
-                                                    down='images/startNewDown.png',
-                                                    over='images/startNewOver.png',
-                                                    disabled='images/startNewDisabled.png')
+                                                 (450, 650),
+                                                 up='images/resetNormal.png',
+                                                 down='images/resetDown.png',
+                                                 over='images/resetOver.png',
+                                                 disabled='images/resetDisabled.png')
 
         self.showHighScores()
 
     def getSceneKey(self):
         return SCENE_HIGH_SCORES
 
-    def enter(self, data):
+    def enter(self, newHighScoreValue=None):
         # This can be called two different ways:
-        # 1. If there is no new high score, data will be None
-        # 2. Or, data is the score of the current game - in top 10
-        if data is None:
+        # 1. If no new high score, newHighScoreValue will be None
+        # 2. newHighScoreValue is score of the current game - in top 10
+        if newHighScoreValue is None:
             return  # nothing to do
 
-        self.draw()
-        # We have a new high score sent in from the play scene
-        newHighScoreValue = data
+        self.draw() # draw before showing dialog
+        # We have a new high score sent in from the Play scene
         dialogQuestion = ('To record your score of ' +
                                  str(newHighScoreValue) + ',\n' +
                                  'please enter your name:')
-        playerName = showCustomAnswerDialog(self.window, dialogQuestion)
+        playerName = showCustomAnswerDialog(self.window,
+                                                                    dialogQuestion)
         if playerName is None:
             return  # user pressed Cancel
 
         # Add user and score to high scores
         if playerName == '':
             playerName = 'Anonymous'
+        self.oHighScoresData.addHighScore(playerName,
+                                                            newHighScoreValue)
 
-        # Find the appropriate place to add the new high score
-        placeFound = False
-        for index, nameScoreList in enumerate(self.scoresList):
-            thisScore = nameScoreList[1]
-            if newHighScoreValue > thisScore:
-                # Insert into proper place, remove last entry
-                self.scoresList.insert(index, [playerName, newHighScoreValue])
-                self.scoresList.pop(N_HIGH_SCORES)
-                placeFound = True
-                break
-        if not placeFound:
-            return  # score does not belong in the list
-
-        # Save the scores
-        self.oHighScoresData.saveScores(self.scoresList)
-        # Show the new high scores table
+        # Show the updated high scores table
         self.showHighScores()
 
     def showHighScores(self):
         # Build up strings and show them in two DisplayText fields
+        scoresList = self.oHighScoresData.getScores()
         scoresText = ''
         namesText = ''
-        for nameScoreList in self.scoresList:
-            # Each element is a list of [name, score]
+        for nameScoreList in scoresList:
+            # Each element is a list: [name, score]
             namesText = namesText + nameScoreList[0] + '\n'
             scoresText = scoresText + str(nameScoreList[1]) + '\n'
 
@@ -145,17 +133,17 @@ class SceneHighScores(pyghelpers.Scene):
 
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:
-            if self.startNewGameButton.handleEvent(event):
-                self.goToScene(SCENE_PLAY)
-
-            elif self.quitButton.handleEvent(event):
+            if self.quitButton.handleEvent(event):
                 self.quit()
+
+            elif self.backButton.handleEvent(event):
+                self.goToScene(SCENE_PLAY)
 
             elif self.resetScoresButton.handleEvent(event):
                 confirmed = showCustomResetDialog(self.window,
                                         'Are you sure you want to \nRESET the high scores?')
                 if confirmed:
-                    self.scoresList = self.oHighScoresData.resetScores()
+                    self.oHighScoresData.resetScores()
                     self.showHighScores()
 
     def draw(self):
@@ -164,15 +152,11 @@ class SceneHighScores(pyghelpers.Scene):
         self.namesField.draw()
         self.quitButton.draw()
         self.resetScoresButton.draw()
-        self.startNewGameButton.draw()
+        self.backButton.draw()
 
     def respond(self, requestID):
         if requestID == HIGH_SCORES_DATA:
-            # This is a request to get a dictionary made up of
-            # the highest and the lowest score of all scores in the list
-            highestOnList = self.scoresList[0]
-            lowestOnList = self.scoresList[-1]
-            highestScore = highestOnList[1]
-            lowestScore = lowestOnList[1]
-
+            # Request from Play scene for the highest and lowest scores
+            # Build a dictionary and return it to the Play Scene
+            highestScore, lowestScore = self.oHighScoresData.getHighestAndLowest()
             return {'highest':highestScore, 'lowest':lowestScore}

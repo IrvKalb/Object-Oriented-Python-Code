@@ -67,41 +67,35 @@ class GoodieMgr():
 
     def reset(self):  # Called when starting a new game
         self.goodiesList = []
-        self.frameCounter = 0
-        self.createGoodieMax = GoodieMgr.GOODIE_RATE_HI
+        self.nFramesTilNextGoodie = GoodieMgr.GOODIE_RATE_HI
 
-    def update(self):
-        # If the correct amount of frames have passed,
-        # add a new goodie at the left or right of the window
-
-        self.frameCounter = self.frameCounter + 1
-        if self.frameCounter == self.createGoodieMax:
-            # Time to add a new goodie (and reset the counter)
-            oGoodie = Goodie(self.window)
-            self.goodiesList.append(oGoodie)
-            self.frameCounter = 0
-            # Add a new goodie, every createGoodieMax frames
-            self.createGoodieMax = random.randrange(GoodieMgr.GOODIE_RATE_LO,
-                                                                          GoodieMgr.GOODIE_RATE_HI)
-
-        # Tell each goodie to update itself.
-        # If a goodie goes off an edge, remove it
+    def update(self, thePlayerRect):
+        # Tell each Goodie to update itself.
+        # If a Goodie goes off an edge, remove it
+        # Count up all Goodies that contact the player and remove them.
+        nGoodiesHit = 0
         goodiesListCopy = self.goodiesList.copy()
         for oGoodie in goodiesListCopy:
             deleteMe = oGoodie.update()
             if deleteMe:
-                self.goodiesList.remove(oGoodie)
+                self.goodiesList.remove(oGoodie)  # remove this Goodie
+
+            elif oGoodie.collide(thePlayerRect):
+                self.goodiesList.remove(oGoodie)  # remove this Goodie
+                nGoodiesHit = nGoodiesHit + 1
+        
+        # If the correct amount of frames have passed,
+        # add a new Goodie (and reset the counter)
+        self.nFramesTilNextGoodie = self.nFramesTilNextGoodie - 1
+        if self.nFramesTilNextGoodie == 0:
+            oGoodie = Goodie(self.window)
+            self.goodiesList.append(oGoodie)
+            self.nFramesTilNextGoodie = random.randrange(
+                                                            GoodieMgr.GOODIE_RATE_LO,
+                                                            GoodieMgr.GOODIE_RATE_HI)
+
+        return nGoodiesHit  # return number of Goodies that contacted player
 
     def draw(self):
         for oGoodie in self.goodiesList:
             oGoodie.draw()
-
-    def hasPlayerHitGoodie(self, playerRect):
-        nGoodiesHit = 0
-        goodiesListCopy = self.goodiesList.copy()
-        for oGoodie in goodiesListCopy:
-            if oGoodie.collide(playerRect):
-                self.goodiesList.remove(oGoodie)  # remove this goodie from the list
-                nGoodiesHit = nGoodiesHit + 1
-
-        return nGoodiesHit

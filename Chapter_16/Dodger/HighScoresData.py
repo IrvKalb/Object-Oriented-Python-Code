@@ -7,28 +7,58 @@ class HighScoresData():
     """The data file is stored as a list of lists in json format.
     Each list is made up of a name and a score:
         [[name, score], [name, score], [name, score] ...]
-    The list is kept in order of scores, highest to lowest."""
-    DATA_FILE_PATH = 'HighScores.json'
-
+    In this class, all scores are kept in self.scoresList
+    The list is kept in order of scores, highest to lowest.
+    """
     def __init__(self):
         self.BLANK_SCORES_LIST = N_HIGH_SCORES * [['-----', 0]]
-        self.oFilePath = Path(HighScoresData.DATA_FILE_PATH)
+        self.oFilePath = Path('HighScores.json')
 
-    def getScores(self):
-
-        if self.oFilePath.is_file():
+        # Try to open and load the data from the data file
+        try:
             data = self.oFilePath.read_text()
-            scoresList = json.loads(data)
-        else:  # file doesn't exist, set scores to blank, write out file
-            scoresList = self.BLANK_SCORES_LIST.copy()
-            self.saveScores(scoresList)
-        return scoresList
+        except FileNotFoundError:  # No file, set to blank scores, save
+            self.scoresList = self.BLANK_SCORES_LIST.copy()
+            self.saveScores()
+            return
 
-    def saveScores(self, scoresList):
-        scoresAsJson = json.dumps(scoresList)
+        # File exists, load the scores from the json file
+        self.scoresList = json.loads(data)
+
+    def addHighScore(self, name, newHighScore):
+        # Find the appropriate place to add the new high score
+        placeFound = False
+        for index, nameScoreList in enumerate(self.scoresList):
+            thisScore = nameScoreList[1]
+            if newHighScore > thisScore:
+                # Insert into proper place, remove last entry
+                self.scoresList.insert(index, [name, newHighScore])
+                self.scoresList.pop(N_HIGH_SCORES)
+                placeFound = True
+                break
+        if not placeFound:
+            return  # score does not belong in the list
+
+        # Save the updated scores
+        self.saveScores()
+
+    def saveScores(self):
+        scoresAsJson = json.dumps(self.scoresList)
         self.oFilePath.write_text(scoresAsJson)
 
     def resetScores(self):
-        scoresList = self.BLANK_SCORES_LIST.copy()
-        self.saveScores(scoresList)
-        return scoresList
+        self.scoresList = self.BLANK_SCORES_LIST.copy()
+        self.saveScores()
+
+    def getScores(self):
+        return self.scoresList
+
+    def getHighestAndLowest(self):
+        # Element zero is highest entry, element -1 is the lowest
+        highestEntry = self.scoresList[0]
+        lowestEntry = self.scoresList[-1]
+        # Get the score (element 1) of each sublist
+        highestScore = highestEntry[1]
+        lowestScore = lowestEntry[1]
+        return highestScore, lowestScore
+

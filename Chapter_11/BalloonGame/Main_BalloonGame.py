@@ -1,4 +1,4 @@
-#  Balloon Game main code
+#  Balloon game main code
 
 # 1 - Import packages
 from pygame.locals import *
@@ -35,7 +35,7 @@ oStartButton = pygwidgets.TextButton(window,
 
 # 5 - Initialize variables
 oBalloonMgr = BalloonMgr(window, WINDOW_WIDTH, USABLE_WINDOW_HEIGHT)
-playing = False  # wait until user clicks start
+playing = False  # wait until user clicks Start
 
 # 6 - Loop forever
 while True:
@@ -43,9 +43,7 @@ while True:
     nPointsEarned = 0
     for event in pygame.event.get():
     
-        # check if the event is the close button
-        if event.type == pygame.QUIT:
-            # if it is quit, the program
+         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 

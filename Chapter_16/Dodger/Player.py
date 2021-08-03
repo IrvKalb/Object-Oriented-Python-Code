@@ -6,16 +6,15 @@ from Constants import *
 class Player():
     def __init__(self, window):
         self.window = window
-        self.image = pygwidgets.Image(window, (-100, -100),
-                                      'images/player.png')
+        self.image = pygwidgets.Image(window,
+                                (-100, -100), 'images/player.png')
         playerRect = self.image.getRect()
         self.maxX = WINDOW_WIDTH - playerRect.width
         self.maxY = GAME_HEIGHT - playerRect.height
 
     # Every frame, move the player icon to the mouse position
-    # Limits the position to the game area of the window
-    def update(self):
-        x, y = pygame.mouse.get_pos()
+    # Limits the x and ycoordinates to the game area of the window
+    def update(self, x, y):
         if x < 0:
             x = 0
         elif x > self.maxX:

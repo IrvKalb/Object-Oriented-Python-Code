@@ -10,7 +10,7 @@ from abc import ABC, abstractmethod
 class Balloon(ABC):
 
     popSoundLoaded = False
-    popSound = None  # Load when first balloon is created
+    popSound = None  # load when first balloon is created
 
     @abstractmethod
     def __init__(self, window, maxWidth, maxHeight, ID,
@@ -21,7 +21,7 @@ class Balloon(ABC):
         self.size = size
         self.nPoints = nPoints
         self.speedY = speedY
-        if not Balloon.popSoundLoaded:  # Load first time only
+        if not Balloon.popSoundLoaded:  # load first time only
             Balloon.popSoundLoaded = True
             Balloon.popSound = pygame.mixer.Sound('sounds/balloonPop.wav')
 
@@ -40,12 +40,12 @@ class Balloon(ABC):
             Balloon.popSound.play()
             return True, self.nPoints # True here means it was hit
         else:
-            return False, 0  # Not hit, no points
+            return False, 0  # not hit, no points
 
     def update(self):
         self.y = self.y - self.speedY   # update y position by speed
         self.balloonImage.setLoc((self.x, self.y))
-        if self.y < -self.height:     # Off the top of the window
+        if self.y < -self.height:     # off the top of the window
             return BALLOON_MISSED
         else:
             return BALLOON_MOVING
