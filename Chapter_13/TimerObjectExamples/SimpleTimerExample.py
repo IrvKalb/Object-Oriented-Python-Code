@@ -1,4 +1,4 @@
-# Simple Timer Example
+# Simple timer example
 
 # 1 - Import packages
 import pygame
@@ -23,7 +23,7 @@ clock = pygame.time.Clock()
 
 # 5 - Initialize variables
 headerMessage = pygwidgets.DisplayText(window, (0, 50), 'Click Start to start a ' +
-                                       str(TIMER_LENGTH) + ' second timer:',
+                                       str(TIMER_LENGTH) + '-second timer:',
                                        fontSize=36, justified='center', width=WINDOW_WIDTH)
 
 startButton = pygwidgets.TextButton(window, (180, 100), 'Start')
@@ -34,7 +34,7 @@ timerMessage = pygwidgets.DisplayText(window, (0, 160), 'Message showing during 
                                       fontSize=36, justified='center', width=WINDOW_WIDTH)
 
 timerMessage.hide()  # start off with this message hidden
-oTimer = pyghelpers.Timer(TIMER_LENGTH)  # create a timer object
+oTimer = pyghelpers.Timer(TIMER_LENGTH)  # create a Timer object
 
 
 # 6 - Loop forever
@@ -42,7 +42,6 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # If the event was a click on the close box, quit pygame and the program
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
@@ -75,4 +74,4 @@ while True:
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make pygame wait the correct amount
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait

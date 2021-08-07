@@ -32,18 +32,18 @@ class Game():
 
         self.cardXPositionsList = []
         thisLeft = Game.CARDS_LEFT
-        # Calculate the x positions of all cards ... once
+        # Calculate the x positions of all cards, once
         for cardNum in range(Game.NCARDS):
             self.cardXPositionsList.append(thisLeft)
             thisLeft = thisLeft + Game.CARD_OFFSET
 
         self.reset()  # start a round of the game
 
-    def reset(self):  # This method is called when a new round starts
+    def reset(self):  # this method is called when a new round starts
         self.cardShuffleSound.play()
         self.cardList = []
         self.oDeck.shuffle()
-        for cardIndex in range(0, Game.NCARDS):  # Deal out cards
+        for cardIndex in range(0, Game.NCARDS):  # deal out cards
             oCard = self.oDeck.getCard()
             self.cardList.append(oCard)
             thisXPosition = self.cardXPositionsList[cardIndex]
@@ -51,10 +51,11 @@ class Game():
 
         self.showCard(0)
         self.cardNumber = 0
-        self.currentCardName, self.currentCardValue = self.getCardNameAndValue(self.cardNumber)
+        self.currentCardName, self.currentCardValue = \
+                                         self.getCardNameAndValue(self.cardNumber)
 
-        self.messageText.setValue(
-            'Starting card is ' + self.currentCardName + '. Will the next card be higher or lower?')
+        self.messageText.setValue('Starting card is ' + self.currentCardName +
+                                                '. Will the next card be higher or lower?')
 
     def getCardNameAndValue(self, index):
         oCard = self.cardList[index]
@@ -81,7 +82,7 @@ class Game():
                 self.messageText.setValue('No, the ' + nextCardName + ' was not higher')
                 self.loserSound.play()
 
-        else:  # user hit the lower button:
+        else:  # user hit the Lower button
             if nextCardValue < self.currentCardValue:
                 self.score = self.score + Game.POINTS_CORRECT
                 self.messageText.setValue('Yes, the ' + nextCardName + ' was lower')
@@ -93,7 +94,7 @@ class Game():
 
         self.scoreText.setValue('Score: ' + str(self.score))
 
-        self.currentCardValue = nextCardValue  # set up for next higher/lower button choice
+        self.currentCardValue = nextCardValue  # set up for the next card 
 
         done = (self.cardNumber == (Game.NCARDS - 1))  # did we reach the last card?
         return done

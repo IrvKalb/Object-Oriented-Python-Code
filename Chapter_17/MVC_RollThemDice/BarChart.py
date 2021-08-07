@@ -14,12 +14,14 @@ class BarChart():
             oBin = Bin(self.window, diceTotalForBin)
             self.oBinsList.append(oBin)
 
-    def update(self, nRounds, resultsDict):
+    def update(self, nRounds, resultsDict, percentsDict):
         self.resultsDict = resultsDict
-        for number, oBin in enumerate(self.oBinsList):
-            if number >= 2:
-                thisResult = resultsDict[number]
-                oBin.update(nRounds, thisResult)
+        self.percentsDict = percentsDict
+        for rollTotal, oBin in enumerate(self.oBinsList):
+            if rollTotal >= 2:
+                thisResult = self.resultsDict[rollTotal]
+                thisPercent = self.percentsDict[rollTotal]
+                oBin.update(nRounds, thisResult, thisPercent)
 
     def draw(self):
         for number, oBin in enumerate(self.oBinsList):

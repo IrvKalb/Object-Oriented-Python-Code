@@ -1,4 +1,4 @@
-# Higher Or Lower - pygame version
+# Higher or Lower - pygame version
 # Main program
 
 # 1 - Import packages
@@ -69,7 +69,7 @@ while True:
     # 10 - Draw the window elements
     # Tell the game to draw itself
     oGame.draw()
-    # draw remaining user interface components
+    # Draw remaining user interface components
     newGameButton.draw()
     higherButton.draw()
     lowerButton.draw()

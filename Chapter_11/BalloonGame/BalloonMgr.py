@@ -7,11 +7,8 @@ import pygwidgets
 from BalloonConstants import *
 from Balloon import *
 
-#
 #  BalloonMgr manages a list of Balloon objects
-#
 class BalloonMgr():
-
     def __init__(self, window, maxWidth, maxHeight):
         self.window = window
         self.maxWidth = maxWidth
@@ -25,7 +22,8 @@ class BalloonMgr():
 
         for balloonNum in range(0, N_BALLOONS):
             randomBalloonClass = random.choice((BalloonSmall,
-                                                         BalloonMedium, BalloonLarge))
+                                                                    BalloonMedium,
+                                                                    BalloonLarge))
             oBalloon = randomBalloonClass(self.window, self.maxWidth,
                                                         self.maxHeight, balloonNum)
             self.balloonList.append(oBalloon)

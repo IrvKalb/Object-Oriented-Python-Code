@@ -6,7 +6,7 @@ import math
 from pygwidgets import *
 from Constants import *
 
-CENTER_X = WINDOW_WIDTH // 2
+CENTER_X = 300
 CENTER_Y = 300
 RADIUS = 200
 
@@ -33,23 +33,25 @@ class PieChart():
         y = 160
         for legendNumber in range(2, 13):
             gray = GRAY_TUPLE[legendNumber - 2]
-            oLegendField = pygwidgets.DisplayText(window, (650, y),
+            oLegendField = pygwidgets.DisplayText(window, (550, y),
                                         value=str(legendNumber), fontSize=32,
                                         textColor=gray)
             self.legendFields.append(oLegendField)
             y = y + 25 # vertical spacing
 
-    def update(self, nRounds, resultsDict):
+    def update(self, nRounds, resultsDict, percentsDict):
         self.nRounds = nRounds
         self.resultsDict = resultsDict
-        self.percents = []
-        for total, count in resultsDict.items():
-            thisPercent = count / self.nRounds
-            self.percents.append(thisPercent)
-
-            index = total - 2
+        self.percentsDict = percentsDict
+        for rollTotal in range(2, 13):
+            rollCount = resultsDict[rollTotal]
+            percent = percentsDict[rollTotal]
+            index = rollTotal - 2
             oLegendField = self.legendFields[index]
-            oLegendField.setValue(str(total) + '  ' + str(round(thisPercent * 100)) +  '%')
+
+            # Build percent as a string with one decimal digit
+            percent = '{:.1f}'.format(100 * percent) + '%'
+            oLegendField.setValue(str(rollTotal) + ':   ' + percent)
 
     def degreesToRadians(self, nDegrees):
         nRadians = (math.pi / 180) * nDegrees
@@ -75,15 +77,13 @@ class PieChart():
     # Draw everything
     def draw(self):
         startAngle = 0
-        for total in range(2, 13):
-            #value = self.resultsDict[total]
-            index = total - 2
-            percent = self.percents[index]
+        for rollTotal in range(2, 13):
+            index = rollTotal - 2
+            percent = self.percentsDict[rollTotal]
             endAngle = startAngle + round(percent * 360)
             rgbColor = GRAY_TUPLE[index]
-
             self.drawFilledArc(CENTER_X, CENTER_Y, RADIUS, startAngle, endAngle, rgbColor)
-            startAngle = endAngle
-
             self.legendFields[index].draw()
+
+            startAngle = endAngle  # set up for next wedge
 

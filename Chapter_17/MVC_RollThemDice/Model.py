@@ -1,12 +1,12 @@
-#  DiceModel - Roll Them Dice
+#  ModelDice - Roll Them Dice
 
 import random
 
 SIDES_PER_DIE = 6
 SIDES_PER_DIE_PLUS_ONE = SIDES_PER_DIE + 1
 
-# DiceModel Class
-class DiceModel():
+# ModelDice Class
+class ModelDice():
     def __init__(self, nRounds):
         self.nRounds = nRounds
 

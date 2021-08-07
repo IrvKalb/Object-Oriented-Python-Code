@@ -22,16 +22,16 @@ class Bin():
                                 fontName='arial', fontSize=24, width=25, justified='center')
         self.oBinCount = pygwidgets.DisplayText(window,
                                 (self.left - 5, BAR_BOTTOM + 40), '',
-                                fontName='arial', fontSize=18, width=45, justified='center')
+                                fontName='arial', fontSize=18, width=50, justified='center')
         self.oBinPercent = pygwidgets.DisplayText(window,
                                 (self.left - 5, BAR_BOTTOM + 60), '',
                                  fontName='arial', fontSize=18, width=50, justified='center')
 
-    def update(self, nRounds, count):
+    def update(self, nRounds, count, percent):
         self.count = count
         self.oBinCount.setValue(count)
-        percent = int((count / nRounds) * 100)
-        self.oBinPercent.setValue(format(percent, '.1f') + '%')
+        percent = '{:.1f}'.format(100 * percent) + '%'
+        self.oBinPercent.setValue(percent)
 
         # force float here, use int when drawing rects
         # Calculate the real height, multiply by two to make it look better

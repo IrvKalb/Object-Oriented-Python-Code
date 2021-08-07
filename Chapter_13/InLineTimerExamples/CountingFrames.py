@@ -10,7 +10,7 @@ import pygwidgets
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 240
 WHITE = (255, 255, 255)
-FRAMES_PER_SECOND = 30
+FRAMES_PER_SECOND = 30  # takes 1/30th of a second for each frame
 TIMER_LENGTH = 2.5 # seconds
 
 # 3 - Initialize the world

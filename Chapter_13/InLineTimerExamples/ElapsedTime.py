@@ -1,4 +1,4 @@
-# Timer in the Main Loop
+# Timer in the main loop
 
 # 1 - Import packages
 import pygame
@@ -41,7 +41,6 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # If the event was a click on the close box, quit pygame and the program
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()

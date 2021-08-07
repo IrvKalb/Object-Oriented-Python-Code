@@ -1,4 +1,4 @@
-# Card Class
+# Card class
 
 import pygame
 import pygwidgets
@@ -14,7 +14,7 @@ class Card():
         self.cardName = rank + ' of ' + suit
         self.value = value
         fileName = 'images/' + self.cardName + '.png'
-        # Set some starting location, use setLoc() below to change
+        # Set some starting location; use setLoc below to change
         self.images = pygwidgets.ImageCollection(window, (0, 0),
                                 {'front': fileName, 
                                  'back': Card.BACK_OF_CARD_IMAGE}, 'back')
@@ -37,7 +37,7 @@ class Card():
     def getRank(self):
         return self.rank
 
-    def setLoc(self, loc): # call setLoc of the ImageCollection
+    def setLoc(self, loc): # call the setLoc method of the ImageCollection
         self.images.setLoc(loc)
 
     def getLoc(self):  # get the location from the ImageCollection

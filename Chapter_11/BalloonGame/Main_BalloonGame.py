@@ -57,7 +57,7 @@ while True:
             playing = True
             oStartButton.disable()
 
-    # 8  Do any "per frame" actions
+    # 8 - Do any "per frame" actions
     if playing:
         oBalloonMgr.update()
         nPopped = oBalloonMgr.getCountPopped()

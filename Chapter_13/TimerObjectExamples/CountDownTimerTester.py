@@ -23,7 +23,7 @@ clock = pygame.time.Clock()
 
 # 5 - Initialize variables
 oHeaderMessage = pygwidgets.DisplayText(window, (0, 50), 'Click Start to start a ' +
-                                       str(TIMER_LENGTH) + ' second timer:',
+                                       str(TIMER_LENGTH) + '-second timer:',
                                        fontSize=36, justified='center', width=WINDOW_WIDTH)
 
 oStartButton = pygwidgets.TextButton(window, (180, 100), 'Start')

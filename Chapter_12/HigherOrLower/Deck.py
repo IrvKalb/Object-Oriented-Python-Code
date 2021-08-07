@@ -1,10 +1,10 @@
-# Deck Class
+# Deck class
 
 import random
 from Card import *
 
 class Deck():
-    SUIT_TUPLE = ('Diamonds', 'Clubs', 'Hearts', 'Diamonds')
+    SUIT_TUPLE = ('Diamonds', 'Clubs', 'Hearts', 'Spades')
     # This dict maps each card rank to a value for a standard deck
     STANDARD_DICT = {'Ace':1, '2':2, '3':3, '4':4, '5':5,
                                   '6':6, '7':7, '8': 8, '9':9, '10':10,
@@ -23,8 +23,8 @@ class Deck():
         self.shuffle()
 
     def shuffle(self):
-        # copy the starting deck and save it in the playing deck list
-        self.playingDeckList = self.startingDeckList[:]
+        # Copy the starting deck and save it in the playing deck list
+        self.playingDeckList = self.startingDeckList.copy()
         for oCard in self.playingDeckList:
             oCard.conceal()
         random.shuffle(self.playingDeckList)
@@ -32,21 +32,21 @@ class Deck():
     def getCard(self):
         if len(self.playingDeckList) == 0:
             raise IndexError('No more cards')
-        # pop one off the deck and return it
+        # Pop one card off the deck and return it
         oCard = self.playingDeckList.pop()  
         return oCard
 
     def returnCardToDeck(self, oCard):
-        # put a card back into the deck
+        # Put a card back into the deck
         self.deckList.insert(0, oCard)
 
 
 if __name__ == '__main__':
-    # MAIN CODE to test the Deck class
+    # Main code to test the Deck class
 
     import pygame
 
-    # CONSTANTS
+    # Constants
     WINDOW_WIDTH = 100
     WINDOW_HEIGHT = 100
 
