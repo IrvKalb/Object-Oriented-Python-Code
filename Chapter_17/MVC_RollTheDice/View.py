@@ -1,4 +1,4 @@
-#  ViewDice - Roll Them Dice
+#  View - Roll The Dice
 
 from BarChart import *
 from PieChart import *

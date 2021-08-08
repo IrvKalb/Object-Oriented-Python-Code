@@ -1,5 +1,4 @@
-#  BarChart - Irv Kalb
-
+#  BarChart - Roll The Dice
 
 from Bin import *
 

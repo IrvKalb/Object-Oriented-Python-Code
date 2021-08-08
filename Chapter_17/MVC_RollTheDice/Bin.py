@@ -1,4 +1,4 @@
-#  Roll Them Dice
+#  Bin - Roll The Dice
 
 import pygame
 import pygwidgets
@@ -7,7 +7,7 @@ MAX_BAR_HEIGHT = 300
 BAR_BOTTOM = 420
 BAR_WIDTH = 30
 BAR_COLOR = (128, 128, 128)
-COLUMN_LEFT_START = -20
+COLUMN_LEFT_START = -40
 COLUMN_OFFSET = 60
 
 # Bin Class

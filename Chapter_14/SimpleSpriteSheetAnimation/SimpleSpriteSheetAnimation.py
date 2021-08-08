@@ -12,12 +12,13 @@ class SimpleSpriteSheetAnimation():
 
         # Load the sprite sheet
         spriteSheetImage = pygame.image.load(imagePath)
-        spriteSheetImage = pygame.Surface.convert_alpha(spriteSheetImage)  # optimizes blitting
+        # Optimizes blitting
+        spriteSheetImage = pygame.Surface.convert_alpha(spriteSheetImage)
 
         # Calculate the number of columns in the starting image
         nCols = spriteSheetImage.get_width() // width
 
-        # Break the starting image into sub-images
+        # Break the starting image into subimages
         row = 0
         col = 0
         for imageNumber in range(nImages):
@@ -64,8 +65,8 @@ class SimpleSpriteSheetAnimation():
                 self.index = 0  # reset to the beginning
 
     def draw(self):
-        # Assumes that self.index has been set earlier - in update method
-        # it is used as the index into the imagesList to find the current image
+        # Assumes that self.index has been set earlier - in the update() method.
+        # It is used as the index into the imagesList to find the current image.
         theImage = self.imagesList[self.index]  # choose the image to show
 
         self.window.blit(theImage, self.loc)   #show it

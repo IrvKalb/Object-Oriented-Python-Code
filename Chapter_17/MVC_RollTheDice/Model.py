@@ -1,4 +1,4 @@
-#  ModelDice - Roll Them Dice
+#  Model - Roll The Dice
 
 import random
 

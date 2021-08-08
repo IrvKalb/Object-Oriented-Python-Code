@@ -1,5 +1,5 @@
-# Animation Example
-# Shows examples of SimpleAnimation object
+# Animation example
+# Shows example of SimpleAnimation object
 
 # 1 - Import library
 import pygame
@@ -41,7 +41,6 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # check if the event is the X button 
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
@@ -60,8 +59,8 @@ while True:
     oDinosaurAnimation.draw()
     oPlayButton.draw()
 
-    # 11 - update the window
+    # 11 - Update the window
     pygame.display.update()
     
-    # 12 - slow things down a bit
+    # 12 - Slow things down a bit
     clock.tick(FRAMES_PER_SECOND)  # make pygame wait

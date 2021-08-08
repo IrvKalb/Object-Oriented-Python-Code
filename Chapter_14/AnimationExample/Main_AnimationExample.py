@@ -96,7 +96,6 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # check if the event is the X button 
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
@@ -158,8 +157,8 @@ while True:
     oWalkAnimation.draw()
     oStartButton.draw()
 
-    # 11 - update the window
+    # 11 - Update the window
     pygame.display.update()
     
-    # 12 - slow things down a bit
+    # 12 - Slow things down a bit
     clock.tick(FRAMES_PER_SECOND)  # make pygame wait

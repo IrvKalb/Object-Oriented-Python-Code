@@ -1,4 +1,4 @@
-#  Controller - Roll Them Dice
+#  Controller - Roll The Dice
 
 import pygame
 from pygame.locals import *
@@ -18,7 +18,7 @@ class Controller():
         self.oModel = ModelDice(nRoundsToStart)
         self.oView = ViewDice(window, nRoundsToStart)
 
-        self.oTitleDisplay = pygwidgets.DisplayText(window, (330, 30), 'Roll Them Dice!',
+        self.oTitleDisplay = pygwidgets.DisplayText(window, (330, 30), 'Roll The Dice!',
                        fontName='monospaces', fontSize=34)
         self.oQuitButton = pygwidgets.TextButton(window, (20, 595), 'Quit', width=100, height=35)
         self.oRollButton = pygwidgets.TextButton(window, (690, 595), 'Roll Again', width=100, height=35)

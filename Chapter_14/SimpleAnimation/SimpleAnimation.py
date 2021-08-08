@@ -43,8 +43,8 @@ class SimpleAnimation():
                 self.index = 0  # reset to the beginning
 
     def draw(self):
-        # Assumes that self.index has been set earlier - in update method
-        # it is used as the index into the imagesList to find the current image
+        # Assumes that self.index has been set earlier - in update() method.
+        # It is used as the index into the imagesList to find the current image.
         theImage = self.imagesList[self.index]  # choose the image to show
 
         self.window.blit(theImage, self.loc)   #show it
