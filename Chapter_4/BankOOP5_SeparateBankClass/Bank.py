@@ -37,7 +37,7 @@ class Bank():
 
         if theBalance is not None:
             print('You had', theBalance, 'in your account, which is being returned to you.')
-            # Remove user's account from dict of accounts
+            # Remove user's account from the dictioary of accounts
             del self.accountsDict[userAccountNumber]
             print('Your account is now closed.')
 

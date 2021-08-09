@@ -1,5 +1,5 @@
 # Interactive test program creating a dictionary of accounts
-# Version 4 with an interactive menu
+# Version 4, with an interactive menu
 
 from Account import *
 

@@ -94,7 +94,7 @@ oTV.volumeDown()
 oTV.mute()
 oTV.showInfo()
 
-# Change the channel to 11
+# Change the channel to 11, unmute the sound, show status
 oTV.setChannel(11)
 oTV.mute()
 oTV.showInfo()

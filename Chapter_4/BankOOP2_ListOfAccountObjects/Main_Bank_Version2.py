@@ -4,7 +4,7 @@
 # Bring in all the code from the Account class file
 from Account import *
 
-# Start off as empty list of accounts
+# Start off with empty list of accounts
 accountsList = [ ]  
 
 # Create two accounts

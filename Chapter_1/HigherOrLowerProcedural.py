@@ -10,7 +10,7 @@ NCARDS = 8
 
 # Pass in a deck and this function returns a random card from the deck
 def getCard(deckListIn):
-    thisCard = deckListIn.pop() # pops one off the top of the deck and returns
+    thisCard = deckListIn.pop() # pops one off the top of the deck and returns it
     return thisCard
     
 # Pass in a deck and this function returns a shuffled copy of the deck
@@ -20,9 +20,9 @@ def shuffle(deckListIn):
     return deckListOut
 
 #  Main code
-print('Welcome to Higher Or Lower')
-print('You have to choose if the next card to be shown will be higher or lower than the current card.')
-print('Getting it right adds 20 points, get it wrong and you lose 15 points.')
+print('Welcome to Higher or Lower.')
+print('You have to choose whether the next card to be shown will be higher or lower than the current card.')
+print('Getting it right adds 20 points; get it wrong and you lose 15 points.')
 print('You have 50 points to start.')
 print()
 

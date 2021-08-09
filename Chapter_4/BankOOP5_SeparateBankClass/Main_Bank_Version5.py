@@ -23,7 +23,7 @@ while True:
     print('To open a new account, press o')
     print('To quit, press q')
     print('To show all accounts, press s')
-    print('To make a withdrawal, press w ')
+    print('To make a withdrawal, press w')
     print()
 
     action = input('What do you want to do? ')

@@ -1,5 +1,5 @@
 # Test program using accounts
-# Version 1 using explicit variables for each Account object
+# Version 1, using explicit variables for each Account object
 
 # Bring in all the code from the Account class file
 from Account import *

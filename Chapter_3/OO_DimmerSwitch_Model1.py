@@ -45,7 +45,7 @@ oDimmer2.raiseLevel()
 oDimmer2.raiseLevel()
 oDimmer2.raiseLevel()
 
-# Create third DimmerSwitch, no changes to settings
+# Create third DimmerSwitch, using the default settings
 oDimmer3 = DimmerSwitch('Dimmer3')
 
 # Ask each switch to show itself
