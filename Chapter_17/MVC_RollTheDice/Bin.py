@@ -25,12 +25,11 @@ class Bin():
                                 fontName='arial', fontSize=18, width=50, justified='center')
         self.oBinPercent = pygwidgets.DisplayText(window,
                                 (self.left - 5, BAR_BOTTOM + 60), '',
-                                 fontName='arial', fontSize=18, width=50, justified='center')
+                                 fontName='arial', fontSize=18, width=50, justified='right')
 
     def update(self, nRounds, count, percent):
-        self.count = count
         self.oBinCount.setValue(count)
-        percent = '{:.1f}'.format(100 * percent) + '%'
+        percent = '{:.1%}'.format(percent)
         self.oBinPercent.setValue(percent)
 
         # force float here, use int when drawing rects

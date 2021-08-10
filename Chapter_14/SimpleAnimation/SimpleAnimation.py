@@ -10,7 +10,7 @@ class SimpleAnimation():
         self.imagesList = []
         for picPath in picPaths:
             image = pygame.image.load(picPath)  # load an image
-            image = pygame.Surface.convert_alpha(image)  # optimizes blitting
+            image = pygame.Surface.convert_alpha(image)  # optimize blitting
             self.imagesList.append(image)
 
         self.playing = False

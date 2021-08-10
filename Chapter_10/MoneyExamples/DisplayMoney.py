@@ -6,9 +6,7 @@ import pygwidgets
 
 BLACK = (0, 0, 0)
 
-#
 #  DisplayMoney class inherits from DisplayText class
-#
 class DisplayMoney(pygwidgets.DisplayText):
 
     def __init__(self, window, loc, value=None,

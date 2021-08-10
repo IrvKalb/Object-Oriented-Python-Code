@@ -131,6 +131,12 @@ class SceneHighScores(pyghelpers.Scene):
         self.namesField.setValue(namesText)
         self.scoresField.setValue(scoresText)
 
+        # Alternative new way to load names & scores into fields
+        #scoresList, namesList = self.oHighScoresData.getScoresAndNames()
+        #self.namesField.setValue(namesList)
+        #self.scoresField.setValue(scoresList)
+        
+
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:
             if self.quitButton.handleEvent(event):

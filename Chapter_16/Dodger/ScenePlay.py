@@ -173,7 +173,7 @@ class ScenePlay(pyghelpers.Scene):
         # Tell the BaddieMgr to move all the Baddies
         # It returns the number of Baddies that fell off the bottom
         nBaddiesEvaded  = self.oBaddieMgr.update()
-        self.score = self.score + nBaddiesEvaded
+        self.score = self.score + (nBaddiesEvaded * POINTS_FOR_BADDIE_EVADED)
         
         self.scoreText.setValue(self.score)
 
