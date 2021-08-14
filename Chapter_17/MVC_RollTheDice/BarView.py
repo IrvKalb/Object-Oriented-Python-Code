@@ -8,22 +8,20 @@ class BarView():
         self.window = window
         self.oModel = oModel
 
-        self.oBinsList = []
+        self.oBinsDict = {}
         # Possible rolls only go from 2 to 12
-        for diceTotalForBin in range(0, MAX_TOTAL_PLUS_1):
-            oBin = Bin(self.window, diceTotalForBin)
-            self.oBinsList.append(oBin)
+        for rollTotal in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
+            oBin = Bin(self.window, rollTotal)
+            self.oBinsDict[rollTotal] = oBin
 
     def update(self):
         nRounds, resultsDict, percentsDict = self.oModel.getRoundsRollsPercents()
-
-        for rollTotal, oBin in enumerate(self.oBinsList):
-            if rollTotal >= MIN_TOTAL:
-                thisResult = resultsDict[rollTotal]
-                thisPercent = percentsDict[rollTotal]
-                oBin.update(nRounds, thisResult, thisPercent)
+        for rollTotal in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
+            thisResult = resultsDict[rollTotal]
+            thisPercent = percentsDict[rollTotal]
+            oBin = self.oBinsDict[rollTotal]
+            oBin.update(nRounds, thisResult, thisPercent)
 
     def draw(self):
-        for number, oBin in enumerate(self.oBinsList):
-            if number >= MIN_TOTAL:
-                oBin.draw()
+        for oBin in self.oBinsDict.values():
+            oBin.draw()

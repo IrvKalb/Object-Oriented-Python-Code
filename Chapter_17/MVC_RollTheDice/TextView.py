@@ -14,7 +14,7 @@ class TextView():
 
         totalText = ['Total', '']
         for rollTotal in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
-            totalText.append(str(rollTotal))
+            totalText.append(rollTotal)
         self.oTotalDisplay = pygwidgets.DisplayText(self.window, (200, 135), totalText,
                                                       fontSize=36, width=100, justified='right')
         self.oCountDisplay = pygwidgets.DisplayText(self.window, (320, 135),
@@ -42,7 +42,7 @@ class TextView():
             count = resultsDict[rollTotal]
             percent = percentsDict[rollTotal]
 
-            countList.append(str(count))
+            countList.append(count)
             # Build percent as a string with one decimal digit
             percent = '{:.1%}'.format(percent)
             percentList.append(percent)

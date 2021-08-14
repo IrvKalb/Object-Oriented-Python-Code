@@ -1,4 +1,4 @@
-#  PieCView - Roll The Dice
+#  PieView - Roll The Dice
 
 import pygame
 import pygame.gfxdraw
@@ -9,6 +9,7 @@ from Constants import *
 CENTER_X = 300
 CENTER_Y = 300
 RADIUS = 200
+RADIUS_MINUS_1 = RADIUS - 1
 
 GRAY0 = (0, 0, 0)  # not used
 GRAY1 = (0, 0, 0)  # not used
@@ -66,6 +67,8 @@ class PieView():
         """
         centerTuple = (centerX, centerY)
         nPointsToDraw = int(degrees2 - degrees1)
+        if nPointsToDraw == 0:
+            return  # nothing to draw
         # Both degrees parameters need to be converted to radians for calculating points
         radians1 = math.radians(degrees1)
         radians2 = math.radians(degrees2)
@@ -92,7 +95,8 @@ class PieView():
             percent = self.percentsDict[index]
             endAngle = startAngle + (percent * 360)
             rgbColor = GRAY_TUPLE[index]
-            self.drawFilledArc(CENTER_X, CENTER_Y, RADIUS, startAngle, endAngle, rgbColor)
+            self.drawFilledArc(CENTER_X, CENTER_Y, RADIUS_MINUS_1,
+                                       startAngle, endAngle, rgbColor)
             self.legendFields[index].draw()
 
             startAngle = endAngle  # set up for next wedge

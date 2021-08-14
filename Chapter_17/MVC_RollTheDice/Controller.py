@@ -90,7 +90,6 @@ class Controller():
             pyghelpers.textYesNoDialog(self.window, pygame.Rect(170, 180, 430, 170),
                                        msg, 'OK', None, backgroundColor=LIGHT_GRAY)
             return
-        nRounds = int(nRounds)
         if nRounds < 100:
             pyghelpers.textYesNoDialog(self.window, pygame.Rect(170, 180, 430, 170),
                                        'For meaningful results,\n enter 100 or more.', 'OK', None,

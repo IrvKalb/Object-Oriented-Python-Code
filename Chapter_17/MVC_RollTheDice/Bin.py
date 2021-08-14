@@ -4,7 +4,7 @@ import pygame
 import pygwidgets
 
 MAX_BAR_HEIGHT = 300
-BAR_BOTTOM = 420
+BAR_BOTTOM = 390
 BAR_WIDTH = 30
 BAR_COLOR = (128, 128, 128)
 COLUMN_LEFT_START = -40
@@ -21,10 +21,10 @@ class Bin():
                                 (self.left + 3, BAR_BOTTOM + 12), binNumber,
                                 fontName='arial', fontSize=24, width=25, justified='center')
         self.oBinCount = pygwidgets.DisplayText(window,
-                                (self.left - 5, BAR_BOTTOM + 40), '',
+                                (self.left - 5, BAR_BOTTOM + 50), '',
                                 fontName='arial', fontSize=18, width=50, justified='center')
         self.oBinPercent = pygwidgets.DisplayText(window,
-                                (self.left - 5, BAR_BOTTOM + 60), '',
+                                (self.left - 5, BAR_BOTTOM + 80), '',
                                  fontName='arial', fontSize=18, width=50, justified='right')
 
     def update(self, nRounds, count, percent):

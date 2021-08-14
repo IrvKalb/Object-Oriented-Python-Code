@@ -1,4 +1,4 @@
-#  Main MVC Roll Them Dice - Irv Kalb
+#  Main MVC Roll The Dice - Irv Kalb
 
 import pygame
 import pygwidgets
