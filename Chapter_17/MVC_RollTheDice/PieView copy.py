@@ -10,21 +10,38 @@ CENTER_X = 300
 CENTER_Y = 300
 RADIUS = 200
 RADIUS_MINUS_1 = RADIUS - 1
+
+GRAY0 = (0, 0, 0)  # not used
+GRAY1 = (0, 0, 0)  # not used
+GRAY2 = (40, 40, 40)
+GRAY3 = (60, 60, 60)
+GRAY4 = (80, 80, 80)
+GRAY5 = (100, 100, 100)
+GRAY6 = (120, 120, 120)
+GRAY7 = (140, 140, 140)
+GRAY8 = (160, 160, 160)
+GRAY9 = (180, 180, 180)
+GRAY10 = (200, 200, 200)
+GRAY11 = (220, 220, 220)
+GRAY12= (240, 240, 240)
 BLACK = (0, 0, 0)
+
+GRAY_TUPLE = (GRAY0, GRAY1,GRAY2, GRAY3, GRAY4, GRAY5, GRAY6,
+                        GRAY7, GRAY8, GRAY9, GRAY10, GRAY11, GRAY12)
 
 class PieView():
     def __init__(self, window, oModel):
         self.window = window
         self.oModel = oModel
-        self.legendFieldsDict = {}
-        y = 160
-        # Create the legend fields
-        for index in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
-            gray = (index * 20, index * 20, index * 20)
+        self.legendFields = []
+        y = 110
+        # Create the legends (first two are not needed and not drawn)
+        for index in range(0, MAX_TOTAL_PLUS_1):
+            gray = GRAY_TUPLE[index]
             oLegendField = pygwidgets.DisplayText(window, (550, y),
                                         value=str(index), fontSize=32,
                                         textColor=gray)
-            self.legendFieldsDict[index] = oLegendField
+            self.legendFields.append(oLegendField)
             y = y + 25 # vertical spacing
 
     def update(self, ):
@@ -37,7 +54,7 @@ class PieView():
             # Could use the count if we want to display it later
             #rollCount = resultsDict[index]
             percent = percentsDict[index]
-            oLegendField = self.legendFieldsDict[index]
+            oLegendField = self.legendFields[index]
 
             # Build percent as a string with one decimal digit
             percent = '{:.1%}'.format(percent)
@@ -77,10 +94,10 @@ class PieView():
         for index in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
             percent = self.percentsDict[index]
             endAngle = startAngle + (percent * 360)
-            gray = (index * 20, index * 20, index * 20)
+            rgbColor = GRAY_TUPLE[index]
             self.drawFilledArc(CENTER_X, CENTER_Y, RADIUS_MINUS_1,
-                                       startAngle, endAngle, gray)
-            self.legendFieldsDict[index].draw()
+                                       startAngle, endAngle, rgbColor)
+            self.legendFields[index].draw()
 
             startAngle = endAngle  # set up for next wedge
 

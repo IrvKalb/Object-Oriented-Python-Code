@@ -7,10 +7,6 @@ class TextView():
     def __init__(self, window, oModel):
         self.window = window
         self.oModel = oModel
-        # Roll total text never changes - set it once, at the beginning
-        #totalText = 'Total\n\n'
-        #for rollTotal in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
-            #totalText = totalText + str(rollTotal) +'\n'
 
         totalText = ['Total', '']
         for rollTotal in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
@@ -24,17 +20,6 @@ class TextView():
 
     def update(self):
         nRounds, resultsDict, percentsDict = self.oModel.getRoundsRollsPercents()
-
-        # countText = 'Count\n\n'
-        # percentText = 'Percent\n\n'
-        # for rollTotal in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
-        #     count = resultsDict[rollTotal]
-        #     percent = percentsDict[rollTotal]
-        #
-        #     countText = countText + str(count) + '\n'
-        #     # Build percent as a string with one decimal digit
-        #     percent = '{:.1%}'.format(percent)
-        #     percentText = percentText + percent + '\n'
 
         countList = ['Count', ''] # extra empty string for a blank line
         percentList = ['Percent', '']
