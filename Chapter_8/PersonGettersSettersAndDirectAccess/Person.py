@@ -13,4 +13,3 @@ class Person():
     # Allow the caller to set a new salary
     def setSalary(self, salary):
         self.salary = salary
-

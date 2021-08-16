@@ -17,7 +17,7 @@ N_ROUNDS_AT_START = 2500
 LIGHT_GRAY = (225, 225, 225)
 
 class Controller():
-    def __init__(self, window, nRoundsToStart):
+    def __init__(self, window):
         self.window = window
 
         # Instantiate the Model
