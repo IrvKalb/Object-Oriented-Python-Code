@@ -61,7 +61,7 @@ class Controller():
         self.oView.update()
 
     def handleEvent(self, event):
-        if self.oQuitButton.handleEvent(event) or (event.type == pygame.QUIT):
+        if self.oQuitButton.handleEvent(event):
             pygame.quit()
             sys.exit()
 
