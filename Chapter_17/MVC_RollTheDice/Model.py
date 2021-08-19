@@ -6,8 +6,8 @@ from Constants import *
 SIDES_PER_DIE = 6
 SIDES_PER_DIE_PLUS_ONE = SIDES_PER_DIE + 1
 
-# ModelDice Class
-class ModelDice():
+# Model Class
+class Model():
     def __init__(self):
         self.nRounds = 0
         self.rollsDict = {}
@@ -32,11 +32,11 @@ class ModelDice():
             thisPercent = count / self.nRounds
             self.percentsDict[rollTotal] = thisPercent
 
+    # All current views call this method to get all the data.
     def getRoundsRollsPercents(self):
         return self.nRounds, self.rollsDict, self.percentsDict
 
-    # All current views call the getRoundsRollsPercent above.
-    # The methods below aren't used right now, but are available for a different view
+    # The methods below aren't used right now, but are available for a new views
     def getNumberOfRounds(self):
         return self.nRounds
 

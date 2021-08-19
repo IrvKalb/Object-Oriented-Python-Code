@@ -8,15 +8,15 @@ class TextView():
         self.window = window
         self.oModel = oModel
 
-        totalText = ['Total', '']
+        totalText = ['Roll total', '']
         for rollTotal in range(MIN_TOTAL, MAX_TOTAL_PLUS_1):
             totalText.append(rollTotal)
         self.oTotalDisplay = pygwidgets.DisplayText(self.window, (200, 135), totalText,
-                                                      fontSize=36, width=100, justified='right')
+                                                      fontSize=36, width=120, justified='right')
         self.oCountDisplay = pygwidgets.DisplayText(self.window, (320, 135),
-                                                      fontSize=36, width=100, justified='right')
+                                                      fontSize=36, width=120, justified='right')
         self.oPercentDisplay = pygwidgets.DisplayText(self.window, (440, 135),
-                                                      fontSize=36, width=100, justified='right')
+                                                      fontSize=36, width=120, justified='right')
 
     def update(self):
         nRounds, resultsDict, percentsDict = self.oModel.getRoundsRollsPercents()

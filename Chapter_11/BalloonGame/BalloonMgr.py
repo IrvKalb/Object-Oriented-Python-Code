@@ -41,9 +41,6 @@ class BalloonMgr():
                         self.score = self.score + nPoints
                     return  # no need to check others
 
-    def getScore(self):
-        return self.score
-
     def update(self):
         for oBalloon in self.balloonList:
             status = oBalloon.update()
@@ -51,6 +48,9 @@ class BalloonMgr():
                 # Balloon went off the top, remove it
                 self.balloonList.remove(oBalloon)
                 self.nMissed = self.nMissed + 1
+
+    def getScore(self):
+        return self.score
 
     def getCountPopped(self):
         return self.nPopped

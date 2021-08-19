@@ -21,7 +21,7 @@ class Controller():
         self.window = window
 
         # Instantiate the Model
-        self.oModel = ModelDice()
+        self.oModel = Model()
 
         # Instantiate different View objects
         self.oBarView = BarView(self.window, self.oModel)
