@@ -49,9 +49,6 @@ class HighScoresData():
         self.scoresList = self.BLANK_SCORES_LIST.copy()
         self.saveScores()
 
-    def getScores(self):
-        return self.scoresList
-
     def getScoresAndNames(self):
         namesList = []
         scoresList = []

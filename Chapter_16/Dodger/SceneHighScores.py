@@ -119,23 +119,10 @@ class SceneHighScores(pyghelpers.Scene):
         self.showHighScores()
 
     def showHighScores(self):
-        # Build up strings and show them in two DisplayText fields
-        scoresList = self.oHighScoresData.getScores()
-        scoresText = ''
-        namesText = ''
-        for nameScoreList in scoresList:
-            # Each element is a list: [name, score]
-            namesText = namesText + nameScoreList[0] + '\n'
-            scoresText = scoresText + str(nameScoreList[1]) + '\n'
-
-        self.namesField.setValue(namesText)
-        self.scoresField.setValue(scoresText)
-
-        # Alternative new way to load names & scores into fields
-        #scoresList, namesList = self.oHighScoresData.getScoresAndNames()
-        #self.namesField.setValue(namesList)
-        #self.scoresField.setValue(scoresList)
-        
+        # Get the scores and names, show them in two fields
+        scoresList, namesList = self.oHighScoresData.getScoresAndNames()
+        self.namesField.setValue(namesList)
+        self.scoresField.setValue(scoresList)        
 
     def handleInputs(self, eventsList, keyPressedList):
         for event in eventsList:
