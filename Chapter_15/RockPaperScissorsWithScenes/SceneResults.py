@@ -1,8 +1,5 @@
-#
 # This is the Results Scene
-#
 # The player is shown the results of the current round
-#
 
 import pygwidgets
 import pyghelpers

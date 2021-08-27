@@ -1,8 +1,6 @@
-#
 # This is the Play Scene
-#
 # The player chooses among Rock, Paper, or Scissors
-#
+
 import pygwidgets
 import pyghelpers
 import pygame
@@ -15,25 +13,25 @@ class ScenePlay(pyghelpers.Scene):
 
         self.RPSTuple = (ROCK, PAPER, SCISSORS)
 
-        self.titleField = pygwidgets.DisplayText(self.window, (15, 40), '    Rock               Paper          Scissors', \
+        self.titleField = pygwidgets.DisplayText(self.window, (15, 40), '    Rock               Paper          Scissors', 
                                               fontSize=50, textColor=WHITE, width=610, justified='center')
 
-        self.messageField = pygwidgets.DisplayText(self.window, (30, 395), 'Choose!', \
+        self.messageField = pygwidgets.DisplayText(self.window, (30, 395), 'Choose!', 
                                               fontSize=50, textColor=WHITE, width=610, justified='center')
 
-        self.rockButton = pygwidgets.CustomButton(self.window, (25, 120), \
-                                             up="images/Rock.png", \
-                                             over="images/RockOver.png", \
+        self.rockButton = pygwidgets.CustomButton(self.window, (25, 120), 
+                                             up="images/Rock.png", 
+                                             over="images/RockOver.png", 
                                              down="images/RockDown.png")
 
-        self.paperButton = pygwidgets.CustomButton(self.window, (225, 120), \
-                                              up="images/Paper.png", \
-                                              over="images/PaperOver.png", \
+        self.paperButton = pygwidgets.CustomButton(self.window, (225, 120), 
+                                              up="images/Paper.png", 
+                                              over="images/PaperOver.png", 
                                               down="images/PaperDown.png")
 
-        self.scissorButton = pygwidgets.CustomButton(self.window, (425, 120), \
-                                                up="images/Scissors.png", \
-                                                over="images/ScissorsOver.png", \
+        self.scissorButton = pygwidgets.CustomButton(self.window, (425, 120), 
+                                                up="images/Scissors.png", 
+                                                over="images/ScissorsOver.png", 
                                                 down="images/ScissorsDown.png")
 
     def getSceneKey(self):

@@ -98,30 +98,29 @@ while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # If the event was a click on the close box, quit pygame and the program 
         if event.type == pygame.QUIT:           
             pygame.quit()  
             sys.exit()        
         
         if state == STATE_SPLASH:
-            if  startButton.handleEvent(event):
+            if startButton.handleEvent(event):
                 state = STATE_PLAYER_CHOICE
 
         elif state == STATE_PLAYER_CHOICE:  # let the user choose
             playerChoice = ''  # Indicates no choice yet
-            if  rockButton.handleEvent(event):
+            if rockButton.handleEvent(event):
                 playerChoice = ROCK
                 rpsCollectionPlayer.replace(ROCK)
                 
-            elif  paperButton.handleEvent(event):
+            elif paperButton.handleEvent(event):
                 playerChoice = PAPER
                 rpsCollectionPlayer.replace(PAPER)
                 
-            elif  scissorButton.handleEvent(event):
+            elif scissorButton.handleEvent(event):
                 playerChoice = SCISSORS
                 rpsCollectionPlayer.replace(SCISSORS)
 
-            if playerChoice != '':    # player has made a choice, make computer choice
+            if playerChoice != '':  # player has made a choice, make computer choice
 
                 # Computer chooses from tuple of moves
                 rps = (ROCK, PAPER, SCISSORS)
@@ -171,13 +170,13 @@ while True:
                 state = STATE_SHOW_RESULTS  # change state
 
         elif state == STATE_SHOW_RESULTS:
-            if  restartButton.handleEvent(event):
+            if restartButton.handleEvent(event):
                 state = STATE_PLAYER_CHOICE  # change state
 
         else:
             raise ValueError('Unknown value for state:', state)
 
-    # 8  Do any 'per frame' actions
+    # 8 - Do any 'per frame' actions
     if state == STATE_PLAYER_CHOICE:
         messageField.setValue('       Rock             Paper         Scissors')
     elif state == STATE_SHOW_RESULTS:
