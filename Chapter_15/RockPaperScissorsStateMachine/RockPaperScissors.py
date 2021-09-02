@@ -133,7 +133,7 @@ while True:
                     tieSound.play()
                     
                 elif playerChoice == ROCK and computerChoice == SCISSORS:
-                    resultsField.setValue('Rock breaks Scissors.You win!')
+                    resultsField.setValue('Rock breaks Scissors. You win!')
                     playerScore = playerScore + 1
                     winnerSound.play()
 
@@ -143,7 +143,7 @@ while True:
                     loserSound.play()
                    
                 elif playerChoice == SCISSORS and computerChoice == PAPER:
-                    resultsField.setValue('Scissors cuts Paper.  You win!')
+                    resultsField.setValue('Scissors cuts Paper. You win!')
                     playerScore = playerScore + 1
                     winnerSound.play()
 
@@ -153,12 +153,12 @@ while True:
                     loserSound.play()
 
                 elif playerChoice == PAPER and computerChoice == ROCK:
-                    resultsField.setValue('Paper covers Rock.  You win!')
+                    resultsField.setValue('Paper covers Rock. You win!')
                     playerScore = playerScore + 1
                     winnerSound.play()
 
                 elif playerChoice == PAPER and computerChoice == SCISSORS:
-                    resultsField.setValue('Paper is cut by Scissors.  You lose.')
+                    resultsField.setValue('Paper is cut by Scissors. You lose.')
                     computerScore = computerScore + 1
                     loserSound.play()
 

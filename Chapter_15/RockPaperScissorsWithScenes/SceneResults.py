@@ -71,7 +71,7 @@ class SceneResults(pyghelpers.Scene):
             self.tieSound.play()
 
         elif playerChoice == ROCK and computerChoice == SCISSORS:
-            self.resultsField.setValue("Rock breaks Scissors.You win!")
+            self.resultsField.setValue("Rock breaks Scissors. You win!")
             self.playerScore = self.playerScore + 1
             self.winnerSound.play()
 
@@ -81,7 +81,7 @@ class SceneResults(pyghelpers.Scene):
             self.loserSound.play()
 
         elif playerChoice == SCISSORS and computerChoice == PAPER:
-            self.resultsField.setValue("Scissors cuts Paper.  You win!")
+            self.resultsField.setValue("Scissors cuts Paper. You win!")
             self.playerScore = self.playerScore + 1
             self.winnerSound.play()
 
@@ -91,12 +91,12 @@ class SceneResults(pyghelpers.Scene):
             self.loserSound.play()
 
         elif playerChoice == PAPER and computerChoice == ROCK:
-            self.resultsField.setValue("Paper covers Rock.  You win!")
+            self.resultsField.setValue("Paper covers Rock. You win!")
             self.playerScore = self.playerScore + 1
             self.winnerSound.play()
 
         elif playerChoice == PAPER and computerChoice == SCISSORS:
-            self.resultsField.setValue("Paper is cut by Scissors.  You lose.")
+            self.resultsField.setValue("Paper is cut by Scissors. You lose.")
             self.computerScore = self.computerScore + 1
             self.loserSound.play()
 
