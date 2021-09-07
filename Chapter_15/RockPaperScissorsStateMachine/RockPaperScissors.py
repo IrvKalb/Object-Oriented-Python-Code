@@ -1,4 +1,4 @@
-# Rock Paper Scissors in pygame
+# Rock, Paper, Scissors in pygame
 # Demonstration of a state machine
 
 # 1 - Import packages
@@ -29,7 +29,7 @@ pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
  
-# 4 - Load assets: image(s), sounds,  etc.
+# 4 - Load assets: image(s), sound(s), etc.
 
 # For Splash screen
 messageField = pygwidgets.DisplayText(window, (15, 25),  'Welcome to Rock, Paper, Scissors!', 
@@ -91,7 +91,7 @@ loserSound = pygame.mixer.Sound('sounds/buzz.wav')
 # 5 - Initialize variables
 playerScore = 0
 computerScore = 0
-state = STATE_SPLASH    # The starting state
+state = STATE_SPLASH    # the starting state
 
 # 6 - Loop forever
 while True:
@@ -107,7 +107,7 @@ while True:
                 state = STATE_PLAYER_CHOICE
 
         elif state == STATE_PLAYER_CHOICE:  # let the user choose
-            playerChoice = ''  # Indicates no choice yet
+            playerChoice = ''  # indicates no choice yet
             if rockButton.handleEvent(event):
                 playerChoice = ROCK
                 rpsCollectionPlayer.replace(ROCK)
@@ -121,14 +121,13 @@ while True:
                 rpsCollectionPlayer.replace(SCISSORS)
 
             if playerChoice != '':  # player has made a choice, make computer choice
-
                 # Computer chooses from tuple of moves
                 rps = (ROCK, PAPER, SCISSORS)
-                computerChoice = random.choice(rps) # Computer chooses
+                computerChoice = random.choice(rps) # computer chooses
                 rpsCollectionComputer.replace(computerChoice)
 
-                # Evaluate the Game
-                if playerChoice == computerChoice:  #Tie
+                # Evaluate the game
+                if playerChoice == computerChoice:  # tie
                     resultsField.setValue('It is a tie!')
                     tieSound.play()
                     
@@ -162,9 +161,9 @@ while True:
                     computerScore = computerScore + 1
                     loserSound.play()
 
-                # Shows the player's score
+                # Show the player's score
                 playerScoreCounter.setValue('Your Score: '+ str(playerScore))
-                # Shows the computer's score
+                # Show the computer's score
                 computerScoreCounter.setValue('Computer Score: '+ str(computerScore))
 
                 state = STATE_SHOW_RESULTS  # change state
@@ -176,7 +175,7 @@ while True:
         else:
             raise ValueError('Unknown value for state:', state)
 
-    # 8 - Do any 'per frame' actions
+    # 8 - Do any "per frame" actions
     if state == STATE_PLAYER_CHOICE:
         messageField.setValue('       Rock             Paper         Scissors')
     elif state == STATE_SHOW_RESULTS:

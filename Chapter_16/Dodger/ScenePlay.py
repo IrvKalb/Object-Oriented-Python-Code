@@ -94,7 +94,7 @@ class ScenePlay(pyghelpers.Scene):
         self.dingSound = pygame.mixer.Sound('sounds/ding.wav')
         self.gameOverSound = pygame.mixer.Sound('sounds/gameover.wav')
 
-        # instantiate objects
+        # Instantiate objects
         self.oPlayer = Player(self.window)
         self.oBaddieMgr = BaddieMgr(self.window)
         self.oGoodieMgr = GoodieMgr(self.window)
@@ -120,7 +120,7 @@ class ScenePlay(pyghelpers.Scene):
         self.highScoreText.setValue(self.highestHighScore)
         self.lowestHighScore = infoDict['lowest']
 
-    def reset(self):   # Start a new game
+    def reset(self):   # start a new game
         self.score = 0
         self.scoreText.setValue(self.score)
         self.getHiAndLowScores()
@@ -159,25 +159,25 @@ class ScenePlay(pyghelpers.Scene):
         if self.playingState != STATE_PLAYING:
             return  # only update when playing
 
-        # Move the player to the mouse position, get back its rect
+        # Move the Player to the mouse position, get back its rect
         mouseX, mouseY = pygame.mouse.get_pos()
         playerRect = self.oPlayer.update(mouseX, mouseY)
 
-        # Tell the Goodie Manager to move all Goodies
-        # It returns the number of Goodies that the player contacted
+        # Tell the GoodieMgr to move all Goodies
+        # Returns the number of Goodies that the Player contacted
         nGoodiesHit = self.oGoodieMgr.update(playerRect)
         if nGoodiesHit > 0:
             self.dingSound.play()
             self.score = self.score + (nGoodiesHit * POINTS_FOR_GOODIE)
 
         # Tell the BaddieMgr to move all the Baddies
-        # It returns the number of Baddies that fell off the bottom
+        # Returns the number of Baddies that fell off the bottom
         nBaddiesEvaded  = self.oBaddieMgr.update()
         self.score = self.score + (nBaddiesEvaded * POINTS_FOR_BADDIE_EVADED)
         
         self.scoreText.setValue(self.score)
 
-        # Check if the player has hit any Baddie
+        # Check if the Player has hit any Baddie
         if self.oBaddieMgr.hasPlayerHitBaddie(playerRect):
             pygame.mouse.set_visible(True)
             pygame.mixer.music.stop()
@@ -211,7 +211,7 @@ class ScenePlay(pyghelpers.Scene):
         self.oBaddieMgr.draw()
         self.oGoodieMgr.draw()
     
-        # Draw the player
+        # Tell the Player to draw itself
         self.oPlayer.draw()
     
         # Draw all the info at the bottom of the window

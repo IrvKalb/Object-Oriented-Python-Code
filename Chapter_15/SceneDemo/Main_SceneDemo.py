@@ -1,4 +1,4 @@
-# Three Scenes Demo Main
+# Scene Demo main program with three scenes
 
 # This is a demo of a typical main program using the Scene Manager.
 # It should start by defining the size of your window, initializing pygame and creating the window.
@@ -27,7 +27,7 @@ FRAMES_PER_SECOND = 30
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 
-# 4 - Load assets: image(s), sounds,  etc.
+# 4 - Load assets: image(s), sound(s), etc.
 
 # 5 - Initialize variables
 # Instantiate all scenes and store them into a list

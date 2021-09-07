@@ -12,8 +12,8 @@ class Player():
         self.maxX = WINDOW_WIDTH - playerRect.width
         self.maxY = GAME_HEIGHT - playerRect.height
 
-    # Every frame, move the player icon to the mouse position
-    # Limits the x and ycoordinates to the game area of the window
+    # Every frame, move the Player icon to the mouse position
+    # Limits the x- and y-coordinates to the game area of the window
     def update(self, x, y):
         if x < 0:
             x = 0

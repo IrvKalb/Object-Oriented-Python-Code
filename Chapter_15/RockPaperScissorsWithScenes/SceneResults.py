@@ -1,4 +1,4 @@
-# This is the Results Scene
+# The Results scene
 # The player is shown the results of the current round
 
 import pygwidgets
@@ -65,7 +65,7 @@ class SceneResults(pyghelpers.Scene):
         self.rpsCollectionPlayer.replace(playerChoice)
         self.rpsCollectionComputer.replace(computerChoice)
 
-        # Evaluate the game  Win/Lose/Tie Conditions
+        # Evaluate the game's win/lose/tie conditions
         if playerChoice == computerChoice:
             self.resultsField.setValue("It's a tie!")
             self.tieSound.play()
@@ -100,7 +100,7 @@ class SceneResults(pyghelpers.Scene):
             self.computerScore = self.computerScore + 1
             self.loserSound.play()
 
-        # Shows the player's and computer's score.
+        # Show the player's and computer's scores.
         self.playerScoreCounter.setValue(
                                'Score: ' + str(self.playerScore))
         self.computerScoreCounter.setValue(
@@ -116,7 +116,6 @@ class SceneResults(pyghelpers.Scene):
 
     def draw(self):
         self.window.fill(OTHER_GRAY)
-
         self.youComputerField.draw()
         self.resultsField.draw()
         self.rpsCollectionPlayer.draw()

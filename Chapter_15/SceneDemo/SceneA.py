@@ -1,6 +1,5 @@
-#
-# This is Scene A
-#
+# Scene A
+
 import pygwidgets
 import pyghelpers
 import pygame

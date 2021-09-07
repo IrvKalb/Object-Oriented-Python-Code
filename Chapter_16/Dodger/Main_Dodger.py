@@ -1,6 +1,6 @@
 #  Dodger main program
 #
-# Instantiates 3 scenes, creates and starts the Scene Manager
+# Instantiates 3 scenes, creates and starts the scene manager
 #
 #  Original version by Al Sweigart from his book "Invent With Python"
 #    (concept, graphics, and sounds used by permission from Al Sweigart)
@@ -31,7 +31,7 @@ scenesList = [SceneSplash(window),
                     SceneHighScores(window),
                     ScenePlay(window)]
 
-# Create the Scene Manager, passing in the scenes list and the FPS
+# Create the scene manager, passing in the scenes list and the FPS
 oSceneMgr = pyghelpers.SceneMgr(scenesList, FRAMES_PER_SECOND)
 
 # Tell the Scene Manager to start running

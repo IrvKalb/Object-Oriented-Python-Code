@@ -1,6 +1,4 @@
-#
-# This is Scene C
-#
+# Scene C
 
 import pygwidgets
 import pyghelpers

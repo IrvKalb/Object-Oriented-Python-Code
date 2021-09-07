@@ -1,5 +1,5 @@
-# This is the Play Scene
-# The player chooses among Rock, Paper, or Scissors
+# The Play scene
+# The player chooses among rock, paper, or scissors
 
 import pygwidgets
 import pyghelpers
@@ -51,11 +51,11 @@ class ScenePlay(pyghelpers.Scene):
                 playerChoice = SCISSORS
 
             if playerChoice is not None:  # user has made a choice
-                computerChoice = random.choice(self.RPSTuple)  # Computer chooses
+                computerChoice = random.choice(self.RPSTuple)  # computer chooses
                 dataDict = {'player': playerChoice, 'computer': computerChoice}
-                self.goToScene(SCENE_RESULTS, dataDict)  # go to results scene
+                self.goToScene(SCENE_RESULTS, dataDict)  # go to Results scene
 
-    # No need to include update method, defaults to inherited one which does nothing.
+    # No need to include update method, defaults to inherited one which does nothing
 
     def draw(self):
         self.window.fill(GRAY)

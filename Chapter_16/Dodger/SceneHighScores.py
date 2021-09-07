@@ -150,6 +150,6 @@ class SceneHighScores(pyghelpers.Scene):
     def respond(self, requestID):
         if requestID == HIGH_SCORES_DATA:
             # Request from Play scene for the highest and lowest scores
-            # Build a dictionary and return it to the Play Scene
+            # Build a dictionary and return it to the Play scene
             highestScore, lowestScore = self.oHighScoresData.getHighestAndLowest()
             return {'highest':highestScore, 'lowest':lowestScore}

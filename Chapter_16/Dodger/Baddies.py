@@ -5,7 +5,7 @@ import pygwidgets
 import random
 from Constants import *
 
-# Baddie
+# Baddie class
 class Baddie():
     MIN_SIZE = 10
     MAX_SIZE = 40
@@ -29,7 +29,7 @@ class Baddie():
         self.speed = random.randrange(Baddie.MIN_SPEED,
                                                       Baddie.MAX_SPEED + 1)
 
-    def update(self):  # move the baddie down
+    def update(self):  # move the Baddie down
         self.y = self.y + self.speed
         self.image.setLoc((self.x, self.y))
         if self.y > GAME_HEIGHT:
@@ -44,7 +44,7 @@ class Baddie():
         collidedWithPlayer = self.image.overlaps(playerRect)
         return collidedWithPlayer
 
-# BaddieMgr
+# BaddieMgr class
 class BaddieMgr():
     ADD_NEW_BADDIE_RATE = 8  # how often to add a new Baddie
 
@@ -52,7 +52,7 @@ class BaddieMgr():
         self.window = window
         self.reset()
 
-    def reset(self):  # Called when starting a new game
+    def reset(self):  # called when starting a new game
         self.baddiesList = []
         self.nFramesTilNextBaddie = BaddieMgr.ADD_NEW_BADDIE_RATE
 

@@ -118,7 +118,8 @@ while True:
             sys.exit()
 
         if oTextAlertButton.handleEvent(event):
-            ignore = pyghelpers.textYesNoDialog(window, (75, 80, 500, 150),
+            ignore = pyghelpers.textYesNoDialog(window,
+                                                  (75, 80, 500, 150),
                                                   'This is an alert!', 'OK', None)
             oResults.setValue('User clicked the OK button')
 

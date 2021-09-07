@@ -1,10 +1,10 @@
-# High Scores Data class
+# HighScoresData class
 from Constants import *
 from pathlib import Path
 import json
 
 class HighScoresData():
-    """The data file is stored as a list of lists in json format.
+    """The data file is stored as a list of lists in JSON format.
     Each list is made up of a name and a score:
         [[name, score], [name, score], [name, score] ...]
     In this class, all scores are kept in self.scoresList
@@ -17,11 +17,11 @@ class HighScoresData():
         # Try to open and load the data from the data file
         try:
             data = self.oFilePath.read_text()
-        except FileNotFoundError:  # No file, set to blank scores, save
+        except FileNotFoundError:  # no file, set to blank scores and save
             self.resetScores()
             return
 
-        # File exists, load the scores from the json file
+        # File exists, load the scores from the JSON file
         self.scoresList = json.loads(data)
 
     def addHighScore(self, name, newHighScore):
@@ -61,7 +61,7 @@ class HighScoresData():
         return scoresList, namesList
 
     def getHighestAndLowest(self):
-        # Element zero is highest entry, element -1 is the lowest
+        # Element 0 is highest entry, element -1 is the lowest
         highestEntry = self.scoresList[0]
         lowestEntry = self.scoresList[-1]
         # Get the score (element 1) of each sublist
