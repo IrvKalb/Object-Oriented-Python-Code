@@ -36,7 +36,7 @@ class Model():
     def getRoundsRollsPercents(self):
         return self.nRounds, self.rollsDict, self.percentsDict
 
-    # The methods below aren't used right now, but are available for a new views
+    # The methods below aren't used right now, but are available for new views
     def getNumberOfRounds(self):
         return self.nRounds
 
