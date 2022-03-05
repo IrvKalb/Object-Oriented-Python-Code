@@ -35,7 +35,7 @@ title = pygwidgets.DisplayText(window, (0, 40),
 inputCaption = pygwidgets.DisplayText(window, (20, 150),
                 'Input money amount:', fontSize=24,
                 width=190, justified='right')
-inputField = InputNumber(window, (230, 150), '', width=150)
+inputField = InputNumber(window, (230, 150), '', width=150, initialFocus=True)
 okButton = pygwidgets.TextButton(window, (430, 150), 'OK')
 
 outputCaption1 = pygwidgets.DisplayText(window, (20, 300),

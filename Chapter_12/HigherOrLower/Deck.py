@@ -38,7 +38,7 @@ class Deck():
 
     def returnCardToDeck(self, oCard):
         # Put a card back into the deck
-        self.deckList.insert(0, oCard)
+        self.playingDeckList.insert(0, oCard)
 
 
 if __name__ == '__main__':
