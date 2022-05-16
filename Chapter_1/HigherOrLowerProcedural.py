@@ -32,10 +32,10 @@ for suit in SUIT_TUPLE:
         cardDict = {'rank':rank, 'suit':suit, 'value':thisValue + 1}
         startingDeckList.append(cardDict)
         
-score = 50
 
 while True:  # play multiple games
     print()
+    score = 50
     gameDeckList = shuffle(startingDeckList)
     currentCardDict = getCard(gameDeckList)
     currentCardRank = currentCardDict['rank']
