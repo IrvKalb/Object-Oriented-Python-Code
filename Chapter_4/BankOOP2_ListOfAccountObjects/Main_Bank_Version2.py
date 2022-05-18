@@ -47,7 +47,7 @@ accountsList[2].show()
 accountsList[2].deposit(100, userPassword)
 usersBalance = accountsList[2].getBalance(userPassword)
 print()
-print('After depositing 100, users balance is:', usersBalance)
+print("After depositing 100, user's balance is:", usersBalance)
 
 # Show the new account
 accountsList[2].show()

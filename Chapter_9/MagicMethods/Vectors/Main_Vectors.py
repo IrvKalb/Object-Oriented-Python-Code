@@ -21,4 +21,4 @@ print('Vector 2:', v2) # 2, 2
 print('Vector 1 + Vector 2:', v1 + v2)  # 5, 6
 print('Vector 1 - Vector 2:', v1 - v2)  # 1, 2
 print('Vector 1 times Vector 2:', v1 * v2)  # 6, 8
-print('Vector 2 times 5:', v1 * 5)  # 15, 20
+print('Vector 1 times 5:', v1 * 5)  # 15, 20

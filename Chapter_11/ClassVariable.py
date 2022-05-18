@@ -6,7 +6,7 @@ class Sample():
         self.name = name
         Sample.nObjects = Sample.nObjects + 1
 
-    def howManyObjects(self):
+    def howManyObjects(cls):
         print('There are', Sample.nObjects, 'Sample objects')
 
     def __del__(self):
@@ -22,4 +22,4 @@ oSample4 = Sample('D')
 del oSample3
 
 # See how many we have
-oSample1.howManyObjects()
+print('Number of objects:', Sample.nObjects)

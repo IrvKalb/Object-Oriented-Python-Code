@@ -40,7 +40,7 @@ oNewAccount.show()
 oNewAccount.deposit(100, userPassword)
 usersBalance = oNewAccount.getBalance(userPassword)
 print()
-print('After depositing 100, users balance is:', usersBalance)
+print("After depositing 100, user's balance is", usersBalance)
 
 # Show the new account
 oNewAccount.show()
