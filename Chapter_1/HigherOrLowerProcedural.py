@@ -75,7 +75,8 @@ while True:  # play multiple games
         print('Your score is:', score)
         print()
         currentCardRank = nextCardRank
-        currentCardValue = nextCardValue  # don't need current suit
+        currentCardValue = nextCardValue
+        currentCardSuit = nextCardSuit
 
     goAgain = input('To play again, press ENTER, or "q" to quit: ')
     if goAgain == 'q':
