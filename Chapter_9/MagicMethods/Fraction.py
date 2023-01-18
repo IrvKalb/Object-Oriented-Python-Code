@@ -79,4 +79,4 @@ print()
 
 oFraction5 = Fraction(5, 2)
 oFraction6 = Fraction(500, 200)
-print('Sum of 5/2 and 500/2\n', oFraction5 + oFraction6)
+print('Sum of 5/2 and 500/200\n', oFraction5 + oFraction6)
