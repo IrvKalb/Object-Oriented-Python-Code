@@ -6,11 +6,9 @@ import pygame
 from pygame.locals import *
 import sys
 import pygwidgets
-# Updated to add example of AnimationCollection
-from Player import *
 
 # 2 Define constants
-SCREEN_WIDTH = 1060
+SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
 FRAMES_PER_SECOND = 30
 BGCOLOR = (220, 220, 220)
@@ -68,12 +66,8 @@ TRexAnimationList = [('images/TRex/f1.gif', .1),
 
 # 5 - Initialize variables
 oCallBackTest = CallBackTest() # instantiate a test object
-oTitleText1 = pygwidgets.DisplayText(window, (110, 80), \
-                                    'Animations                      SpriteSheetAnimations                    AnimationCollection', \
-                                    fontSize=32)
-oTitleText2 = pygwidgets.DisplayText(window, (110, 310), \
-                                    '                                                                                          SpriteSheetAnimationCollection', \
-                                    fontSize=32)
+oTitleText = pygwidgets.DisplayText(window, (110, 80), \
+                                    'Animations                      SpriteSheetAnimations', fontSize=32)
 oDinosaurAnimation = pygwidgets.Animation(window, (22, 145), dinosaurAnimList,
                                      autoStart=True, loop=False, callBack=myFunction, nickname='Dinosaur')
 oPlayButton = pygwidgets.TextButton(window, (20, 240), "Play")
@@ -94,29 +88,6 @@ oWalkAnimation = pygwidgets.SpriteSheetAnimation(window, (460, 335), 'images/mal
                             (.1, .1, .1, .1, .1, .1, .1, .1, .3, .1, .1, .1, .1, .1, .1, .1, .1, .3, \
                              .1, .1, .1, .1, .1, .1, .1, .1, .3, .1, .1, .1, .1, .1, .1, .1, .1, .3), \
                              autoStart=False, loop=False)
-
-
-
-if '1.0.3' in pygwidgets.getVersion():
-    oPlayer = pygwidgets.DisplayText(window, (740, SCREEN_HEIGHT * .333), 'Available in pygwidgets 1.1', fontSize=24)
-    oRunAnimation = pygwidgets.DisplayText(window, 740, SCREEN_HEIGHT * .666, 'Available in pygwidgets 1.1', fontSize=24)
-    oCollectionsInstructionsText1 = pygwidgets.DisplayText(window, (750, 300), '')
-    oCollectionsInstructionsText2 = pygwidgets.DisplayText(window, (750, 500), '')
-    animCollectionsAvailable = False
-else:
-    oPlayer = Player(window, (800, SCREEN_HEIGHT * .333))
-    # Build a dictionary of sprite sheet animations, Each key value pair looks like this:
-    #      <someKey>:(<imagePath>, <nImages>, <width>, <height>, <durationsOrDurationsList>)
-    animationCollectionDict = {'right' : ('images/runRight.png', 10, 30, 40, .1),
-                                           'left' : ('images/runLeft.png', 10, 30, 40, .1)}
-
-    # Create a SpriteSheetAnimationCollection object with multiple sprite sheet animations
-    oRunAnimation = pygwidgets.SpriteSheetAnimationCollection(window, (810, SCREEN_HEIGHT * .75),
-                                                            animationCollectionDict, 'right', autoStart=True, loop=True)
-    oCollectionsInstructionsText1 = pygwidgets.DisplayText(window, (750, 250), '(Press left, up, right, down to move)')
-    oCollectionsInstructionsText2 = pygwidgets.DisplayText(window, (750, 420), '(Press "l" to run left, or "r" to run right)')
-    animCollectionsAvailable = True
-
 
 oStartButton = pygwidgets.TextButton(window, (440, 400), "Start")
 
@@ -158,18 +129,6 @@ while True:
         if oTRexAnimation.handleEvent(event):
             oTRexAnimation.start()
 
-        if event.type == pygame.KEYDOWN:
-            # Allow the user to press left and right keys to switch animations
-            if event.key == pygame.K_l and  animCollectionsAvailable:
-                oRunAnimation.replace('left')
-            elif event.key == pygame.K_r and  animCollectionsAvailable:
-                oRunAnimation.replace('right')
-            else:
-                oPlayer.handleEvent(event)  # send it to the Player animation
- 
-
-        elif event.type == pygame.KEYUP:
-            oPlayer.handleEvent(event)
 
     # 8 - Do any "per frame" actions
     if oTRexAnimation.update():
@@ -180,16 +139,12 @@ while True:
         print('In main code - Effect animation ended')
     if oWalkAnimation.update():
         print('In main code - Walk animation ended')
-    if animCollectionsAvailable:
-        playerX, playerY = oPlayer.update()
-        oRunAnimation.update()
 
     # 9 - Clear the window
     window.fill(BGCOLOR)
 
     # 10 - Draw all window elements
-    oTitleText1.draw()
-    oTitleText2.draw()
+    oTitleText.draw()
     oDinosaurAnimation.draw()
     oPlayButton.draw()
     oPauseButton.draw()
@@ -201,10 +156,6 @@ while True:
     oEffectAnimation.draw()
     oWalkAnimation.draw()
     oStartButton.draw()
-    oCollectionsInstructionsText1.draw()
-    oCollectionsInstructionsText2.draw()
-    oPlayer.draw()
-    oRunAnimation.draw()
 
     # 11 - Update the window
     pygame.display.update()
