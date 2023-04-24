@@ -16,14 +16,17 @@ As of Python 3.11, a new branch of pygame, named "pygame-ce" (community edition)
 
 Page 90:  Installing the pygame package.  The page says to enter these commands at the command line:
 
-python3 -m pip install -U pip --user
-python3 -m pip install -U pygame --user
+  python3 -m pip install -U pip --user
+
+  python3 -m pip install -U pygame --user
 
 To install the community edition of pygame, you must first uninstall the older version of pygame if you have already installed it. Here are the updated commands that you should use at the command line.:
 
-python3 -m pip install -U pip --user
-python3 -m pip uninstall -U pygame --user 
-python3 -m pip install -U pygame-ce --user
+  python3 -m pip install -U pip --user
+
+  python3 -m pip uninstall -U pygame --user
+
+  python3 -m pip install -U pygame-ce --user
 
 After installing pygame-ce, you do NOT need to change anything to use the example code from the book. In fact, the import statement:
 
