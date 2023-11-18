@@ -10,6 +10,21 @@ Link to book:  https://nostarch.com/object-oriented-python
 
 -----------------------------------
 
+## New free game available:
+
+I have finally released my first Python-based game on itch.io.  It is free to download and play (Mac and Windows):
+
+https://irvkalb.itch.io/rats
+
+This is a highly challenging 80's style retro shooter game.  Here is a link to the How to Play video:
+
+https://www.youtube.com/watch?v=nX_oFR27g2g
+
+The game was developed using heavy doses of object-oriented programming, which is the subject of my book "Object-Oriented Python".
+
+Please check out the game - I hope you enjoy it.
+
+-----------------------------------
 ## Important notice about pygame
 
 As of Python 3.11, a new branch of pygame, named "pygame-ce" (community edition), must be used.  (The details of this are too complex to go into here.)  In all printings of Object-Oriented Python, there are these installations instructions for the pygame package:
