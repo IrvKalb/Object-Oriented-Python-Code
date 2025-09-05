@@ -5,6 +5,7 @@ import pygame
 from pygame.locals import *
 import sys
 import random
+from pathlib import Path
 
 # 2 - Define constants
 BLACK = (0, 0, 0)
@@ -15,33 +16,38 @@ BALL_WIDTH_HEIGHT = 100
 MAX_WIDTH = WINDOW_WIDTH - BALL_WIDTH_HEIGHT
 MAX_HEIGHT = WINDOW_HEIGHT - BALL_WIDTH_HEIGHT
 
+# defines path to ball
+ROOT_DIR = Path(__file__).resolve().parent
+PATH_TO_BALL = ROOT_DIR / 'images' / 'ball.png'
+
+
 # 3 - Initialize the world
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
- 
+
 # 4 - Load assets: image(s), sound(s),  etc.
-ballImage = pygame.image.load('images/ball.png')
+ballImage = pygame.image.load(PATH_TO_BALL)
 
 # 5 - Initialize variables
 ballX = random.randrange(MAX_WIDTH)
 ballY = random.randrange(MAX_HEIGHT)
 ballRect = pygame.Rect(ballX, ballY, BALL_WIDTH_HEIGHT, BALL_WIDTH_HEIGHT)
- 
+
 # 6 - Loop forever
 while True:
 
     # 7 - Check for and handle events
     for event in pygame.event.get():
-        # Clicked the close button? Quit pygame and end the program 
-        if event.type == pygame.QUIT:           
-            pygame.quit()  
+        # Clicked the close button? Quit pygame and end the program
+        if event.type == pygame.QUIT:
+            pygame.quit()
             sys.exit()
 
         # See if user clicked
         if event.type == pygame.MOUSEBUTTONUP:
             #  mouseX, mouseY = event.pos   #  Could do this if we needed it
-            
+
             # Check if the click was in the rect of the ball
             # If so, choose a random new location
             if ballRect.collidepoint(event.pos):
@@ -50,13 +56,13 @@ while True:
                 ballRect = pygame.Rect(ballX, ballY, BALL_WIDTH_HEIGHT, BALL_WIDTH_HEIGHT)
 
     # 8  Do any "per frame" actions
-    
+
     # 9 - Clear the window
     window.fill(BLACK)
-    
+
     # 10 - Draw all window elements
     # Draw the ball at the randomized location
-    window.blit(ballImage, (ballX, ballY))    
+    window.blit(ballImage, (ballX, ballY))
 
     # 11 - Update the window
     pygame.display.update()
