@@ -1,6 +1,8 @@
 # Animation Example
 # Shows examples of Animation and SpriteSheetAnimation objects
 
+# 11/24 Fixed a bug pointed out by Ruth Callender, in identifying if the SpriteSheetAnimationCollection class is available in the version of pygwidgets being used.
+
 # 1 - Import library
 import pygame
 from pygame.locals import *
@@ -95,9 +97,8 @@ oWalkAnimation = pygwidgets.SpriteSheetAnimation(window, (460, 335), 'images/mal
                              .1, .1, .1, .1, .1, .1, .1, .1, .3, .1, .1, .1, .1, .1, .1, .1, .1, .3), \
                              autoStart=False, loop=False)
 
-
-
-if '1.0.3' in pygwidgets.getVersion():
+#if '1.0.3' in pygwidgets.getVersion():
+if not hasattr(pygwidgets, 'SpriteSheetAnimationCollection'):
     oPlayer = pygwidgets.DisplayText(window, (740, SCREEN_HEIGHT * .333), 'Available in pygwidgets 1.1', fontSize=24)
     oRunAnimation = pygwidgets.DisplayText(window, 740, SCREEN_HEIGHT * .666, 'Available in pygwidgets 1.1', fontSize=24)
     oCollectionsInstructionsText1 = pygwidgets.DisplayText(window, (750, 300), '')
